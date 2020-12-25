@@ -137,22 +137,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a29e49786eb4855bb24015fea469b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xVel2: 0
-  yVel2: 0
-  velInt2: 0
-  dashFXThreshold: 0
+  velInt: 0
+  rb: {fileID: 1854964192959219949}
+  dashFX: {fileID: 566631137944508850, guid: e10ec0831fc2d4b08804124881ee48bf, type: 3}
+  moveSpeed: 1
+  slashStutter: 0
   dashSpeed: 0
   dashEqualizer: 0
-  velInt: 0
-  backpedal: 0
-  dashFX: {fileID: 566631137944508850, guid: e10ec0831fc2d4b08804124881ee48bf, type: 3}
+  dashFXThreshold: 0
   dashEffectOn: 0
   isDashing: 0
-  rb: {fileID: 1854964192959219949}
-  moveSpeed: 1
+  backpedal: 0
   anim: {fileID: 1854964192959219945}
-  idleState: 0
-  isFlipped: 0
 --- !u!95 &1854964192959219945
 Animator:
   serializedVersion: 3
@@ -184,12 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658cee0c0a3b94e27a66bc5b1d8a7142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopSwitch: 0
-  currVel: {x: 0, y: 0, z: 0}
+  slashintCounter: 0
   slashInterval: 0
+  stopInterval: 0
   slash: {fileID: 461353016495162138}
-  thisSlash: {fileID: 0}
-  animState: 0
   rb: {fileID: 1854964192959219949}
 --- !u!1001 &4236473781567599398
 PrefabInstance:
@@ -257,6 +251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Slash
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372419552213495868, guid: cd903a63bea404aab98b6f85d7271556,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd903a63bea404aab98b6f85d7271556, type: 3}
