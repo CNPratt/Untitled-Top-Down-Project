@@ -12,13 +12,15 @@ GameObject:
   - component: {fileID: 4372419552213495870}
   - component: {fileID: 4372419552213495871}
   - component: {fileID: 4763106935261233187}
+  - component: {fileID: 2262781564665805496}
+  - component: {fileID: -5576383933755010629}
   m_Layer: 0
   m_Name: Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4372419552213495809
 Transform:
   m_ObjectHideFlags: 0
@@ -148,3 +150,40 @@ PolygonCollider2D:
       - {x: 0.34364134, y: -0.015623573}
       - {x: 0.3750104, y: -0.015607361}
       - {x: 0.375, y: 0.10939874}
+--- !u!50 &2262781564665805496
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4372419552213495868}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!114 &-5576383933755010629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4372419552213495868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b769a266b7836418ba5850fd492af0ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animState: 0
+  knockBack: 0
+  enPos: {x: 0, y: 0, z: 0}
+  playerTrans: {fileID: 0}

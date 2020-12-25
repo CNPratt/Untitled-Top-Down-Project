@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
+    
+    public bool stopSwitch;
+    public Vector3 currVel;
+    public static bool slashCDOn;
+    public float slashInterval;
+
     public GameObject slash;
     public GameObject thisSlash;
     public int animState;
@@ -12,23 +18,41 @@ public class WeaponController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        slashInterval = .2f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        
+
+        if (slashCDOn == true)
+        {
+
+            
+
+    //        rb.velocity = rb.velocity - rb.velocity;
+
+        }
+
         animState = PlayerController.currentState;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && slashCDOn == false)
         {
             StartCoroutine(Slash());
         }
 
         IEnumerator Slash()
         {
+//            rb.AddForce(rb.velocity * 2, ForceMode2D.Impulse);
+            slashCDOn = true;
+            stopSwitch = true;
+                
+
             if (animState == 3 || animState == 11 || animState == 0)
             {
+
                 thisSlash = Instantiate(slash, transform.position + Vector3.down / 2, transform.rotation);
                 thisSlash.transform.parent = gameObject.transform;
                 thisSlash.transform.Rotate(0, 0, 0, 0);
@@ -82,7 +106,9 @@ public class WeaponController : MonoBehaviour
                 thisSlash.transform.parent = gameObject.transform;
                 thisSlash.transform.Rotate(0, 0, -135, 0);
             }
-            yield break;
+            yield return new WaitForSeconds(slashInterval);
+            slashCDOn = false;
+
         }
     }
 }

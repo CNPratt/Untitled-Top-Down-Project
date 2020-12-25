@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public float slashStutter;
+
     public float xVel2;
     public float yVel2;
     public float velInt2;
@@ -22,8 +24,10 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public int moveSpeed;
     public Animator anim;
-    public int idleState;
+    public static int idleState;
     public static int currentState;
+    public static int runState;
+    public static int bpState;
     public bool isFlipped;
 
     // Start is called before the first frame update
@@ -35,17 +39,20 @@ public class PlayerController : MonoBehaviour
         isDashing = false;
         moveSpeed = 1;
 
+        slashStutter = 25f;
 
     }
 
     private void Update()
     {
+        anim.SetInteger("animState", currentState);
+
         xVel2 = Mathf.Abs(rb.velocity.x);
         yVel2 = Mathf.Abs(rb.velocity.y);
 
         IEnumerator DashFX()
         {
-            Debug.Log("dashFX called");
+//            Debug.Log("dashFX called");
             dashEffectOn = true;
 
             while (xVel2 >= dashFXThreshold || yVel2 >= dashFXThreshold)
@@ -57,7 +64,7 @@ public class PlayerController : MonoBehaviour
                 xVel2 = Mathf.Abs(rb.velocity.x);
                 yVel2 = Mathf.Abs(rb.velocity.y);
 
-                velInt2 = xVel + yVel;
+                velInt2 = xVel2 + yVel2;
 
                 if (velInt2 > 0)
                 {
@@ -86,6 +93,27 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+   //     anim.SetInteger("animState", currentState);
+
+        if (WeaponController2.stopSwitch == true)
+        {
+            slashStutter = 0f;
+        }
+        else
+        {
+            slashStutter = 25f;
+            //           anim.SetInteger("animState", currentState);
+        }
+
+//        if (WeaponController2.slashCDOn)
+//        {
+//            anim.SetInteger("animState", WeaponController2.animState);
+//        }
+ //       else
+ //       {
+ //           anim.SetInteger("animState", currentState);
+ //       }
+
         
 
 
@@ -102,236 +130,254 @@ public class PlayerController : MonoBehaviour
 
 
         //        Debug.Log(currentState);
-        if (!Input.GetKey(KeyCode.LeftShift))
-        {
-            backpedal = false;
-
-            if (Input.GetKey("w"))
-            {
-                rb.AddForce(Vector2.up * moveSpeed * Time.deltaTime * 25, ForceMode2D.Impulse);
-            }
-            if (Input.GetKey("a"))
-            {
-                rb.AddForce(Vector2.left * moveSpeed * Time.deltaTime * 25, ForceMode2D.Impulse);
-            }
-            if (Input.GetKey("s"))
-            {
-                rb.AddForce(Vector2.down * moveSpeed * Time.deltaTime * 25, ForceMode2D.Impulse);
-            }
-            if (Input.GetKey("d"))
-            {
-                rb.AddForce(Vector2.right * moveSpeed * Time.deltaTime * 25, ForceMode2D.Impulse);
-            }
 
 
-            if (Input.GetKey("w") && !Input.GetKey("d") && !Input.GetKey("a"))
+            if (!Input.GetKey(KeyCode.LeftShift))
             {
-                if (currentState != 1)
+                backpedal = false;
+
+                if (Input.GetKey("w"))
                 {
-                    currentState = 1;
-                    anim.SetInteger("animState", 1);
+                    rb.AddForce(Vector2.up * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                }
+                if (Input.GetKey("a"))
+                {
+                    rb.AddForce(Vector2.left * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                }
+                if (Input.GetKey("s"))
+                {
+                    rb.AddForce(Vector2.down * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                }
+                if (Input.GetKey("d"))
+                {
+                    rb.AddForce(Vector2.right * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                }
+
+
+                if (Input.GetKey("w") && !Input.GetKey("d") && !Input.GetKey("a"))
+                {
+                    if (currentState != 1)
+                    {
+                    runState = 1;
+                    currentState = runState;
+                    //            anim.SetInteger("animState", 1);
                     idleState = 9;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("a") && !Input.GetKey("w") && !Input.GetKey("s"))
-            {
-                if (currentState != 2)
+                else if (Input.GetKey("a") && !Input.GetKey("w") && !Input.GetKey("s"))
                 {
-                    currentState = 2;
-                    anim.SetInteger("animState", 2);
+                    if (currentState != 2)
+                    {
+                    runState = 2;
+                    currentState = runState;
+                    //            anim.SetInteger("animState", 2);
                     idleState = 10;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("s") && !Input.GetKey("a") && !Input.GetKey("d"))
-            {
-                if (currentState != 3)
+                else if (Input.GetKey("s") && !Input.GetKey("a") && !Input.GetKey("d"))
                 {
-                    currentState = 3;
-                    anim.SetInteger("animState", 3);
+                    if (currentState != 3)
+                    {
+                    runState = 3;
+                    currentState = runState;
+                    //            anim.SetInteger("animState", 3);
                     idleState = 11;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("d") && !Input.GetKey("w") && !Input.GetKey("s"))
-            {
-                if (currentState != 4)
+                else if (Input.GetKey("d") && !Input.GetKey("w") && !Input.GetKey("s"))
                 {
-                    currentState = 4;
-                    anim.SetInteger("animState", 4);
+                    if (currentState != 4)
+                    {
+                    runState = 4;
+                    currentState = runState;
+                    //            anim.SetInteger("animState", 4);
                     idleState = 12;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("w") && Input.GetKey("a"))
-            {
-                if (currentState != 5)
+                else if (Input.GetKey("w") && Input.GetKey("a"))
                 {
-                    currentState = 5;
-                    anim.SetInteger("animState", 5);
+                    if (currentState != 5)
+                    {
+                    runState = 5;
+                    currentState = runState;
+                    //            anim.SetInteger("animState", 5);
                     idleState = 13;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("w") && Input.GetKey("d"))
-            {
-                if (currentState != 6)
+                else if (Input.GetKey("w") && Input.GetKey("d"))
                 {
-                    currentState = 6;
-                    anim.SetInteger("animState", 6);
+                    if (currentState != 6)
+                    {
+                    runState = 6;
+                    currentState = runState;
+                    //            anim.SetInteger("animState", 6);
                     idleState = 14;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("s") && Input.GetKey("a"))
-            {
-                if (currentState != 7)
+                else if (Input.GetKey("s") && Input.GetKey("a"))
                 {
-                    currentState = 7;
-                    anim.SetInteger("animState", 7);
+                    if (currentState != 7)
+                    {
+                    runState = 7;
+                    currentState = runState;
+                    //             anim.SetInteger("animState", 7);
                     idleState = 15;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("s") && Input.GetKey("d"))
-            {
-                if (currentState != 8)
+                else if (Input.GetKey("s") && Input.GetKey("d"))
                 {
-                    currentState = 8;
-                    anim.SetInteger("animState", 8);
+                    if (currentState != 8)
+                    {
+                        runState = 8;
+                    currentState = runState;
+                    //              anim.SetInteger("animState", 8);
                     idleState = 16;
+                    }
+                }
+
+                else if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("s") && !Input.GetKey("d"))
+                {
+                    if (rb.velocity.x <= .01f || rb.velocity.y <= .01f)
+                    {
+                        currentState = idleState;
+           //             anim.SetInteger("animState", idleState);
+                    }
                 }
             }
 
-            else if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("s") && !Input.GetKey("d"))
+            else if (Input.GetKey(KeyCode.LeftShift))
             {
-                if (rb.velocity.x <= .01f || rb.velocity.y <= .01f)
+                backpedal = true;
+
+                if (Input.GetKey("w"))
                 {
-                    currentState = idleState;
-                    anim.SetInteger("animState", idleState);
+                    rb.AddForce(Vector2.up * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
                 }
-            }
-        }
-
-        else if (Input.GetKey(KeyCode.LeftShift))
-        {
-            backpedal = true;
-
-            if (Input.GetKey("w"))
-            {
-                rb.AddForce(Vector2.up * moveSpeed * Time.deltaTime * 25, ForceMode2D.Impulse);
-            }
-            if (Input.GetKey("a"))
-            {
-                rb.AddForce(Vector2.left * moveSpeed * Time.deltaTime * 25, ForceMode2D.Impulse);
-            }
-            if (Input.GetKey("s"))
-            {
-                rb.AddForce(Vector2.down * moveSpeed * Time.deltaTime * 25, ForceMode2D.Impulse);
-            }
-            if (Input.GetKey("d"))
-            {
-                rb.AddForce(Vector2.right * moveSpeed * Time.deltaTime * 25, ForceMode2D.Impulse);
-            }
-
-
-            if (Input.GetKey("w") && !Input.GetKey("d") && !Input.GetKey("a"))
-            {
-                if (currentState != 3)
+                if (Input.GetKey("a"))
                 {
-                    currentState = 3;
-                    anim.SetInteger("animState", 3);
+                    rb.AddForce(Vector2.left * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                }
+                if (Input.GetKey("s"))
+                {
+                    rb.AddForce(Vector2.down * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                }
+                if (Input.GetKey("d"))
+                {
+                    rb.AddForce(Vector2.right * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                }
+
+
+                if (Input.GetKey("w") && !Input.GetKey("d") && !Input.GetKey("a"))
+                {
+                    if (currentState != 3)
+                    {
+                        bpState = 3;
+                    currentState = bpState;
+                    //               anim.SetInteger("animState", 3);
                     idleState = 11;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("a") && !Input.GetKey("w") && !Input.GetKey("s"))
-            {
-                if (currentState != 4)
+                else if (Input.GetKey("a") && !Input.GetKey("w") && !Input.GetKey("s"))
                 {
-                    currentState = 4;
-                    anim.SetInteger("animState", 4);
+                    if (currentState != 4)
+                    {
+                        currentState = 4;
+                    currentState = bpState;
+                    //               anim.SetInteger("animState", 4);
                     idleState = 12;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("s") && !Input.GetKey("a") && !Input.GetKey("d"))
-            {
-                if (currentState != 1)
+                else if (Input.GetKey("s") && !Input.GetKey("a") && !Input.GetKey("d"))
                 {
-                    currentState = 1;
-                    anim.SetInteger("animState", 1);
+                    if (currentState != 1)
+                    {
+                    bpState = 1;
+                    currentState = bpState;
+                    //               anim.SetInteger("animState", 1);
                     idleState = 9;
+                    }
+
+
                 }
 
-
-            }
-
-            else if (Input.GetKey("d") && !Input.GetKey("w") && !Input.GetKey("s"))
-            {
-                if (currentState != 2)
+                else if (Input.GetKey("d") && !Input.GetKey("w") && !Input.GetKey("s"))
                 {
-                    currentState = 2;
-                    anim.SetInteger("animState", 2);
+                    if (currentState != 2)
+                    {
+                    bpState = 2;
+                    currentState = bpState;
+                    //            anim.SetInteger("animState", 2);
                     idleState = 10;
+                    }
+
                 }
 
-            }
-
-            else if (Input.GetKey("w") && Input.GetKey("a"))
-            {
-                if (currentState != 8)
+                else if (Input.GetKey("w") && Input.GetKey("a"))
                 {
-                    currentState = 8;
-                    anim.SetInteger("animState", 8);
+                    if (currentState != 8)
+                    {
+                    bpState = 8;
+                    currentState = bpState;
+                    //            anim.SetInteger("animState", 8);
                     idleState = 16;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("w") && Input.GetKey("d"))
-            {
-                if (currentState != 7)
+                else if (Input.GetKey("w") && Input.GetKey("d"))
                 {
-                    currentState = 7;
-                    anim.SetInteger("animState", 7);
+                    if (currentState != 7)
+                    {
+                    bpState = 7;
+                    currentState = bpState;
+                    //          anim.SetInteger("animState", 7);
                     idleState = 15;
+                    }
                 }
-            }
 
-            else if (Input.GetKey("s") && Input.GetKey("a"))
-            {
-                if (currentState != 6)
+                else if (Input.GetKey("s") && Input.GetKey("a"))
                 {
-                    currentState = 6;
-                    anim.SetInteger("animState", 6);
+                    if (currentState != 6)
+                    {
+                    bpState = 6;
+                    currentState = bpState;
+                    //        anim.SetInteger("animState", 6);
                     idleState = 14;
+                    }
+
                 }
 
-            }
-
-            else if (Input.GetKey("s") && Input.GetKey("d"))
-            {
-                if (currentState != 5)
+                else if (Input.GetKey("s") && Input.GetKey("d"))
                 {
-                    currentState = 5;
-                    anim.SetInteger("animState", 5);
+                    if (currentState != 5)
+                    {
+                    bpState = 5;
+                    currentState = bpState;
+                    //       anim.SetInteger("animState", 5);
                     idleState = 13;
+                    }
+
                 }
 
-            }
-
-            else if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("s") && !Input.GetKey("d"))
-            {
-                if (rb.velocity.x <= .01f || rb.velocity.y <= .01f)
+                else if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("s") && !Input.GetKey("d"))
                 {
-                    currentState = idleState;
-                    anim.SetInteger("animState", idleState);
+                    if (rb.velocity.x <= .01f || rb.velocity.y <= .01f)
+                    {
+                        currentState = idleState;
+   //                     anim.SetInteger("animState", idleState);
+                    }
                 }
-            }
-        }
+            
 
-        
+        }
 
         IEnumerator DashMethod()
         {
