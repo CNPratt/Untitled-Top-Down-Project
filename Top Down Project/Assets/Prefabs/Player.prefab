@@ -180,6 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658cee0c0a3b94e27a66bc5b1d8a7142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCharging: 0
+  slashCharger: 0
   slashintCounter: 0
   slashInterval: 0
   stopInterval: 0

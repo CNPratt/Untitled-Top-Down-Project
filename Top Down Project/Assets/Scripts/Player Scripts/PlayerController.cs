@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     public GameObject dashFX;
-    public int moveSpeed;
+    public static float moveSpeed;
     public float slashStutter;
 
     public float dashSpeed;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         dashEffectOn = false;
         isDashing = false;
 
-        moveSpeed = 1;
+        moveSpeed = 1f;
 
         slashStutter = 25f;
 
@@ -44,11 +44,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
- //      set parameter animstate in animator
+  //      if (WeaponController2.slashCDOn)
+  //      {
+  //          currentState = WeaponController2.thisIdle;
+  //      }
+
+        //      set parameter animstate in animator
 
         anim.SetInteger("animState", currentState);
 
-//      calculatw equalizer for  dashfx instantiation
+//      calculate equalizer for  dashfx instantiation
 
         xVel = Mathf.Abs(rb.velocity.x);
         yVel = Mathf.Abs(rb.velocity.y);
@@ -147,15 +152,6 @@ public class PlayerController : MonoBehaviour
 
         //     anim.SetInteger("animState", currentState);
 
-        //        if (WeaponController2.slashCDOn)
-        //        {
-        //            currentState = WeaponController2.animState);
-        //        }
-        //       else
-        //       {
-        //           anim.SetInteger("animState", currentState);
-        //       }
-
                if (WeaponController2.stopSwitch == true)
                {
                     slashStutter = 0f;
@@ -190,24 +186,24 @@ public class PlayerController : MonoBehaviour
 
                 if (Input.GetKey("w") && !Input.GetKey("d") && !Input.GetKey("a"))
                 {
-                    if (!Input.GetKeyDown(KeyCode.LeftShift))
+                    if (backpedal == false)
                     {
                     runState = 1;
                     currentState = runState;
                     idleState = 9;
                     }
 
-                else if (backpedal == true)
+                    else if (backpedal == true)
                     {
-                        bpState = 3;
-                     currentState = bpState;
+                      bpState = 3;
+                      currentState = bpState;
                       idleState = 11;
                     }
                  }
 
                 else if (Input.GetKey("a") && !Input.GetKey("w") && !Input.GetKey("s"))
                 {
-                    if (!Input.GetKeyDown(KeyCode.LeftShift))
+                    if (backpedal == false)
                     {
                         runState = 2;
                         currentState = runState;
@@ -219,9 +215,9 @@ public class PlayerController : MonoBehaviour
                     {
                      bpState = 4;
                      currentState = bpState;
-                      idleState = 12;
+                     idleState = 12;
                     }
-        }
+                }
 
                 else if (Input.GetKey("s") && !Input.GetKey("a") && !Input.GetKey("d"))
                 {
@@ -229,15 +225,15 @@ public class PlayerController : MonoBehaviour
                     {
                      runState = 3;
                      currentState = runState;
-                      idleState = 11;
-                 }
+                     idleState = 11;
+                    }
 
-                else if (backpedal == true)
-                {
-                    bpState = 1;
-                    currentState = bpState;
-                    idleState = 9;
-                }
+                     else if (backpedal == true)
+                    {
+                     bpState = 1;
+                     currentState = bpState;
+                     idleState = 9;
+                    }
             }
 
                 else if (Input.GetKey("d") && !Input.GetKey("w") && !Input.GetKey("s"))
@@ -249,19 +245,19 @@ public class PlayerController : MonoBehaviour
                         idleState = 12;
                    }
 
-                else if (backpedal == true)
-                {
-                    bpState = 2;
-                    currentState = bpState;
-                    idleState = 10;
-                }
+                    else if (backpedal == true)
+                    {
+                      bpState = 2;
+                      currentState = bpState;
+                      idleState = 10;
+                    }
             }
 
                 else if (Input.GetKey("w") && Input.GetKey("a"))
                 {
                  if (backpedal == false)
                  {
-                      runState = 5;
+                       runState = 5;
                        currentState = runState;
                        idleState = 13;
                  }
@@ -272,7 +268,7 @@ public class PlayerController : MonoBehaviour
                     currentState = bpState;
                     idleState = 16;
                 }
-            }
+               }
 
                 else if (Input.GetKey("w") && Input.GetKey("d"))
                 {
@@ -283,13 +279,13 @@ public class PlayerController : MonoBehaviour
                        idleState = 14;
                    }
 
-                else if (backpedal == true)
-                {
+                   else if (backpedal == true)
+                  {
                     bpState = 7;
                     currentState = bpState;
                     idleState = 15;
-                }
-            }
+                  }
+                 }
 
                 else if (Input.GetKey("s") && Input.GetKey("a"))
                 {
@@ -300,13 +296,13 @@ public class PlayerController : MonoBehaviour
                       idleState = 15;
                     }
 
-                else if (backpedal == true)
-                {
-                    bpState = 6;
-                    currentState = bpState;
-                    idleState = 14;
-                }
-            }
+                    else if (backpedal == true)
+                    {
+                        bpState = 6;
+                        currentState = bpState;
+                        idleState = 14;
+                    }
+                 }
 
                 else if (Input.GetKey("s") && Input.GetKey("d"))
                 {
@@ -317,13 +313,13 @@ public class PlayerController : MonoBehaviour
                       idleState = 16;
                    }
 
-                else if (backpedal == true)
-                {
-                    bpState = 5;
-                    currentState = bpState;
-                    idleState = 13;
-                }
-            }
+                    else if (backpedal == true)
+                   {
+                       bpState = 5;
+                        currentState = bpState;
+                       idleState = 13;
+                   }
+                 }
 
                 else if (!Input.GetKey("w") && !Input.GetKey("a") && !Input.GetKey("s") && !Input.GetKey("d"))
                 {
@@ -341,7 +337,7 @@ public class PlayerController : MonoBehaviour
 
         IEnumerator DashMethod()
         {
-            Debug.Log("Dashmethod called");
+//            Debug.Log("Dashmethod called");
 
             if (backpedal == false && !isDashing)
             {

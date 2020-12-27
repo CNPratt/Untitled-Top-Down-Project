@@ -27,7 +27,7 @@ public class slashScript : MonoBehaviour
     {
         knockBack = 25f;
 
-        if (collider.name == "Drone")
+        if (collider.tag == "Enemy")
         {
             playerTrans = GameObject.Find("Player").GetComponent<Transform>();
             enPos = playerTrans.InverseTransformPoint(collider.transform.position);

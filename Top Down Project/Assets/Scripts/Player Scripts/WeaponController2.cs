@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WeaponController2 : MonoBehaviour
 {
+    public bool isCharging;
+    public float slashCharger;
     public int slashintCounter;
     public static bool stopSwitch;
     public static bool slashCDOn;
@@ -11,8 +13,8 @@ public class WeaponController2 : MonoBehaviour
     public float slashInterval;
     public float stopInterval;
 
+    public static int thisIdle;
     public GameObject slash;
-    public static int animState;
     public Rigidbody2D rb;
 
 
@@ -26,14 +28,51 @@ public class WeaponController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        IEnumerator slashCharge()
+        {
+            slashCharger = slashCharger + 1;
+            yield return new WaitForSeconds(.2f);
+            isCharging = false;
+
+        }
+
+        if (Input.GetKey(KeyCode.Space) && isCharging == false)
+        {
+            isCharging = true;
+            StartCoroutine(slashCharge());
+        }
+
+        if(Input.GetKeyUp(KeyCode.Space) && slashCharger >= 3)
+        {
+            slashCharger = 0;
+            slash.transform.localScale = new Vector3(2, 2, 1);
+            if (PlayerController.faceDirection == Vector3.down || PlayerController.faceDirection == Vector3.up || PlayerController.faceDirection == Vector3.right || PlayerController.faceDirection == Vector3.left)
+            {
+                rb.AddForce(PlayerController.faceDirection * 100);
+                slash.transform.localPosition = PlayerController.faceDirection / 2;
+                slash.transform.localEulerAngles = PlayerController.faceRoto;
+            }
+
+            else if (PlayerController.faceDirection == (Vector3.down + Vector3.right) / 2 || PlayerController.faceDirection == (Vector3.down + Vector3.left) / 2 || PlayerController.faceDirection == (Vector3.up + Vector3.right) / 2 || PlayerController.faceDirection == (Vector3.up + Vector3.left) / 2)
+            {
+                rb.AddForce(PlayerController.faceDirection * 200);
+                slash.transform.localPosition = PlayerController.faceDirection * .6667f;
+                slash.transform.localEulerAngles = PlayerController.faceRoto;
+            }
+
+            StartCoroutine(Slash2());
+        }
+
+        else if (Input.GetKeyUp(KeyCode.Space) && slashCharger < 3)
+        {
+            slashCharger = 0;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && slashCDOn == false)
         {
+            slash.transform.localScale = new Vector3(1, 1, 1);
+
             // slash location updater
-
-//            Debug.Log(animState);
-
-            animState = PlayerController.currentState;
 
             if (PlayerController.faceDirection == Vector3.down || PlayerController.faceDirection == Vector3.up || PlayerController.faceDirection == Vector3.right || PlayerController.faceDirection == Vector3.left)
             {
@@ -55,10 +94,9 @@ public class WeaponController2 : MonoBehaviour
         IEnumerator Slash2()
         {
 
-
             slash.SetActive(true);
 
-            //            rb.AddForce(rb.velocity * 2, ForceMode2D.Impulse);
+            thisIdle = PlayerController.idleState;
 
             slashintCounter = slashintCounter + 1;
 
