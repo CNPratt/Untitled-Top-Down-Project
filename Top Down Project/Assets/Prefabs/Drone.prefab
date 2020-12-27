@@ -117,7 +117,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 50
+  m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -154,8 +154,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848768e423b8547d78af96405d459b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDragging: 0
-  pTrans: {fileID: 0}
-  player: {fileID: 0}
-  dragCounter: 0
-  rb: {fileID: 383803539456323029}

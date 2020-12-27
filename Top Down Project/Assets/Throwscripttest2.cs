@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Throwscripttest : MonoBehaviour
+public class Throwscripttest2 : MonoBehaviour
 {
+    // MODULER MASS BUT LINEAR DRAG = 2
+
+    public float objMass;
+    public float objDrag;
+
     public float speedBefore;
     public GameObject player;
     public CapsuleCollider2D pCol;
@@ -19,8 +24,10 @@ public class Throwscripttest : MonoBehaviour
     {
 //        Debug.Log("collision detected");
 
-        if(canpickUp== true && (collision.collider.name == "Player" && Input.GetKey(KeyCode.O)))
+        if(canpickUp== true && (collision.collider.name == "Player" && Input.GetKey(KeyCode.O) && PlayerController.isHolding == false))
         {
+            PlayerController.isHolding = true;
+
             canpickUp = false;
             isHeld = true;
             gameObject.transform.SetParent(player.transform);
@@ -30,6 +37,7 @@ public class Throwscripttest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         canpickUp = true;
         player = GameObject.Find("Player");
         pCol = GameObject.Find("Player").GetComponent<CapsuleCollider2D>();
@@ -39,6 +47,9 @@ public class Throwscripttest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        objMass = bombRB.mass;
+        objDrag = bombRB.drag;
+
         if (isIgnoringPlayer == true)
         {
             Physics2D.IgnoreCollision(bombCol, pCol);
@@ -57,6 +68,8 @@ public class Throwscripttest : MonoBehaviour
 
         if (isHeld == true)
         {
+            bombRB.velocity = new Vector3(0, 0, 0);
+
             isIgnoringPlayer = true;
 
             bombCol.enabled = false;
@@ -66,28 +79,17 @@ public class Throwscripttest : MonoBehaviour
 
         if (isHeld == true && Input.GetKeyDown(KeyCode.I))
         {
+            PlayerController.isHolding = false;
+
             isHeld = false;
 
 //            throwPoint = gameObject.transform.TransformPoint(gameObject.transform.localPosition);
-
+            
             gameObject.transform.parent = null;
 
             bombRB.isKinematic = false;
 
-            if (PlayerController.faceDirection == Vector3.down || PlayerController.faceDirection == Vector3.up || PlayerController.faceDirection == Vector3.right || PlayerController.faceDirection == Vector3.left)
-            {
-                bombRB.AddForce(PlayerController.faceDirection * 200, ForceMode2D.Impulse);
-            }
-
-            else if (PlayerController.faceDirection == (Vector3.down + Vector3.right) || PlayerController.faceDirection == (Vector3.down + Vector3.left) || PlayerController.faceDirection == (Vector3.up + Vector3.right) || PlayerController.faceDirection == (Vector3.up + Vector3.left))
-            {
-
-//              was facedir*400 but calculated relationship of diagonal travel to be aproxx. 280
-
-                bombRB.AddForce(PlayerController.faceDirection * 200, ForceMode2D.Impulse);
-            }
-
-       //     bombRB.AddForce(PlayerController.faceDirection * 200, ForceMode2D.Impulse);
+            bombRB.AddForce(PlayerController.faceDirection * 10, ForceMode2D.Impulse);
 
             bombRB.gravityScale = .3f;
 
@@ -106,6 +108,7 @@ public class Throwscripttest : MonoBehaviour
 
         IEnumerator skipMethod()
         {
+
             bombCol.enabled = true;
 
             speedBefore = PlayerController.moveSpeed;
@@ -123,7 +126,7 @@ public class Throwscripttest : MonoBehaviour
             yield return new WaitForSeconds(.1f);
 
             bombRB.gravityScale = 0;
-            bombRB.AddForce(Vector3.up * 45, ForceMode2D.Impulse);
+            bombRB.AddForce(Vector3.up * (1.5f * objMass), ForceMode2D.Impulse);
 
             yield return new WaitForSeconds(.2f);
 
@@ -132,16 +135,16 @@ public class Throwscripttest : MonoBehaviour
             yield return new WaitForSeconds(.5f);
 
             bombRB.gravityScale = 0;
-            bombRB.AddForce(Vector3.up * 30, ForceMode2D.Impulse);
+            bombRB.AddForce(Vector3.up * (1 * objMass), ForceMode2D.Impulse);
 
             yield return new WaitForSeconds(.2f);
 
             bombRB.gravityScale = .3f;
 
-            yield return new WaitForSeconds(.3f);
+            yield return new WaitForSeconds(.2f);
 
             bombRB.gravityScale = 0;
-            bombRB.AddForce(Vector3.up * 20, ForceMode2D.Impulse);
+            bombRB.AddForce(Vector3.up * (.6667f * objMass), ForceMode2D.Impulse);
 
             yield return new WaitForSeconds(.2f);
 

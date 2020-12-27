@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static bool isHolding;
+
     private float xVel;
     private float yVel;
     public float velInt;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         dashFXThreshold = 3.5f;
         dashSpeed = 15f;
         dashEffectOn = false;
@@ -44,11 +47,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-  //      if (WeaponController2.slashCDOn)
-  //      {
-  //          currentState = WeaponController2.thisIdle;
-  //      }
-
         //      set parameter animstate in animator
 
         anim.SetInteger("animState", currentState);
@@ -120,25 +118,25 @@ public class PlayerController : MonoBehaviour
 
         else if (currentState == 8 || currentState == 16)
         {
-            faceDirection = (Vector2.down + Vector2.right)/2;
+            faceDirection = (Vector2.down + Vector2.right);
             faceRoto = new Vector3(0, 0, 45);
         }
 
         else if (currentState == 7 || currentState == 15)
         {
-            faceDirection = (Vector2.down + Vector2.left)/2;
+            faceDirection = (Vector2.down + Vector2.left);
             faceRoto = new Vector3(0, 0, -45);
         }
 
         else if (currentState == 6 || currentState == 14)
         {
-            faceDirection = (Vector2.up + Vector2.right)/2;
+            faceDirection = (Vector2.up + Vector2.right);
             faceRoto = new Vector3(0, 0, 135);
         }
 
         else if (currentState == 5 || currentState == 13)
         {
-            faceDirection = (Vector2.up + Vector2.left)/2;
+            faceDirection = (Vector2.up + Vector2.left);
             faceRoto = new Vector3(0, 0, -135);
         }
 

@@ -53,10 +53,10 @@ public class WeaponController2 : MonoBehaviour
                 slash.transform.localEulerAngles = PlayerController.faceRoto;
             }
 
-            else if (PlayerController.faceDirection == (Vector3.down + Vector3.right) / 2 || PlayerController.faceDirection == (Vector3.down + Vector3.left) / 2 || PlayerController.faceDirection == (Vector3.up + Vector3.right) / 2 || PlayerController.faceDirection == (Vector3.up + Vector3.left) / 2)
+            else if (PlayerController.faceDirection == (Vector3.down + Vector3.right) || PlayerController.faceDirection == (Vector3.down + Vector3.left) || PlayerController.faceDirection == (Vector3.up + Vector3.right) || PlayerController.faceDirection == (Vector3.up + Vector3.left))
             {
-                rb.AddForce(PlayerController.faceDirection * 200);
-                slash.transform.localPosition = PlayerController.faceDirection * .6667f;
+                rb.AddForce(PlayerController.faceDirection * 100);
+                slash.transform.localPosition = PlayerController.faceDirection * .3334f;
                 slash.transform.localEulerAngles = PlayerController.faceRoto;
             }
 
@@ -81,10 +81,10 @@ public class WeaponController2 : MonoBehaviour
                 slash.transform.localEulerAngles = PlayerController.faceRoto;
             }
 
-            else if (PlayerController.faceDirection == (Vector3.down + Vector3.right) /2 || PlayerController.faceDirection == (Vector3.down + Vector3.left) / 2 || PlayerController.faceDirection == (Vector3.up + Vector3.right) / 2 || PlayerController.faceDirection == (Vector3.up + Vector3.left) / 2)
+            else if (PlayerController.faceDirection == (Vector3.down + Vector3.right) || PlayerController.faceDirection == (Vector3.down + Vector3.left)  || PlayerController.faceDirection == (Vector3.up + Vector3.right) || PlayerController.faceDirection == (Vector3.up + Vector3.left))
             {
-                rb.AddForce(PlayerController.faceDirection * 200);
-                slash.transform.localPosition = PlayerController.faceDirection * .6667f;
+                rb.AddForce(PlayerController.faceDirection * 100);
+                slash.transform.localPosition = PlayerController.faceDirection * .3334f;
                 slash.transform.localEulerAngles = PlayerController.faceRoto;
             }
 
