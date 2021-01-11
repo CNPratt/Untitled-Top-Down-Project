@@ -18,7 +18,7 @@ public class dashEffect : MonoBehaviour
         prend = GameObject.Find("Player").GetComponent<SpriteRenderer>();
         rend = GetComponent<SpriteRenderer>();
         color = rend.color;
-        color.a = .75f;
+        color.a = 1f;
 
         rend.sprite = prend.sprite;
     }
@@ -26,7 +26,7 @@ public class dashEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerController.currentState == 1 || PlayerController.currentState == 5 || PlayerController.currentState == 6 || PlayerController.currentState == 9 || PlayerController.currentState == 13 || PlayerController.currentState == 14)
+        if(PlayerAnimScript.currentState == 1 || PlayerAnimScript.currentState == 5 || PlayerAnimScript.currentState == 6 || PlayerAnimScript.currentState == 9 || PlayerAnimScript.currentState == 13 || PlayerAnimScript.currentState == 14)
         {
             rend.sortingOrder = 1;
         }
@@ -36,7 +36,7 @@ public class dashEffect : MonoBehaviour
         }
         
         
-//        dashFXstate = PlayerController.currentState;
+//        dashFXstate = PlayerAnimScript.currentState;
 //        anim.SetInteger("animState", dashFXstate);
 
         rend.color = color;

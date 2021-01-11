@@ -1,0 +1,551 @@
+fileFormatVersion: 2
+guid: aa79f7dec4e524376bd08dd9e8a4c66b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7185926882291271973
+    second: kobold base complete idle_0
+  - first:
+      213: -7071166476798622741
+    second: kobold base complete idle_1
+  - first:
+      213: 657108287513741075
+    second: kobold base complete idle_2
+  - first:
+      213: -5376909085569821510
+    second: kobold base complete idle_3
+  - first:
+      213: -9201561556218666151
+    second: kobold base complete idle_4
+  - first:
+      213: 4333163589542708530
+    second: kobold base complete idle_5
+  - first:
+      213: -7620369198904702733
+    second: kobold base complete idle_6
+  - first:
+      213: 4305585558880702971
+    second: kobold base complete idle_7
+  - first:
+      213: 3165902337071043346
+    second: kobold base complete idle_8
+  - first:
+      213: -3375487836650198140
+    second: kobold base complete idle_9
+  - first:
+      213: 5825246489999066806
+    second: kobold base complete idle_10
+  - first:
+      213: 6917638036349919772
+    second: kobold base complete idle_11
+  - first:
+      213: 31890719876446711
+    second: kobold base complete idle_12
+  - first:
+      213: -94976360474398008
+    second: kobold base complete idle_13
+  - first:
+      213: 7547239810863842667
+    second: kobold base complete idle_14
+  - first:
+      213: -2350603906872885390
+    second: kobold base complete idle_15
+  - first:
+      213: 3108956861071896982
+    second: kobold base complete idle_0
+  - first:
+      213: 7645411350589775873
+    second: kobold base complete idle_1
+  - first:
+      213: 7611652576810530711
+    second: kobold base complete idle_2
+  - first:
+      213: 6613776674022224524
+    second: kobold base complete idle_3
+  - first:
+      213: -1915097105007433329
+    second: kobold base complete idle_4
+  - first:
+      213: 4350418791572928754
+    second: kobold base complete idle_5
+  - first:
+      213: 9023281110386760276
+    second: kobold base complete idle_6
+  - first:
+      213: -1150273286463137165
+    second: kobold base complete idle_7
+  - first:
+      213: 7398491043773374849
+    second: kobold base complete idle_8
+  - first:
+      213: -5791868591846579273
+    second: kobold base complete idle_9
+  - first:
+      213: 5150967556544866441
+    second: kobold base complete idle_10
+  - first:
+      213: 2302208207530038233
+    second: kobold base complete idle_11
+  - first:
+      213: 8597820966093828319
+    second: kobold base complete idle_12
+  - first:
+      213: 8636245261917822991
+    second: kobold base complete idle_13
+  - first:
+      213: 7062954999788075251
+    second: kobold base complete idle_14
+  - first:
+      213: -8632162723220966498
+    second: kobold base complete idle_15
+  - first:
+      213: -5992025533716300196
+    second: kobold base complete idle_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kobold base complete idle_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 100
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691343e0bcb352b20800000000000000
+      internalID: 3108956861071896982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 100
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100a4a1cd15f91a60800000000000000
+      internalID: 7645411350589775873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 100
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7977a7ab0b502a960800000000000000
+      internalID: 7611652576810530711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 100
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82fbdef7dad8cb50800000000000000
+      internalID: 6613776674022224524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 68
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8927a164553c65e0800000000000000
+      internalID: -1915097105007433329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_5
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 68
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f873e767dacf5c30800000000000000
+      internalID: 4350418791572928754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 68
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a581dcc52293d70800000000000000
+      internalID: 9023281110386760276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_7
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 68
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a5eb55a886900f0800000000000000
+      internalID: -1150273286463137165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 36
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181650ac768bca660800000000000000
+      internalID: 7398491043773374849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_9
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 36
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b32e3dc3362f9fa0800000000000000
+      internalID: -5791868591846579273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_10
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 36
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9882b61a3b9eb7740800000000000000
+      internalID: 5150967556544866441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_11
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 36
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d311d8ca2613ff10800000000000000
+      internalID: 2302208207530038233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 4
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0bd6e8d98915770800000000000000
+      internalID: 8597820966093828319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_13
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 4
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0023c51f4b1ad770800000000000000
+      internalID: 8636245261917822991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_14
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 4
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8ffe2b628a40260800000000000000
+      internalID: 7062954999788075251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kobold base complete idle_15
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 4
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93bb070db5643880800000000000000
+      internalID: -8632162723220966498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
