@@ -8,7 +8,7 @@ public class pDetectorScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.name == "Player" && !kCom.isAttacking)
         {
 //            Debug.Log("Kobold has detected the player");
             kCom.pDetected = true;

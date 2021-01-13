@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using Pathfinding;
+using UnityEngine.Tilemaps;
 
 public class KoboldPath : MonoBehaviour
 {
+    public KoboldCombat thiskCom;
     public static bool animswitch;
 
+    public Vector3 thisNode;
+    public Vector3 pathRandomizer;
     public BoxCollider2D handlerCol;
 
     public SpriteRenderer rend;
@@ -29,6 +33,9 @@ public class KoboldPath : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+ //       pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+
+        thiskCom = gameObject.GetComponent<KoboldCombat>();
 
         handlerCol = gameObject.GetComponent<BoxCollider2D>();
 
@@ -38,14 +45,16 @@ public class KoboldPath : MonoBehaviour
         koboldRB = GetComponent<Rigidbody2D>();
 
 
-        InvokeRepeating("UpdatePath", 0f, 0.5f);
+        InvokeRepeating("UpdatePath", 0f, .5f);
     }
+
 
     void UpdatePath()
     {
         if (seeker.IsDone())
         {
-            seeker.StartPath(koboldRB.position, target.position, OnPathComplete);
+            pathRandomizer = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0);
+            seeker.StartPath(koboldRB.position, target.position- pathRandomizer, OnPathComplete);
         }
     }
 
@@ -61,6 +70,7 @@ public class KoboldPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         AstarPath.active.UpdateGraphs(handlerCol.bounds);
 
         thisEnemy.transform.position = transform.position;
@@ -90,12 +100,12 @@ public class KoboldPath : MonoBehaviour
         float targDist = Vector2.Distance(koboldRB.position, target.position);
         float awareDistance = 5f;
 
-        if (targDist < awareDistance)
+        if (targDist < awareDistance && !thiskCom.isAttacking)
         {
             //            Debug.Log("Direction: " + direction);
             //            Debug.Log("Force: " + force);
-//                        Debug.Log("Distance to Player: " + Vector2.Distance(koboldRB.position, target.position));
-
+            //                        Debug.Log("Distance to Player: " + Vector2.Distance(koboldRB.position, target.position));
+            koboldRB.velocity = new Vector2(0, 0);
             koboldRB.AddForce(force, ForceMode2D.Force);
         }
         //

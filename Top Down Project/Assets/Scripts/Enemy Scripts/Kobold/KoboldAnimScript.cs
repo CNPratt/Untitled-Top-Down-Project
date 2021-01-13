@@ -10,6 +10,7 @@ public class KoboldAnimScript : MonoBehaviour
 
     public Vector3 faceDirection;
     public Vector3 faceRoto;
+    public Vector3 backDirection;
 
     public Animator anim;
     public int idleState;
@@ -27,11 +28,20 @@ public class KoboldAnimScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         Vector3 pDistancenorm = transform.InverseTransformPoint(player.transform.position).normalized;
 
         anim.SetInteger("animState", currentState);
         //
-        if (!thiskCom.inRange)
+
+        if (thiskCom.spriteSwitch)
+        {
+            Debug.Log("switch on");
+
+            currentState = thiskCom.currAttDir;
+        }
+
+        else if (!thiskCom.inRange && thiskCom.spriteSwitch == false)
         {
             if (koboldRB.velocity.y > 0 && Mathf.Abs(koboldRB.velocity.x) <= Mathf.Abs(koboldRB.velocity.y) / 2)
             {
@@ -97,7 +107,7 @@ public class KoboldAnimScript : MonoBehaviour
             }
         }
 
-        else if (thiskCom.inRange)
+        else if (thiskCom.inRange && thiskCom.spriteSwitch == false)
         {
             if (pDistancenorm.y > 0 && Mathf.Abs(pDistancenorm.x) < .25f)
             {
@@ -137,39 +147,48 @@ public class KoboldAnimScript : MonoBehaviour
                 idleState = 11;
             }
 
-            //           else if ()
-            //           {
-            //               runState = 8;
-            //               currentState = runState;
-            //               idleState = 16;
-
-            //           }
-
-            //           else if ()
-            //           {
-            //               runState = 2;
-            //               currentState = runState;
-            //               idleState = 10;
-            //           }
-
-            //           else if ()
-            //           {
-            //               runState = 6;
-            //               currentState = runState;
-            //               idleState = 16;
-            //           }
-
-            //           else if ()
-            //           {
-            //               runState = 4;
-            //               currentState = runState;
-            //               idleState = 12;
-            //           }
-            //           else
-            //           {
-            //               currentState = idleState;
-            //           }
+            else if (pDistancenorm.y > 0 && pDistancenorm.x < -.25f)
+            {
+//                Debug.Log("inRange look up left" + pDistancenorm);
+            
+                runState = 8;
+                currentState = runState;
+                idleState = 16;
+            
+            }
+            
+            else if (pDistancenorm.y > 0 && pDistancenorm.x > .25f)
+            {
+//                Debug.Log("inRange look up right" + pDistancenorm);
+            
+                runState = 2;
+                currentState = runState;
+                idleState = 10;
+            }
+            
+            else if (pDistancenorm.y < 0 && pDistancenorm.x < -.25f)
+            {
+//                Debug.Log("inRange look down left" + pDistancenorm);
+            
+                runState = 6;
+                currentState = runState;
+                idleState = 16;
+            }
+            
+            else if (pDistancenorm.y < 0 && pDistancenorm.x > .25f)
+            {
+ //               Debug.Log("inRange look down right" + pDistancenorm);
+            
+                runState = 4;
+                currentState = runState;
+                idleState = 12;
+            }
+            else
+            {
+                currentState = idleState;
+            }
         }
+
 
         //          facedirection setting
 
@@ -177,48 +196,57 @@ public class KoboldAnimScript : MonoBehaviour
         {
             faceDirection = Vector2.down;
             faceRoto = new Vector3(0, 0, 0);
+            backDirection = Vector2.up;
+
         }
 
         else if (currentState == 1 || currentState == 9)
         {
             faceDirection = Vector2.up;
             faceRoto = new Vector3(0, 0, 180);
+            backDirection = Vector2.down;
         }
 
         else if (currentState == 7 || currentState == 15)
         {
             faceDirection = Vector2.left;
             faceRoto = new Vector3(0, 0, -90);
+            backDirection = Vector2.right;
         }
 
         else if (currentState == 3 || currentState == 11)
         {
             faceDirection = Vector2.right;
             faceRoto = new Vector3(0, 0, 90);
+            backDirection = Vector2.left;
         }
 
         else if (currentState == 4 || currentState == 12)
         {
             faceDirection = (Vector2.down + Vector2.right);
             faceRoto = new Vector3(0, 0, 45);
+            backDirection = Vector2.up + Vector2.left;
         }
 
         else if (currentState == 6 || currentState == 14)
         {
             faceDirection = (Vector2.down + Vector2.left);
             faceRoto = new Vector3(0, 0, -45);
+            backDirection = Vector2.up + Vector2.right;
         }
 
         else if (currentState == 2 || currentState == 10)
         {
             faceDirection = (Vector2.up + Vector2.right);
             faceRoto = new Vector3(0, 0, 135);
+            backDirection = Vector2.down + Vector2.left;
         }
 
         else if (currentState == 8 || currentState == 16)
         {
             faceDirection = (Vector2.up + Vector2.left);
             faceRoto = new Vector3(0, 0, -135);
+            backDirection = Vector2.down + Vector2.right;
         }
     }
 }

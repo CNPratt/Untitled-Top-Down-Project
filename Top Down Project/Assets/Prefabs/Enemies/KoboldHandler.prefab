@@ -559,7 +559,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -606,6 +606,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kAnimScript: {fileID: 0}
+  currAttDir: 0
+  spriteSwitch: 0
+  isAttacking: 0
   inRange: 0
   pDetected: 0
   pdetector: {fileID: 1209333757}
@@ -630,6 +633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd1acd5513a64a5ebf3939ab4504acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathRandomizer: {x: 0, y: 0, z: 0}
   handlerCol: {fileID: 8516214642272112939}
   rend: {fileID: 8516214642194656242}
   ignorePlayer: 0
@@ -637,7 +641,7 @@ MonoBehaviour:
   gotHit: 0
   thisEnemy: {fileID: 8516214642194656243}
   target: {fileID: 0}
-  speed: 1
+  speed: 80
   nextWaypointDistance: 1
   reachedEndofPath: 0
 --- !u!114 &8163223885167649976
@@ -657,6 +661,7 @@ MonoBehaviour:
   koboldRB: {fileID: 0}
   faceDirection: {x: 0, y: 0, z: 0}
   faceRoto: {x: 0, y: 0, z: 0}
+  backDirection: {x: 0, y: 0, z: 0}
   anim: {fileID: 8516214642194656247}
   idleState: 0
   currentState: 0
