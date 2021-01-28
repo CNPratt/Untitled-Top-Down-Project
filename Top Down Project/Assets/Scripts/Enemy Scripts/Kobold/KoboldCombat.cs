@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class KoboldCombat : MonoBehaviour
+public class KoboldCombat : EnCombatMono
 {
     public KoboldAnimScript kAnimScript;
 
@@ -21,8 +21,8 @@ public class KoboldCombat : MonoBehaviour
     public SpriteRenderer rend;
     public GameObject player;
     public CapsuleCollider2D pCol;
-    public BoxCollider2D enCol;
-    public bool gotHit;
+    public CapsuleCollider2D enCol;
+//    public bool gotHit;
     public bool gotHitSwitch;
     public Rigidbody2D koboldRB;
 
@@ -38,6 +38,8 @@ public class KoboldCombat : MonoBehaviour
             isAttacking = false;
             spriteSwitch = false;
         }
+
+        koboldRB.AddForce((transform.position - player.transform.position).normalized * 5f, ForceMode2D.Impulse);
 
         rend.color = Color.white;
         yield return new WaitForSeconds(.1f);
@@ -61,7 +63,7 @@ public class KoboldCombat : MonoBehaviour
         koboldRB = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         pCol = player.GetComponent<CapsuleCollider2D>();
-        enCol = gameObject.GetComponent<BoxCollider2D>();
+        enCol = gameObject.GetComponent<CapsuleCollider2D>();
 
     }
 
@@ -77,7 +79,7 @@ public class KoboldCombat : MonoBehaviour
         currAttDir = kAnimScript.currentState;
         spriteSwitch = true;
 
-        koboldRB.AddForce(kAnimScript.faceDirection * 2, ForceMode2D.Impulse);
+        koboldRB.AddForce(kAnimScript.faceDirection * 4, ForceMode2D.Impulse);
 
         kslashl.SetActive(true);
         kslashr.SetActive(true);

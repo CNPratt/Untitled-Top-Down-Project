@@ -15,6 +15,24 @@ public class enHitdetector : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.tag == "Weapons" && !handlerAI.gotHit)
+        {
+            handlerAI.gotHit = true;
+            handlerAI.gotHitSwitch = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.tag == "Weapons" && !handlerAI.gotHit)
+        {
+            handlerAI.gotHit = true;
+            handlerAI.gotHitSwitch = true;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

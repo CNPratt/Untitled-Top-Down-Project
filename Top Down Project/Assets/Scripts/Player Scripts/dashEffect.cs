@@ -43,7 +43,7 @@ public class dashEffect : MonoBehaviour
 
         IEnumerator DashFade()
         {
-            color.a = color.a - .15f;
+            color.a = color.a - .05f;
             yield return new WaitForSeconds(.25f);
             fadeOn = false;
         }

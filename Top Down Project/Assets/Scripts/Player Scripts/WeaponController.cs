@@ -22,7 +22,7 @@ public class WeaponController : MonoBehaviour
     void Start()
     {
         slashInterval = .25f;
-        stopInterval = .3f;
+        stopInterval = .4f;
     }
 
     // Update is called once per frame

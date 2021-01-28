@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LRRoomtrans : MonoBehaviour
 {
+    public GameObject roomObjLeft;
+    public GameObject roomObjRight;
+
     public Transform playerTrans;
     public Camera cam;
     public CameraScript camscript;
@@ -16,10 +19,13 @@ public class LRRoomtrans : MonoBehaviour
     {
         if (collision.name == "Player")
         {
-            Debug.Log("trig");
+//            Debug.Log("trig");
 
             if (playerTrans.position.x > transform.position.x)
             {
+                roomObjRight.SetActive(true);
+                roomObjLeft.SetActive(false);
+
                 camscript.maxBounds = rightmaxBounds;
                 camscript.minBounds = rightminBounds;
 
@@ -32,6 +38,9 @@ public class LRRoomtrans : MonoBehaviour
 
             if (playerTrans.position.x < transform.position.x)
             {
+                roomObjLeft.SetActive(true);
+                roomObjRight.SetActive(false);
+
                 camscript.maxBounds = leftmaxBounds;
                 camscript.minBounds = leftminBounds;
 

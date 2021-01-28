@@ -1,0 +1,1604 @@
+fileFormatVersion: 2
+guid: 2aa29e632245048df999aac371009fce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7000826089495898175
+    second: kgunner base complete (2)_0
+  - first:
+      213: 489804837352132068
+    second: kgunner base complete (2)_1
+  - first:
+      213: 6090415014919620245
+    second: kgunner base complete (2)_2
+  - first:
+      213: 9031206835772303789
+    second: kgunner base complete (2)_3
+  - first:
+      213: -1015153426895019513
+    second: kgunner base complete (2)_4
+  - first:
+      213: -4404839569115037182
+    second: kgunner base complete (2)_5
+  - first:
+      213: 7577532039848041417
+    second: kgunner base complete (2)_6
+  - first:
+      213: 8613727496406540869
+    second: kgunner base complete (2)_7
+  - first:
+      213: -4795652777924201250
+    second: kgunner base complete (2)_8
+  - first:
+      213: 8055072448798798770
+    second: kgunner base complete (2)_9
+  - first:
+      213: -6887541907308177435
+    second: kgunner base complete (2)_10
+  - first:
+      213: 7692453207139518867
+    second: kgunner base complete (2)_11
+  - first:
+      213: -5473994662867557293
+    second: kgunner base complete (2)_12
+  - first:
+      213: 3484131588307088794
+    second: kgunner base complete (2)_13
+  - first:
+      213: 5840766330341734685
+    second: kgunner base complete (2)_14
+  - first:
+      213: 5548491011675357999
+    second: kgunner base complete (2)_15
+  - first:
+      213: -7873838786885366517
+    second: kgunner base complete (2)_16
+  - first:
+      213: -2785905586809560777
+    second: kgunner base complete (2)_17
+  - first:
+      213: 2735108721203648313
+    second: kgunner base complete (2)_18
+  - first:
+      213: -3007736539752513089
+    second: kgunner base complete (2)_19
+  - first:
+      213: -8691963292114799153
+    second: kgunner base complete (2)_20
+  - first:
+      213: 958562154941876201
+    second: kgunner base complete (2)_21
+  - first:
+      213: -2974671957252894824
+    second: kgunner base complete (2)_22
+  - first:
+      213: -4775671853549955820
+    second: kgunner base complete (2)_23
+  - first:
+      213: 8796972727725542331
+    second: kgunner base complete (2)_24
+  - first:
+      213: 4694778461176913741
+    second: kgunner base complete (2)_25
+  - first:
+      213: 5614534220366226195
+    second: kgunner base complete (2)_26
+  - first:
+      213: 5158916566449860217
+    second: kgunner base complete (2)_27
+  - first:
+      213: 3558039765630506594
+    second: kgunner base complete (2)_28
+  - first:
+      213: 1727320887124208511
+    second: kgunner base complete (2)_29
+  - first:
+      213: 8876568344508630935
+    second: kgunner base complete (2)_30
+  - first:
+      213: 2747489341575332902
+    second: kgunner base complete (2)_31
+  - first:
+      213: 4446613495437138151
+    second: kgunner base complete (2)_32
+  - first:
+      213: 1400500917864434733
+    second: kgunner base complete (2)_33
+  - first:
+      213: -73992838295222013
+    second: kgunner base complete (2)_34
+  - first:
+      213: -2550608441095266264
+    second: kgunner base complete (2)_35
+  - first:
+      213: 5819166270775753652
+    second: kgunner base complete (2)_36
+  - first:
+      213: 1751763659439086498
+    second: kgunner base complete (2)_37
+  - first:
+      213: -9014502934964776297
+    second: kgunner base complete (2)_38
+  - first:
+      213: 3361644089615004732
+    second: kgunner base complete (2)_39
+  - first:
+      213: -3354422638897323052
+    second: kgunner base complete (2)_40
+  - first:
+      213: -7775870246312775929
+    second: kgunner base complete (2)_41
+  - first:
+      213: 2684128981187777873
+    second: kgunner base complete (2)_42
+  - first:
+      213: 7847696966624704610
+    second: kgunner base complete (2)_43
+  - first:
+      213: -5462617701409100705
+    second: kgunner base complete (2)_44
+  - first:
+      213: -6631373503290530854
+    second: kgunner base complete (2)_45
+  - first:
+      213: 3594715699729194046
+    second: kgunner base complete (2)_46
+  - first:
+      213: 4704612565699145390
+    second: kgunner base complete (2)_47
+  - first:
+      213: -8104910258780837582
+    second: kgunner base complete (2)_48
+  - first:
+      213: 2071929967243382435
+    second: kgunner base complete (2)_49
+  - first:
+      213: -1996925609987101440
+    second: kgunner base complete (2)_50
+  - first:
+      213: 4924774811666366019
+    second: kgunner base complete (2)_51
+  - first:
+      213: 1673681100217068541
+    second: kgunner base complete (2)_52
+  - first:
+      213: -8532432877142695585
+    second: kgunner base complete (2)_53
+  - first:
+      213: -9090236836481351979
+    second: kgunner base complete (2)_54
+  - first:
+      213: 9092717007954188339
+    second: kgunner base complete (2)_55
+  - first:
+      213: 54550200871958680
+    second: kgunner base complete (2)_56
+  - first:
+      213: -8833795459017862364
+    second: kgunner base complete (2)_57
+  - first:
+      213: 244468316856559742
+    second: kgunner base complete (2)_58
+  - first:
+      213: 7919247320334434992
+    second: kgunner base complete (2)_59
+  - first:
+      213: -8948734026702560096
+    second: kgunner base complete (2)_60
+  - first:
+      213: -4600251763644820315
+    second: kgunner base complete (2)_61
+  - first:
+      213: -6514258890842311081
+    second: kgunner base complete (2)_62
+  - first:
+      213: 5333544125891257941
+    second: kgunner base complete (2)_63
+  - first:
+      213: -4514157548940978118
+    second: kgunner base complete (2)_64
+  - first:
+      213: -5153580398359737932
+    second: kgunner base complete (2)_65
+  - first:
+      213: 3347172130801033054
+    second: kgunner base complete (2)_66
+  - first:
+      213: -519358000725198630
+    second: kgunner base complete (2)_67
+  - first:
+      213: -8740531422194119827
+    second: kgunner base complete (2)_68
+  - first:
+      213: 7175724410208790511
+    second: kgunner base complete (2)_69
+  - first:
+      213: -8498551192026737434
+    second: kgunner base complete (2)_70
+  - first:
+      213: -3251839518597406620
+    second: kgunner base complete (2)_71
+  - first:
+      213: 6588222313508285817
+    second: kgunner base complete (2)_72
+  - first:
+      213: -1856546835819299932
+    second: kgunner base complete (2)_73
+  - first:
+      213: -8033263729728215648
+    second: kgunner base complete (2)_74
+  - first:
+      213: -4237338428151192615
+    second: kgunner base complete (2)_75
+  - first:
+      213: 8305328394527248319
+    second: kgunner base complete (2)_76
+  - first:
+      213: -1709237742849028508
+    second: kgunner base complete (2)_77
+  - first:
+      213: 3472214753774106705
+    second: kgunner base complete (2)_78
+  - first:
+      213: -772673151097892632
+    second: kgunner base complete (2)_79
+  - first:
+      213: -4296461012457251659
+    second: kgunner base complete (2)_80
+  - first:
+      213: -304289702703947617
+    second: kgunner base complete (2)_81
+  - first:
+      213: -2083054674322166268
+    second: kgunner base complete (2)_82
+  - first:
+      213: 4890698251347520182
+    second: kgunner base complete (2)_83
+  - first:
+      213: -2283421339582367941
+    second: kgunner base complete (2)_84
+  - first:
+      213: 2036627652116326343
+    second: kgunner base complete (2)_85
+  - first:
+      213: 3415082632414587343
+    second: kgunner base complete (2)_86
+  - first:
+      213: 7069874006621248041
+    second: kgunner base complete (2)_87
+  - first:
+      213: 5098443220416628800
+    second: kgunner base complete (2)_88
+  - first:
+      213: 7283515997125624430
+    second: kgunner base complete (2)_89
+  - first:
+      213: -6308228214515814820
+    second: kgunner base complete (2)_90
+  - first:
+      213: 8927216051378645413
+    second: kgunner base complete (2)_91
+  - first:
+      213: -2427838637064736258
+    second: kgunner base complete (2)_92
+  - first:
+      213: -3322441951912437834
+    second: kgunner base complete (2)_93
+  - first:
+      213: -7520514727695499407
+    second: kgunner base complete (2)_94
+  - first:
+      213: 8422657891558408754
+    second: kgunner base complete (2)_95
+  - first:
+      213: 4205933451268363037
+    second: kgunner base complete (2)_96
+  - first:
+      213: -6973789429083372682
+    second: kgunner base complete (2)_97
+  - first:
+      213: 1870000893318284558
+    second: kgunner base complete (2)_98
+  - first:
+      213: 595832224755449106
+    second: kgunner base complete (2)_99
+  - first:
+      213: -7161568477963920246
+    second: kgunner base complete (2)_100
+  - first:
+      213: -5176016796324772543
+    second: kgunner base complete (2)_101
+  - first:
+      213: 9220025052211237693
+    second: kgunner base complete (2)_102
+  - first:
+      213: 2277389150850995582
+    second: kgunner base complete (2)_103
+  - first:
+      213: -1238002399919894302
+    second: kgunner base complete (2)_104
+  - first:
+      213: 3068213312633241249
+    second: kgunner base complete (2)_105
+  - first:
+      213: -2848374782442313515
+    second: kgunner base complete (2)_106
+  - first:
+      213: 2220709892041926347
+    second: kgunner base complete (2)_107
+  - first:
+      213: 6435102762567042212
+    second: kgunner base complete (2)_108
+  - first:
+      213: -3251166394015298765
+    second: kgunner base complete (2)_109
+  - first:
+      213: 6451493373155897971
+    second: kgunner base complete (2)_110
+  - first:
+      213: -754792301622667317
+    second: kgunner base complete (2)_111
+  - first:
+      213: -8981864161789304109
+    second: kgunner base complete (2)_112
+  - first:
+      213: 1569242096433753426
+    second: kgunner base complete (2)_113
+  - first:
+      213: -2193947094808397574
+    second: kgunner base complete (2)_114
+  - first:
+      213: 3014973112123123825
+    second: kgunner base complete (2)_115
+  - first:
+      213: 5623093759828109979
+    second: kgunner base complete (2)_116
+  - first:
+      213: 6924097550951710830
+    second: kgunner base complete (2)_117
+  - first:
+      213: -290746057527161112
+    second: kgunner base complete (2)_118
+  - first:
+      213: 2029081795403245233
+    second: kgunner base complete (2)_119
+  - first:
+      213: -4248230395833806112
+    second: kgunner base complete (2)_120
+  - first:
+      213: 6544698276181899658
+    second: kgunner base complete (2)_121
+  - first:
+      213: -831310624952164517
+    second: kgunner base complete (2)_122
+  - first:
+      213: -5280218929064248605
+    second: kgunner base complete (2)_123
+  - first:
+      213: 5675580922000571074
+    second: kgunner base complete (2)_124
+  - first:
+      213: -8614931874671867206
+    second: kgunner base complete (2)_125
+  - first:
+      213: -2301468352008834269
+    second: kgunner base complete (2)_126
+  - first:
+      213: 4841239758355877284
+    second: kgunner base complete (2)_127
+  - first:
+      213: -1219039980311676783
+    second: kgunner base complete (2)_128
+  - first:
+      213: -7784662869292756140
+    second: kgunner base complete (2)_129
+  - first:
+      213: -6183634391202473739
+    second: kgunner base complete (2)_130
+  - first:
+      213: -8517633660776687421
+    second: kgunner base complete (2)_131
+  - first:
+      213: -3060068184864832402
+    second: kgunner base complete (2)_132
+  - first:
+      213: 1843752479338200341
+    second: kgunner base complete (2)_133
+  - first:
+      213: -207404288961861183
+    second: kgunner base complete (2)_134
+  - first:
+      213: 7743988715176071994
+    second: kgunner base complete (2)_135
+  - first:
+      213: -373215347211069145
+    second: kgunner base complete (2)_136
+  - first:
+      213: 5592013632224301964
+    second: kgunner base complete (2)_137
+  - first:
+      213: 5906817644210839785
+    second: kgunner base complete (2)_138
+  - first:
+      213: -8341927635081754654
+    second: kgunner base complete (2)_139
+  - first:
+      213: 7899850361038270772
+    second: kgunner base complete (2)_140
+  - first:
+      213: -4223808725235639409
+    second: kgunner base complete (2)_141
+  - first:
+      213: 741142919227143065
+    second: kgunner base complete (2)_142
+  - first:
+      213: -4082675211408390603
+    second: kgunner base complete (2)_143
+  - first:
+      213: 8752970260919995111
+    second: kgunner base complete (2)_144
+  - first:
+      213: -6065300339173751854
+    second: kgunner base complete (2)_145
+  - first:
+      213: -1977442767670385438
+    second: kgunner base complete (2)_146
+  - first:
+      213: -2247705255745666719
+    second: kgunner base complete (2)_147
+  - first:
+      213: -4512618496003821590
+    second: kgunner base complete (2)_148
+  - first:
+      213: -8692392223203373447
+    second: kgunner base complete (2)_149
+  - first:
+      213: 5870175634689827429
+    second: kgunner base complete (2)_150
+  - first:
+      213: 7993296781665007172
+    second: kgunner base complete (2)_151
+  - first:
+      213: -6756484279660163096
+    second: kgunner base complete (2)_152
+  - first:
+      213: -1968578795946321735
+    second: kgunner base complete (2)_153
+  - first:
+      213: 22394176957933923
+    second: kgunner base complete (2)_154
+  - first:
+      213: 5835694925934427532
+    second: kgunner base complete (2)_155
+  - first:
+      213: -6201316136275908224
+    second: kgunner base complete (2)_156
+  - first:
+      213: -7017006071922763046
+    second: kgunner base complete (2)_157
+  - first:
+      213: -2920284574857658212
+    second: kgunner base complete (2)_158
+  - first:
+      213: -3735916797169883358
+    second: kgunner base complete (2)_159
+  - first:
+      213: -4861774809051442089
+    second: kgunner base complete (2)_160
+  - first:
+      213: -51866173109210425
+    second: kgunner base complete (2)_161
+  - first:
+      213: 5444233223554045929
+    second: kgunner base complete (2)_162
+  - first:
+      213: 5528929139027068690
+    second: kgunner base complete (2)_163
+  - first:
+      213: 5260463964050912261
+    second: kgunner base complete (2)_164
+  - first:
+      213: -2902079856847529873
+    second: kgunner base complete (2)_165
+  - first:
+      213: -4253791463059688017
+    second: kgunner base complete (2)_166
+  - first:
+      213: 6034117067890608067
+    second: kgunner base complete (2)_167
+  - first:
+      213: -2085415784860780613
+    second: kgunner base complete (2)_168
+  - first:
+      213: 6640471519413262978
+    second: kgunner base complete (2)_169
+  - first:
+      213: 627597943842027141
+    second: kgunner base complete (2)_170
+  - first:
+      213: 2080227522888088495
+    second: kgunner base complete (2)_171
+  - first:
+      213: 6687138277070404348
+    second: kgunner base complete (2)_172
+  - first:
+      213: 2284287818727466801
+    second: kgunner base complete (2)_173
+  - first:
+      213: 7015996527381128608
+    second: kgunner base complete (2)_174
+  - first:
+      213: 4048819979746680281
+    second: kgunner base complete (2)_175
+  - first:
+      213: 392976671322279775
+    second: kgunner base complete (2)_176
+  - first:
+      213: -3603798663757703083
+    second: kgunner base complete (2)_177
+  - first:
+      213: -3952076647507184468
+    second: kgunner base complete (2)_178
+  - first:
+      213: -5280933583430955514
+    second: kgunner base complete (2)_179
+  - first:
+      213: -6560510565470114352
+    second: kgunner base complete (2)_180
+  - first:
+      213: 1878125048014403053
+    second: kgunner base complete (2)_181
+  - first:
+      213: -6534933911556589390
+    second: kgunner base complete (2)_182
+  - first:
+      213: -665732690549499171
+    second: kgunner base complete (2)_183
+  - first:
+      213: 2223393471316925018
+    second: kgunner base complete (2)_184
+  - first:
+      213: -8180603000733439252
+    second: kgunner base complete (2)_185
+  - first:
+      213: 675696880284290719
+    second: kgunner base complete (2)_186
+  - first:
+      213: 863357499405789943
+    second: kgunner base complete (2)_187
+  - first:
+      213: -7062103249019534882
+    second: kgunner base complete (2)_188
+  - first:
+      213: -7911260156333902121
+    second: kgunner base complete (2)_189
+  - first:
+      213: -8802552756538502310
+    second: kgunner base complete (2)_190
+  - first:
+      213: -9193960644595994073
+    second: kgunner base complete (2)_191
+  - first:
+      213: 3455719086640748233
+    second: kgunner base complete (2)_192
+  - first:
+      213: 6038742927499546862
+    second: kgunner base complete (2)_193
+  - first:
+      213: 6333065032606079176
+    second: kgunner base complete (2)_194
+  - first:
+      213: 3686549733559032995
+    second: kgunner base complete (2)_195
+  - first:
+      213: -7501286234048873875
+    second: kgunner base complete (2)_196
+  - first:
+      213: -3171622535475365279
+    second: kgunner base complete (2)_197
+  - first:
+      213: -5617200565015902443
+    second: kgunner base complete (2)_198
+  - first:
+      213: 31001237374976780
+    second: kgunner base complete (2)_199
+  - first:
+      213: 7180391089356288839
+    second: kgunner base complete (2)_200
+  - first:
+      213: -2365559973279706002
+    second: kgunner base complete (2)_201
+  - first:
+      213: -1736030143121801722
+    second: kgunner base complete (2)_202
+  - first:
+      213: -5577950746312319292
+    second: kgunner base complete (2)_203
+  - first:
+      213: -1433981688841545969
+    second: kgunner base complete (2)_204
+  - first:
+      213: -7985847607695936724
+    second: kgunner base complete (2)_205
+  - first:
+      213: 6596738505108501823
+    second: kgunner base complete (2)_206
+  - first:
+      213: -7877433739891792524
+    second: kgunner base complete (2)_207
+  - first:
+      213: 8499421100675406291
+    second: kgunner base complete (2)_208
+  - first:
+      213: -1788280741071583877
+    second: kgunner base complete (2)_209
+  - first:
+      213: 2439840574078023915
+    second: kgunner base complete (2)_210
+  - first:
+      213: -7618004480983989505
+    second: kgunner base complete (2)_211
+  - first:
+      213: 7406289542597865515
+    second: kgunner base complete (2)_212
+  - first:
+      213: -1028164255278888970
+    second: kgunner base complete (2)_213
+  - first:
+      213: 2774094581193693650
+    second: kgunner base complete (2)_214
+  - first:
+      213: -3014218287383246878
+    second: kgunner base complete (2)_215
+  - first:
+      213: -6761167214693873669
+    second: kgunner base complete (2)_216
+  - first:
+      213: 167581056977374098
+    second: kgunner base complete (2)_217
+  - first:
+      213: -156917541272312786
+    second: kgunner base complete (2)_218
+  - first:
+      213: 4948365316617929591
+    second: kgunner base complete (2)_219
+  - first:
+      213: 7140097692084130540
+    second: kgunner base complete (2)_220
+  - first:
+      213: -3524945875932283132
+    second: kgunner base complete (2)_221
+  - first:
+      213: 9003928550084448889
+    second: kgunner base complete (2)_222
+  - first:
+      213: -5503813935993877401
+    second: kgunner base complete (2)_223
+  - first:
+      213: 4937867498235200380
+    second: kgunner base complete (2)_224
+  - first:
+      213: -274191235351218388
+    second: kgunner base complete (2)_225
+  - first:
+      213: -5900403760708477276
+    second: kgunner base complete (2)_226
+  - first:
+      213: -3894054323068042677
+    second: kgunner base complete (2)_227
+  - first:
+      213: 586230852778837697
+    second: kgunner base complete (2)_228
+  - first:
+      213: -5367495576048124080
+    second: kgunner base complete (2)_229
+  - first:
+      213: -6613022036574942879
+    second: kgunner base complete (2)_230
+  - first:
+      213: 3123675669497256518
+    second: kgunner base complete (2)_231
+  - first:
+      213: -3541648652509610416
+    second: kgunner base complete (2)_232
+  - first:
+      213: -2523608422244648331
+    second: kgunner base complete (2)_233
+  - first:
+      213: 8834645097576914968
+    second: kgunner base complete (2)_234
+  - first:
+      213: -228016600230354506
+    second: kgunner base complete (2)_235
+  - first:
+      213: 5804441762489959106
+    second: kgunner base complete (2)_236
+  - first:
+      213: 4053195111767047510
+    second: kgunner base complete (2)_237
+  - first:
+      213: 3928081308908784347
+    second: kgunner base complete (2)_238
+  - first:
+      213: 217651308382859239
+    second: kgunner base complete (2)_239
+  - first:
+      213: -5850130599747674504
+    second: kgunner base complete (2)_240
+  - first:
+      213: 943739937106632958
+    second: kgunner base complete (2)_241
+  - first:
+      213: -4973361923249373502
+    second: kgunner base complete (2)_242
+  - first:
+      213: 1629719017834943846
+    second: kgunner base complete (2)_243
+  - first:
+      213: -3621161655142061710
+    second: kgunner base complete (2)_244
+  - first:
+      213: -7046575656609039977
+    second: kgunner base complete (2)_245
+  - first:
+      213: -2927067739032470810
+    second: kgunner base complete (2)_246
+  - first:
+      213: -2787216689695052296
+    second: kgunner base complete (2)_247
+  - first:
+      213: -6103553661749734119
+    second: kgunner base complete (2)_248
+  - first:
+      213: -4402513377385152804
+    second: kgunner base complete (2)_249
+  - first:
+      213: 5878787075599531383
+    second: kgunner base complete (2)_250
+  - first:
+      213: 4551164530130936
+    second: kgunner base complete (2)_251
+  - first:
+      213: 2174636267438405605
+    second: kgunner base complete (2)_252
+  - first:
+      213: 6998241017995504617
+    second: kgunner base complete (2)_253
+  - first:
+      213: -3951258825140394039
+    second: kgunner base complete (2)_254
+  - first:
+      213: -4384573134561800147
+    second: kgunner base complete (2)_255
+  - first:
+      213: 5913482077170496527
+    second: kgunner base complete (2)_256
+  - first:
+      213: 3279371515372418570
+    second: kgunner base complete (2)_257
+  - first:
+      213: -1975947288770616514
+    second: kgunner base complete (2)_258
+  - first:
+      213: 513070811966430962
+    second: kgunner base complete (2)_259
+  - first:
+      213: 7336792894602657219
+    second: kgunner base complete (2)_260
+  - first:
+      213: 2610184451403648190
+    second: kgunner base complete (2)_261
+  - first:
+      213: 5202355587031060018
+    second: kgunner base complete (2)_262
+  - first:
+      213: -8002714461776082496
+    second: kgunner base complete (2)_263
+  - first:
+      213: 3911702520315456652
+    second: kgunner base complete (2)_264
+  - first:
+      213: 4841456531928803364
+    second: kgunner base complete (2)_265
+  - first:
+      213: -841453660307658034
+    second: kgunner base complete (2)_266
+  - first:
+      213: 6602002715280309024
+    second: kgunner base complete (2)_267
+  - first:
+      213: -9065535848530584043
+    second: kgunner base complete (2)_268
+  - first:
+      213: 2701539523110676141
+    second: kgunner base complete (2)_269
+  - first:
+      213: -3981121133642206250
+    second: kgunner base complete (2)_270
+  - first:
+      213: -8419938795620702753
+    second: kgunner base complete (2)_271
+  - first:
+      213: 2604962465526334630
+    second: kgunner base complete (2)_272
+  - first:
+      213: 5796592400157945414
+    second: kgunner base complete (2)_273
+  - first:
+      213: 3288421095294630458
+    second: kgunner base complete (2)_274
+  - first:
+      213: 5081109267935704069
+    second: kgunner base complete (2)_275
+  - first:
+      213: -9215898663492247840
+    second: kgunner base complete (2)_276
+  - first:
+      213: -3637688553025488147
+    second: kgunner base complete (2)_277
+  - first:
+      213: 9017508719818030738
+    second: kgunner base complete (2)_278
+  - first:
+      213: -4919181865013327265
+    second: kgunner base complete (2)_279
+  - first:
+      213: 4086079256557142143
+    second: kgunner base complete (2)_280
+  - first:
+      213: 298960356396613185
+    second: kgunner base complete (2)_281
+  - first:
+      213: 5706369645792400161
+    second: kgunner base complete (2)_282
+  - first:
+      213: -5584489263731059852
+    second: kgunner base complete (2)_283
+  - first:
+      213: -110317550363947191
+    second: kgunner base complete (2)_284
+  - first:
+      213: -9221248458809145587
+    second: kgunner base complete (2)_285
+  - first:
+      213: -7797342731677413987
+    second: kgunner base complete (2)_286
+  - first:
+      213: -5964907195762023582
+    second: kgunner base complete (2)_287
+  - first:
+      213: -4481239777400519411
+    second: kgunner base complete (2)_288
+  - first:
+      213: 8504438866810700833
+    second: kgunner base complete (2)_289
+  - first:
+      213: -4906911121368436125
+    second: kgunner base complete (2)_290
+  - first:
+      213: 4016950355824030542
+    second: kgunner base complete (2)_291
+  - first:
+      213: -6996215932551749712
+    second: kgunner base complete (2)_292
+  - first:
+      213: -2036089576690756515
+    second: kgunner base complete (2)_293
+  - first:
+      213: 7993662226629107097
+    second: kgunner base complete (2)_294
+  - first:
+      213: -7268972215700097987
+    second: kgunner base complete (2)_295
+  - first:
+      213: -2802787028839383405
+    second: kgunner base complete (2)_296
+  - first:
+      213: 1704651589304474449
+    second: kgunner base complete (2)_297
+  - first:
+      213: 6158135938103521983
+    second: kgunner base complete (2)_298
+  - first:
+      213: -9185518870146092310
+    second: kgunner base complete (2)_299
+  - first:
+      213: -517647462825867935
+    second: kgunner base complete (2)_300
+  - first:
+      213: 2170709992683183693
+    second: kgunner base complete (2)_301
+  - first:
+      213: -8476526921213296632
+    second: kgunner base complete (2)_302
+  - first:
+      213: -252740967925226352
+    second: kgunner base complete (2)_303
+  - first:
+      213: 6983972277176008919
+    second: kgunner base complete (2)_304
+  - first:
+      213: -5163724046249009426
+    second: kgunner base complete (2)_305
+  - first:
+      213: 3191883565049689866
+    second: kgunner base complete (2)_306
+  - first:
+      213: 3169595036882519065
+    second: kgunner base complete (2)_307
+  - first:
+      213: -2494124202988995926
+    second: kgunner base complete (2)_308
+  - first:
+      213: 1872680366460680419
+    second: kgunner base complete (2)_309
+  - first:
+      213: -8488720837754827713
+    second: kgunner base complete (2)_310
+  - first:
+      213: 3945572646300388685
+    second: kgunner base complete (2)_311
+  - first:
+      213: -500067192892039244
+    second: kgunner base complete (2)_312
+  - first:
+      213: -8817843134777402618
+    second: kgunner base complete (2)_313
+  - first:
+      213: 1365209426893396578
+    second: kgunner base complete (2)_314
+  - first:
+      213: 7132751106593478389
+    second: kgunner base complete (2)_315
+  - first:
+      213: -8890079818683902331
+    second: kgunner base complete (2)_316
+  - first:
+      213: -5660877302295778260
+    second: kgunner base complete (2)_317
+  - first:
+      213: -5905457883316403438
+    second: kgunner base complete (2)_318
+  - first:
+      213: -8705160131268270062
+    second: kgunner base complete (2)_319
+  - first:
+      213: 450378825789613227
+    second: kgunner base complete (2)_320
+  - first:
+      213: -2391567883394741078
+    second: kgunner base complete (2)_321
+  - first:
+      213: 8264334905781201023
+    second: kgunner base complete (2)_322
+  - first:
+      213: -1079133287368088927
+    second: kgunner base complete (2)_323
+  - first:
+      213: 7262158742428021235
+    second: kgunner base complete (2)_324
+  - first:
+      213: 7694172329467320873
+    second: kgunner base complete (2)_325
+  - first:
+      213: 7905014719602898558
+    second: kgunner base complete (2)_326
+  - first:
+      213: -4921350742214911552
+    second: kgunner base complete (2)_327
+  - first:
+      213: -2371267705919669255
+    second: kgunner base complete (2)_328
+  - first:
+      213: -1640080148422285063
+    second: kgunner base complete (2)_329
+  - first:
+      213: -7667392296181478774
+    second: kgunner base complete (2)_330
+  - first:
+      213: -8026980557518491132
+    second: kgunner base complete (2)_331
+  - first:
+      213: 1173045517566457894
+    second: kgunner base complete (2)_332
+  - first:
+      213: 7670152933793608863
+    second: kgunner base complete (2)_333
+  - first:
+      213: 7890069982323147530
+    second: kgunner base complete (2)_334
+  - first:
+      213: -1031339531672304337
+    second: kgunner base complete (2)_335
+  - first:
+      213: 3703933054693973034
+    second: kgunner base complete (2)_336
+  - first:
+      213: -3257548195755618019
+    second: kgunner base complete (2)_337
+  - first:
+      213: -4769609698949176831
+    second: kgunner base complete (2)_338
+  - first:
+      213: -8776671683523706885
+    second: kgunner base complete (2)_339
+  - first:
+      213: 8228724899165864294
+    second: kgunner base complete (2)_340
+  - first:
+      213: 5903328593463593007
+    second: kgunner base complete (2)_341
+  - first:
+      213: 4282319532823728916
+    second: kgunner base complete (2)_342
+  - first:
+      213: -8015022480989594603
+    second: kgunner base complete (2)_343
+  - first:
+      213: 1872680668741243864
+    second: kgunner base complete (2)_344
+  - first:
+      213: 1506625558358483078
+    second: kgunner base complete (2)_345
+  - first:
+      213: -2337966485933860946
+    second: kgunner base complete (2)_346
+  - first:
+      213: -3187308069340062142
+    second: kgunner base complete (2)_347
+  - first:
+      213: -6929564443371915718
+    second: kgunner base complete (2)_348
+  - first:
+      213: 7964219641688057639
+    second: kgunner base complete (2)_349
+  - first:
+      213: -3955815190783914276
+    second: kgunner base complete (2)_350
+  - first:
+      213: 3763729625349446827
+    second: kgunner base complete (2)_351
+  - first:
+      213: -7928552695580528168
+    second: kgunner base complete (2)_352
+  - first:
+      213: 1734548065383540461
+    second: kgunner base complete (2)_353
+  - first:
+      213: 6147388045291330547
+    second: kgunner base complete (2)_354
+  - first:
+      213: 5273027467969097490
+    second: kgunner base complete (2)_355
+  - first:
+      213: -4565748416460341625
+    second: kgunner base complete (2)_356
+  - first:
+      213: -5463162309531321819
+    second: kgunner base complete (2)_357
+  - first:
+      213: 1009999879950135365
+    second: kgunner base complete (2)_358
+  - first:
+      213: 9204658765404320694
+    second: kgunner base complete (2)_359
+  - first:
+      213: 721502124196956015
+    second: kgunner base complete (2)_360
+  - first:
+      213: -4969668160759506740
+    second: kgunner base complete (2)_361
+  - first:
+      213: -3557416974522714169
+    second: kgunner base complete (2)_362
+  - first:
+      213: -2250639052018976631
+    second: kgunner base complete (2)_363
+  - first:
+      213: -1631954122961419925
+    second: kgunner base complete (2)_364
+  - first:
+      213: 2610811492026404969
+    second: kgunner base complete (2)_365
+  - first:
+      213: 1294816832581961752
+    second: kgunner base complete (2)_366
+  - first:
+      213: -1169782008997951443
+    second: kgunner base complete (2)_367
+  - first:
+      213: -3845301313184146322
+    second: kgunner base complete (2)_368
+  - first:
+      213: -4762438865766682550
+    second: kgunner base complete (2)_369
+  - first:
+      213: -1324340955547902147
+    second: kgunner base complete (2)_370
+  - first:
+      213: -2995097419231627652
+    second: kgunner base complete (2)_371
+  - first:
+      213: 8421797445281752738
+    second: kgunner base complete (2)_372
+  - first:
+      213: 4830938828090144013
+    second: kgunner base complete (2)_373
+  - first:
+      213: -3835307714011079462
+    second: kgunner base complete (2)_374
+  - first:
+      213: 989135622026824623
+    second: kgunner base complete (2)_375
+  - first:
+      213: -7715477338937239661
+    second: kgunner base complete (2)_376
+  - first:
+      213: 7438972714465220817
+    second: kgunner base complete (2)_377
+  - first:
+      213: 2631404658986083434
+    second: kgunner base complete (2)_378
+  - first:
+      213: -7392097172198876226
+    second: kgunner base complete (2)_379
+  - first:
+      213: -4164418315298907006
+    second: kgunner base complete (2)_380
+  - first:
+      213: -5821846712724881590
+    second: kgunner base complete (2)_381
+  - first:
+      213: -7636714351233164204
+    second: kgunner base complete (2)_382
+  - first:
+      213: -2856057883966506174
+    second: kgunner base complete (2)_383
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kgunner base complete (2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c75f4973c118de90800000000000000
+      internalID: -7000826089495898175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 960
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed44ab87e22cc600800000000000000
+      internalID: 489804837352132068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 960
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5964dfa0030858450800000000000000
+      internalID: 6090415014919620245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9a94b84ca455d70800000000000000
+      internalID: 9031206835772303789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702e665365379e1f0800000000000000
+      internalID: -1015153426895019513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202405eefbdded2c0800000000000000
+      internalID: -4404839569115037182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_6
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb98452e3dc82960800000000000000
+      internalID: 7577532039848041417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_7
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 640
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542a35f358b1a8770800000000000000
+      internalID: 8613727496406540869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed476b9f43b627db0800000000000000
+      internalID: -4795652777924201250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b330bee6bd59cf60800000000000000
+      internalID: 8055072448798798770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7974780298a60a0800000000000000
+      internalID: -6887541907308177435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 320
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3998dde7f6511ca60800000000000000
+      internalID: 7692453207139518867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35425694bd67804b0800000000000000
+      internalID: -5473994662867557293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95f2c7483f1a5030800000000000000
+      internalID: 3484131588307088794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_14
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19b41028029e0150800000000000000
+      internalID: 5840766330341734685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kgunner base complete (2)_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f238b5e8d23300d40800000000000000
+      internalID: 5548491011675357999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

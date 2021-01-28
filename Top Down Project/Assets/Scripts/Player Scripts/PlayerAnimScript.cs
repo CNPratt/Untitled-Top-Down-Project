@@ -19,7 +19,7 @@ public class PlayerAnimScript : MonoBehaviour
 
         //      anim state setter
 
-        if (!PlayerController.beenHit)
+        if (!PlayerController.beenHit && !WeaponController.slashCDOn)
         {
             if (Input.GetKey("w") && !Input.GetKey("d") && !Input.GetKey("a"))
             {

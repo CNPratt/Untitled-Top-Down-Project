@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
+    public EnCombatMono lastCombatAI;
+    public Vector3 lastColPos;
     public SpriteRenderer rend;
     public Collider2D lastEnemyCollider;
     public static bool beenHit;
@@ -54,22 +56,23 @@ public class PlayerController : MonoBehaviour
 
     void DashFX()
     {
-        if (xVel > dashFXThreshold || yVel > dashFXThreshold)
-        {
+   //     if (xVel > dashFXThreshold || yVel > dashFXThreshold)
+   //     {
             Instantiate(dashFX, transform.position, transform.rotation);
-        }
+   //     }
         return;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Enemy" && beenHit == false)
+        if (collider.tag == "Enemy" && beenHit == false && !collider.GetComponentInParent<EnCombatMono>().gotHit)
         {
       //      Debug.Log("Initial enemy hit.");
 
             PlayerAnimScript.currentState = PlayerAnimScript.idleState;
 
             lastEnemyCollider = collider.GetComponentInParent<Collider2D>();
+            lastColPos = lastEnemyCollider.transform.position;
 
             rb.velocity = new Vector2(0, 0);
 
@@ -78,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
         if (collider.tag == "Enemy" && beenHit == true)
         {
-            rb.AddForce((transform.position - lastEnemyCollider.transform.position).normalized * 5f, ForceMode2D.Impulse);
+            rb.AddForce((transform.position - lastColPos).normalized * 5f, ForceMode2D.Impulse);
     //        Debug.Log("Hit while beenHit = true" + (transform.position - lastEnemyCollider.transform.position));
         }
 
@@ -90,6 +93,7 @@ public class PlayerController : MonoBehaviour
             PlayerAnimScript.currentState = PlayerAnimScript.idleState;
 
             lastEnemyCollider = collider.GetComponentInParent<Collider2D>();
+            lastColPos = lastEnemyCollider.transform.position;
 
             rb.velocity = new Vector2(0, 0);
 
@@ -98,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
         if (collider.tag == "Enemy Weapons" && beenHit == true)
         {
-            rb.AddForce((transform.position - lastEnemyCollider.transform.position).normalized * 5f, ForceMode2D.Impulse);
+            rb.AddForce((transform.position - lastColPos).normalized * 5f, ForceMode2D.Impulse);
 
         }
 
@@ -106,40 +110,42 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy" && beenHit == false)
+        if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit)
         {
             //      Debug.Log("Initial enemy hit.");
 
             PlayerAnimScript.currentState = PlayerAnimScript.idleState;
 
             lastEnemyCollider = collision.GetComponentInParent<Collider2D>();
+            lastColPos = lastEnemyCollider.transform.position;
 
             StartCoroutine(Recoil());
         }
 
         if (collision.tag == "Enemy" && beenHit == true)
         {
-            rb.AddForce((transform.position - lastEnemyCollider.transform.position).normalized * 2f, ForceMode2D.Force);
+            rb.AddForce((transform.position - lastColPos).normalized * 2f, ForceMode2D.Force);
             //        Debug.Log("Hit while beenHit = true" + (transform.position - lastEnemyCollider.transform.position));
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy" && beenHit == false)
+        if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit)
         {
             //      Debug.Log("Initial enemy hit.");
 
             PlayerAnimScript.currentState = PlayerAnimScript.idleState;
 
             lastEnemyCollider = collision.GetComponentInParent<Collider2D>();
+            lastColPos = lastEnemyCollider.transform.position;
 
             StartCoroutine(Recoil());
         }
 
         if (collision.tag == "Enemy" && beenHit == true)
         {
-            rb.AddForce((transform.position - lastEnemyCollider.transform.position).normalized * 2f, ForceMode2D.Impulse);
+            rb.AddForce((transform.position - lastColPos).normalized * 2f, ForceMode2D.Impulse);
             //        Debug.Log("Hit while beenHit = true" + (transform.position - lastEnemyCollider.transform.position));
         }
     }
@@ -191,14 +197,16 @@ public class PlayerController : MonoBehaviour
         yVel = Mathf.Abs(rb.velocity.y);
         velInt = xVel + yVel;
 
-        if(xVel > yVel)
-        {
-            dashEqualizer = .1f / xVel;
-        }
-        if (yVel > xVel)
-        {
-            dashEqualizer = .1f / yVel;
-        }
+        dashEqualizer = .2f / velInt;
+
+//        if(xVel > yVel)
+//        {
+//            dashEqualizer = .1f / xVel;
+//        }
+//        if (yVel > xVel)
+//        {
+//            dashEqualizer = .1f / yVel;
+//        }
     }
 
     // Update is called once per frame
@@ -208,7 +216,7 @@ public class PlayerController : MonoBehaviour
         {
             //    Debug.Log("beenhit if loop triggered");
        //     rb.velocity = new Vector2(0, 0);
-            rb.AddForce((transform.position - lastEnemyCollider.transform.position).normalized * 5f, ForceMode2D.Force);
+            rb.AddForce((transform.position - lastColPos).normalized * 5f, ForceMode2D.Force);
         }
 
         //          recently couched input and anim switching inside this bool, eventually to be switched with a more general canInput bool
@@ -264,9 +272,9 @@ public class PlayerController : MonoBehaviour
                     rb.AddForce(PlayerAnimScript.faceDirection * moveSpeed * dashSpeed, ForceMode2D.Impulse);
                     InvokeRepeating("DashFX", 0, dashEqualizer);
 
-                    yield return new WaitForSeconds(.5f);
+                    yield return new WaitForSeconds(.25f);
                     CancelInvoke("DashFX");
-                    yield return new WaitForSeconds(.5f);
+                    yield return new WaitForSeconds(.75f);
 
                     CancelInvoke("DashFX");
                     isDashing = false;

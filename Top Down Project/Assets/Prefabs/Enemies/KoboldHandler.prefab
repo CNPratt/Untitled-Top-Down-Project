@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b593a22c0fd456f8100dbccbf5071c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kCom: {fileID: 0}
   knockBack: 0
   enPos: {x: 0, y: 0, z: 0}
   koboldTrans: {fileID: 8516214642194656246}
@@ -324,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b593a22c0fd456f8100dbccbf5071c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kCom: {fileID: 0}
   knockBack: 0
   enPos: {x: 0, y: 0, z: 0}
   koboldTrans: {fileID: 8516214642194656246}
@@ -492,13 +494,13 @@ GameObject:
   - component: {fileID: 8516214642272112942}
   - component: {fileID: 8516214642272112943}
   - component: {fileID: 8516214642272112940}
-  - component: {fileID: 8516214642272112939}
+  - component: {fileID: 659138093528342538}
   - component: {fileID: 6629723928895401351}
   - component: {fileID: 2797636792663237627}
   - component: {fileID: 8163223885167649976}
   m_Layer: 11
   m_Name: KoboldHandler
-  m_TagString: Enemy
+  m_TagString: Enemy Handler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,8 +569,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &8516214642272112939
-BoxCollider2D:
+--- !u!70 &659138093528342538
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -580,19 +582,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002926588, y: -0.13430929}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2955613, y: 0.30307102}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.007644191, y: -0.13759716}
+  m_Size: {x: 0.300808, y: 0.3008072}
+  m_Direction: 1
 --- !u!114 &6629723928895401351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,6 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1d3ef1748234ce78ae9e26fd00bbbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gotHit: 0
   kAnimScript: {fileID: 0}
   currAttDir: 0
   spriteSwitch: 0
@@ -617,8 +610,7 @@ MonoBehaviour:
   rend: {fileID: 8516214642194656242}
   player: {fileID: 0}
   pCol: {fileID: 0}
-  enCol: {fileID: 8516214642272112939}
-  gotHit: 0
+  enCol: {fileID: 0}
   gotHitSwitch: 0
   koboldRB: {fileID: 8516214642272112940}
 --- !u!114 &2797636792663237627
@@ -633,15 +625,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd1acd5513a64a5ebf3939ab4504acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0}
+  Enemies: []
+  thiskCom: {fileID: 0}
+  updateSwitch: 0
+  thisNode: {x: 0, y: 0, z: 0}
   pathRandomizer: {x: 0, y: 0, z: 0}
-  handlerCol: {fileID: 8516214642272112939}
+  handlerCol: {fileID: 0}
   rend: {fileID: 8516214642194656242}
-  ignorePlayer: 0
   gotHitSwitch: 0
   gotHit: 0
   thisEnemy: {fileID: 8516214642194656243}
   target: {fileID: 0}
-  speed: 80
+  speed: 40
   nextWaypointDistance: 1
   reachedEndofPath: 0
 --- !u!114 &8163223885167649976

@@ -36,7 +36,7 @@ public class KoboldAnimScript : MonoBehaviour
 
         if (thiskCom.spriteSwitch)
         {
-            Debug.Log("switch on");
+//            Debug.Log("switch on");
 
             currentState = thiskCom.currAttDir;
         }
