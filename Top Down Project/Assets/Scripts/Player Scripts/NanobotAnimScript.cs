@@ -5,7 +5,15 @@ using Pathfinding;
 
 public class NanobotAnimScript : MonoBehaviour
 {
+    public GameObject comboFXpos;
+    public GameObject comboFX;
+
+    public SpriteRenderer comboFXrend;
+    public GameObject portFX;
+    public GameObject nanotarg;
     public GameObject targPos;
+    public SpriteRenderer rend;
+
     public Animator anim;
     public AIPath ai;
     public Rigidbody2D koboldRB;
@@ -20,6 +28,7 @@ public class NanobotAnimScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rend = gameObject.GetComponent<SpriteRenderer>();
         ai = GetComponent<AIPath>(); // For example
 
         anim = GetComponent<Animator>();
@@ -29,6 +38,40 @@ public class NanobotAnimScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        comboFX.transform.position = comboFXpos.transform.position;
+
+        if (WeaponController.isComWindow && !WeaponController.slashCDOn && !DodgeScript.isDodging)
+        {
+            comboFXrend.enabled = true;
+        }
+        else
+        {
+            comboFXrend.enabled = false;
+        }
+ 
+        if(WeaponController.stopSwitch || DodgeScript.isDodging)
+        {
+
+            if (rend.enabled == true)
+            {
+                portFX.SetActive(true);
+            }
+
+            rend.enabled = false;
+        }
+        else
+        {
+            if(rend.enabled == false)
+            {
+                koboldRB.transform.position = nanotarg.transform.position;
+
+                portFX.SetActive(true);
+                comboFXrend.enabled = false;
+            }
+
+            rend.enabled = true;
+        }
+
 //              Debug.Log(ai.velocity);
 
         anim.SetInteger("animState", currentState);

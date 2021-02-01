@@ -5,29 +5,32 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     public GameObject colCenter;
+    public GameObject slash;
+    public GameObject bigslash;
 
-    public bool isSlashing;
-    public int checker;
+    public Rigidbody2D rb;
     public SpriteRenderer sprite;
 
-    public int comboCounter;
-    public bool isCharging;
-    public float slashCharger;
+    public int checker;
     public int stopintCounter;
+    public int comboCounter;
+    public static int thisIdle;
+
+    public bool isSlashing;
+    public bool isCharging;
     public static bool stopSwitch;
     public static bool slashCDOn;
+    public static bool isComWindow;
 
+    public float slashCharger;
     public float slashInterval;
     public float stopInterval;
-
-    public static int thisIdle;
-    public GameObject slash;
-    public Rigidbody2D rb;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        isComWindow = false;
         slashInterval = .25f;
         stopInterval = .5f;
     }
@@ -35,6 +38,8 @@ public class WeaponController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        colCenter.transform.localEulerAngles = PlayerAnimScript.faceRoto;
+
         //       Debug.Log(stopintCounter);
 
         if (checker != comboCounter)
@@ -44,14 +49,6 @@ public class WeaponController : MonoBehaviour
 
         checker = comboCounter;
 
-        IEnumerator slashCharge()
-        {
-            slashCharger = slashCharger + 1;
-            yield return new WaitForSeconds(.2f);
-            isCharging = false;
-
-        }
-
         if (Input.GetKey(KeyCode.Space) && isCharging == false && PlayerController.canAttack)
         {
             isCharging = true;
@@ -60,64 +57,31 @@ public class WeaponController : MonoBehaviour
 
         //        if(Input.GetKeyUp(KeyCode.Space) && slashCharger >= 3)
         //        {
-        ////          THIS IS FOR THE CHARGE FUNCTION
-        //         //
-        //            comboCounter = 0;
-        //         //
+        //          THIS IS FOR THE CHARGE FUNCTION
+
         //            slashCharger = 0;
-        //            slash.transform.localScale = new Vector3(2, 2, 1);
+
         //            if (PlayerAnimScript.faceDirection == Vector3.down || PlayerAnimScript.faceDirection == Vector3.up || PlayerAnimScript.faceDirection == Vector3.right || PlayerAnimScript.faceDirection == Vector3.left)
         //            {
         //                rb.AddForce(PlayerAnimScript.faceDirection * 100);
-        //                slash.transform.localPosition = PlayerAnimScript.faceDirection / 2;
-        //                slash.transform.localEulerAngles = PlayerAnimScript.faceRoto;
+        //                colCenter.transform.localEulerAngles = PlayerAnimScript.faceRoto;
         //            }
         //
         //            else if (PlayerAnimScript.faceDirection == (Vector3.down + Vector3.right) || PlayerAnimScript.faceDirection == (Vector3.down + Vector3.left) || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.right) || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.left))
         //            {
         //                rb.AddForce(PlayerAnimScript.faceDirection * 100);
-        //                slash.transform.localPosition = PlayerAnimScript.faceDirection * .3334f;
-        //                slash.transform.localEulerAngles = PlayerAnimScript.faceRoto;
+        //                colCenter.transform.localEulerAngles = PlayerAnimScript.faceRoto;
         //            }
         //
-        //            StartCoroutine(Slash2());
+        //            StartCoroutine(Slash());
         //        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && slashCDOn == false && PlayerController.canAttack && comboCounter >= 2)
-        {
-            //          separate slashcharger statement above for separate charge function
-            //
-            comboCounter = 0;
-            //
-            slashCharger = 0;
-            slash.transform.localScale = new Vector3(2, 2, 1);
-            if (PlayerAnimScript.faceDirection == Vector3.down || PlayerAnimScript.faceDirection == Vector3.up || PlayerAnimScript.faceDirection == Vector3.right || PlayerAnimScript.faceDirection == Vector3.left)
-            {
-                rb.AddForce(PlayerAnimScript.faceDirection * 100);
-                //                slash.transform.localPosition = PlayerAnimScript.faceDirection / 2;
-                //              slash.transform.localEulerAngles = PlayerAnimScript.faceRoto;
-
-                colCenter.transform.localEulerAngles = PlayerAnimScript.faceRoto;
-            }
-
-            else if (PlayerAnimScript.faceDirection == (Vector3.down + Vector3.right) || PlayerAnimScript.faceDirection == (Vector3.down + Vector3.left) || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.right) || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.left))
-            {
-                rb.AddForce(PlayerAnimScript.faceDirection * 100);
-//                slash.transform.localPosition = PlayerAnimScript.faceDirection * .3334f;
-//              slash.transform.localEulerAngles = PlayerAnimScript.faceRoto;
-
-                colCenter.transform.localEulerAngles = PlayerAnimScript.faceRoto;
-            }
-
-            StartCoroutine(Slash2());
-        }
 
         else if (Input.GetKeyUp(KeyCode.Space) && slashCharger < 3)
         {
             slashCharger = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && slashCDOn == false && PlayerController.canAttack && comboCounter < 2)
+        if (Input.GetKeyDown(KeyCode.Space) && slashCDOn == false && PlayerController.canAttack && !DodgeScript.isDodging)
         {
             slash.transform.localScale = new Vector3(1, 1, 1);
 
@@ -129,8 +93,6 @@ public class WeaponController : MonoBehaviour
                 {
                     rb.AddForce(PlayerAnimScript.faceDirection * 100);
                 }
-  //              slash.transform.localPosition = PlayerAnimScript.faceDirection / 2;
-  //              slash.transform.localEulerAngles = PlayerAnimScript.faceRoto;
 
                 colCenter.transform.localEulerAngles = PlayerAnimScript.faceRoto;
             }
@@ -141,21 +103,35 @@ public class WeaponController : MonoBehaviour
                 {
                     rb.AddForce(PlayerAnimScript.faceDirection * 100);
                 }
-  //              slash.transform.localPosition = PlayerAnimScript.faceDirection * .3334f;
-  //              slash.transform.localEulerAngles = PlayerAnimScript.faceRoto;
 
                 colCenter.transform.localEulerAngles = PlayerAnimScript.faceRoto;
             }
 
-            StartCoroutine(Slash2());
+            StartCoroutine(Slash());
         }
 
-        IEnumerator Slash2()
+        IEnumerator slashCharge()
         {
-            sprite.color = Color.white;
+            slashCharger = slashCharger + 1;
+            yield return new WaitForSeconds(.2f);
+            isCharging = false;
+
+        }
+
+        IEnumerator Slash()
+        {
+//            sprite.color = Color.white;
 
             //         Debug.Log("called");
-            slash.SetActive(true);
+            if (comboCounter >= 2)
+            {
+                comboCounter = 0;
+                bigslash.SetActive(true);
+            }
+            else
+            {
+                slash.SetActive(true);
+            }
 
             thisIdle = PlayerAnimScript.idleState;
 
@@ -170,11 +146,13 @@ public class WeaponController : MonoBehaviour
             int countCheck = comboCounter;
             slashCDOn = false;
 
-            sprite.color = Color.blue;
+//            sprite.color = Color.blue;
+            isComWindow = true;
 
             yield return new WaitForSeconds(stopInterval - slashInterval);
 
-            sprite.color = Color.white;
+            isComWindow = false;
+//            sprite.color = Color.white;
 //
 //            slashCDOn = false;
 //

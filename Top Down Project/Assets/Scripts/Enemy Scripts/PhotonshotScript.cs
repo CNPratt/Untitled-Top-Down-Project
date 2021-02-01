@@ -27,9 +27,6 @@ public class PhotonshotScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //        Debug.Log(transform.forward);
-
-        //       thisRB.AddForce(dest, ForceMode2D.Force);
 
         thisRB.velocity = dest.normalized * 5;
 
