@@ -598,6 +598,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gotHit: 0
+  enHealthMax: 0
+  enHealthCurrent: 0
+  deathFX: {fileID: 7326784430475278950, guid: a88a1db0d6fd14d7ead2e515077f0c8f, type: 3}
   kAnimScript: {fileID: 0}
   currAttDir: 0
   spriteSwitch: 0

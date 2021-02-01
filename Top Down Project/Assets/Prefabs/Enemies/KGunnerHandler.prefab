@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b593a22c0fd456f8100dbccbf5071c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kCom: {fileID: 0}
   knockBack: 0
   enPos: {x: 0, y: 0, z: 0}
   koboldTrans: {fileID: 8516214642194656246}
@@ -324,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b593a22c0fd456f8100dbccbf5071c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kCom: {fileID: 0}
   knockBack: 0
   enPos: {x: 0, y: 0, z: 0}
   koboldTrans: {fileID: 8516214642194656246}
@@ -357,7 +359,7 @@ GameObject:
   - component: {fileID: 8516214642194656242}
   - component: {fileID: 8516214642194656247}
   - component: {fileID: 8516214642194656244}
-  - component: {fileID: 674100878842368881}
+  - component: {fileID: 5622893990568855085}
   m_Layer: 8
   m_Name: KGunner
   m_TagString: Enemy
@@ -468,7 +470,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0020733012, y: -2.1095529}
   m_Size: {x: 2.8153286, y: 2.0964816}
   m_Direction: 1
---- !u!114 &674100878842368881
+--- !u!114 &5622893990568855085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -477,7 +479,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8516214642194656243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ff4ccdff9864767bc7bf2d9787f477, type: 3}
+  m_Script: {fileID: 11500000, guid: 87cb0d9f7a34d4ac39a90bca25fc532c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handlerAI: {fileID: -1674099913028283102}
@@ -595,6 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40b9e815025d413db2321dbb218d66b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kgPath: {fileID: 0}
   player: {fileID: 0}
   thiskCom: {fileID: -1674099913028283102}
   koboldRB: {fileID: 8516214642272112940}
@@ -617,6 +620,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a0ded6e11fb472a8c24a2019eaa865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gotHit: 0
+  gotHitSwitch: 0
+  enHealthMax: 0
+  enHealthCurrent: 0
+  deathFX: {fileID: 7326784430475278950, guid: a88a1db0d6fd14d7ead2e515077f0c8f, type: 3}
+  shotSwitch: 0
   photonPrefab: {fileID: 6627783739158635166, guid: 98851fe1e0ccf427596a6413ea75e5fd,
     type: 3}
   kAnimScript: {fileID: -5752454894025946494}
@@ -632,8 +641,6 @@ MonoBehaviour:
   player: {fileID: 0}
   pCol: {fileID: 0}
   enCol: {fileID: 0}
-  gotHit: 0
-  gotHitSwitch: 0
   koboldRB: {fileID: 0}
 --- !u!114 &-5339695917324259524
 MonoBehaviour:
@@ -647,6 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6de46e3e5f747549af035299963502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSearching: 0
   startPos: {x: 0, y: 0}
   Enemies: []
   thiskCom: {fileID: -1674099913028283102}

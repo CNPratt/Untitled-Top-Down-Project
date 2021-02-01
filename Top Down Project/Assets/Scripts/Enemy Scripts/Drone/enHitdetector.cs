@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class enHitdetector : MonoBehaviour
 {
-    public DroneCombat handlerAI;
+    public EnCombatMono handlerAI;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.tag == "Weapons")
         {
-            handlerAI.gotHit = true;
-            handlerAI.gotHitSwitch = true;
+            if (handlerAI.gotHit == false)
+            {
+                handlerAI.gotHit = true;
+                handlerAI.gotHitSwitch = true;
+            }
         }
     }
 
@@ -19,8 +22,11 @@ public class enHitdetector : MonoBehaviour
     {
         if (collider.tag == "Weapons" && !handlerAI.gotHit)
         {
-            handlerAI.gotHit = true;
-            handlerAI.gotHitSwitch = true;
+            if (handlerAI.gotHit == false)
+            {
+                handlerAI.gotHit = true;
+                handlerAI.gotHitSwitch = true;
+            }
         }
     }
 
@@ -28,15 +34,18 @@ public class enHitdetector : MonoBehaviour
     {
         if (collider.tag == "Weapons" && !handlerAI.gotHit)
         {
-            handlerAI.gotHit = true;
-            handlerAI.gotHitSwitch = true;
+            if (handlerAI.gotHit == false)
+            {
+                handlerAI.gotHit = true;
+                handlerAI.gotHitSwitch = true;
+            }
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        handlerAI = gameObject.GetComponentInParent<DroneCombat>();
+        handlerAI = gameObject.GetComponentInParent<EnCombatMono>();
     }
 
     // Update is called once per frame

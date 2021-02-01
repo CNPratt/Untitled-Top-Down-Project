@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool isDodging;
+    public GameObject nanoTarget;
     public EnCombatMono lastCombatAI;
     public Vector3 lastColPos;
     public SpriteRenderer rend;
@@ -65,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Enemy" && beenHit == false && !collider.GetComponentInParent<EnCombatMono>().gotHit)
+        if (collider.tag == "Enemy" && beenHit == false && !collider.GetComponentInParent<EnCombatMono>().gotHit && !isDodging)
         {
       //      Debug.Log("Initial enemy hit.");
 
@@ -87,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
 //          for enemy weapons
 
-        if (collider.tag == "Enemy Weapons" && beenHit == false)
+        if (collider.tag == "Enemy Weapons" && beenHit == false && !isDodging)
         {
 
             PlayerAnimScript.currentState = PlayerAnimScript.idleState;
@@ -110,7 +112,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit)
+        if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit && !isDodging)
         {
             //      Debug.Log("Initial enemy hit.");
 
@@ -131,7 +133,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit)
+        if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit && !isDodging)
         {
             //      Debug.Log("Initial enemy hit.");
 
@@ -152,6 +154,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         enCollisionIgnore = true;
 
         canAttack = true;
@@ -170,7 +173,128 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(beenHit == true)
+ //       if (isDodging)
+ //       {
+  //          Debug.Log("called");
+
+ //           if (Input.GetKey("w"))
+ //           {
+ //               rb.AddForce(Vector2.up * Time.deltaTime * 30, ForceMode2D.Impulse);
+ //           }
+ //           if (Input.GetKey("a"))
+ //           {
+ //               rb.AddForce(Vector2.left * Time.deltaTime * 30, ForceMode2D.Impulse);
+ //           }
+ //           if (Input.GetKey("s"))
+ //           {
+ //               rb.AddForce(Vector2.down * Time.deltaTime * 30, ForceMode2D.Impulse);
+ //           }
+ //           if (Input.GetKey("d"))
+ //           {
+ //               rb.AddForce(Vector2.right * Time.deltaTime * 30, ForceMode2D.Impulse);
+ //           }
+ //       }
+
+        if (PlayerAnimScript.faceDirection == Vector3.down || PlayerAnimScript.faceDirection == Vector3.up || PlayerAnimScript.faceDirection == Vector3.right || PlayerAnimScript.faceDirection == Vector3.left)
+        {
+            nanoTarget.transform.localPosition = PlayerAnimScript.faceDirection / 2;
+            nanoTarget.transform.localEulerAngles = PlayerAnimScript.faceRoto;
+        }
+
+        else if (PlayerAnimScript.faceDirection == (Vector3.down + Vector3.right) || PlayerAnimScript.faceDirection == (Vector3.down + Vector3.left) || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.right) || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.left))
+        {
+            nanoTarget.transform.localPosition = PlayerAnimScript.faceDirection * .3334f;
+            nanoTarget.transform.localEulerAngles = PlayerAnimScript.faceRoto;
+        }
+
+        IEnumerator DashMethod()
+        {
+            //            Debug.Log("Dashmethod called");
+
+            if (backpedal == false && !isDashing)
+            {
+                dashEffectOn = true;
+                isDashing = true;
+
+                rb.AddForce(PlayerAnimScript.faceDirection * moveSpeed * dashSpeed, ForceMode2D.Impulse);
+                //               InvokeRepeating("DashFX", 0, dashEqualizer);
+
+                InvokeRepeating("DashFX", 0, .05f);
+
+                yield return new WaitForSeconds(.25f);
+                CancelInvoke("DashFX");
+                yield return new WaitForSeconds(.75f);
+
+                CancelInvoke("DashFX");
+                isDashing = false;
+                dashEffectOn = false;
+            }
+
+            yield break;
+        }
+
+        //      EXPERIMENTAL DODGE FUNCTION
+
+        IEnumerator DodgeMethod()
+        {
+            //            Debug.Log("Dashmethod called");
+
+            if (backpedal == false && !isDodging)
+            {
+                rend.color = Color.white;
+                rend.color = Color.grey;
+
+                dashEffectOn = true;
+                isDodging = true;
+
+                                rb.AddForce(PlayerAnimScript.faceDirection * moveSpeed * dashSpeed, ForceMode2D.Impulse);
+                //               InvokeRepeating("DashFX", 0, dashEqualizer);
+
+                //                InvokeRepeating("DashFX", 0, .05f);
+
+                yield return new WaitForSeconds(.25f);
+//                CancelInvoke("DashFX");
+//                yield return new WaitForSeconds(.75f);
+
+//                CancelInvoke("DashFX");
+                isDodging = false;
+                dashEffectOn = false;
+
+                WeaponController.stopSwitch = true;
+
+                rend.color = Color.white;
+                rend.color = Color.blue;
+
+                yield return new WaitForSeconds(.25f);
+
+                rend.color = Color.white;
+
+                if (!WeaponController.slashCDOn)
+                {
+                    WeaponController.stopSwitch = false;
+                }
+            }
+
+            yield break;
+        }
+
+        if (Input.GetKeyDown(KeyCode.O) && backpedal == false && !isDodging && !WeaponController.slashCDOn && WeaponController.stopSwitch)
+        {
+                   Debug.Log("Dodge pressed");
+
+            StartCoroutine(DodgeMethod());
+        }
+
+//
+
+        if (Input.GetKeyDown(KeyCode.P) && backpedal == false && !isDashing & canDash == true)
+        {
+            //       Debug.Log("Dash pressed");
+
+            StartCoroutine(DashMethod());
+        }
+
+        if (beenHit == true)
         {
             enCollisionIgnore = false;
         }
@@ -258,37 +382,6 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 backpedal = true;
-            }
-
-            IEnumerator DashMethod()
-            {
-                //            Debug.Log("Dashmethod called");
-
-                if (backpedal == false && !isDashing)
-                {
-                    dashEffectOn = true;
-                    isDashing = true;
-
-                    rb.AddForce(PlayerAnimScript.faceDirection * moveSpeed * dashSpeed, ForceMode2D.Impulse);
-                    InvokeRepeating("DashFX", 0, dashEqualizer);
-
-                    yield return new WaitForSeconds(.25f);
-                    CancelInvoke("DashFX");
-                    yield return new WaitForSeconds(.75f);
-
-                    CancelInvoke("DashFX");
-                    isDashing = false;
-                    dashEffectOn = false;
-                }
-
-                yield break;
-            }
-
-            if (Input.GetKeyDown(KeyCode.P) && backpedal == false && !isDashing & canDash == true)
-            {
-                //       Debug.Log("Dash pressed");
-
-                StartCoroutine(DashMethod());
             }
         }
     }

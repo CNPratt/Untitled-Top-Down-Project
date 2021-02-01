@@ -72,9 +72,12 @@ public class ScarabPath : MonoBehaviour
             if (Vector2.Distance(koboldRB.position, target.position) < 5f && !thiskCom.isAttacking)
             {
                 pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-                seeker.StartPath(koboldRB.position, target.position - pathRandomizer, OnPathComplete);
+   //             seeker.StartPath(koboldRB.position, target.position - pathRandomizer, OnPathComplete);
+
+                seeker.StartPath(koboldRB.position, koboldRB.transform.position - pathRandomizer * 5, OnPathComplete);
+
                 CancelInvoke();
-                InvokeRepeating("UpdatePath", 0, Random.Range(.5f, 1f));
+                InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
             }
             else if (Vector2.Distance(koboldRB.position, target.position) > 5f && !thiskCom.isAttacking)
             {
@@ -98,6 +101,7 @@ public class ScarabPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(thiskCom.inRange != updateSwitch)
         {
             updateSwitch = thiskCom.inRange;
@@ -114,11 +118,14 @@ public class ScarabPath : MonoBehaviour
             //           Debug.Log(target.transform.position - enemy.transform.position);
             //           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
 
-                if (Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x) < .5f || Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).y) < .5f)
+            if (enemy != null)
             {
-     //           Debug.Log("spreader activated on " + gameObject);
-            
+                if (Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x) < .5f || Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).y) < .5f)
+                {
+                    //           Debug.Log("spreader activated on " + gameObject);
+
                     koboldRB.AddForce(enemy.transform.InverseTransformPoint(transform.position).normalized, ForceMode2D.Force);
+                }
             }
         }
 
@@ -150,8 +157,8 @@ public class ScarabPath : MonoBehaviour
 
         if (targDist < awareDistance && !thiskCom.isAttacking && !thiskCom.gotHit)
         {
-            koboldRB.velocity = new Vector2(0, 0);
-            koboldRB.AddForce(force, ForceMode2D.Force);
+   //         koboldRB.velocity = new Vector2(0, 0);
+            koboldRB.AddForce(force/20, ForceMode2D.Force);
         }
         else if (targDist > awareDistance && !thiskCom.isAttacking && !thiskCom.gotHit)
         {

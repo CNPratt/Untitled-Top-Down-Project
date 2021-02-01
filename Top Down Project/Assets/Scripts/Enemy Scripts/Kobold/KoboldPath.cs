@@ -114,11 +114,14 @@ public class KoboldPath : MonoBehaviour
             //           Debug.Log(target.transform.position - enemy.transform.position);
             //           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
 
-                if (Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x) < .5f || Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).y) < .5f)
+            if (enemy != null)
             {
-     //           Debug.Log("spreader activated on " + gameObject);
-            
+                if (Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x) < .5f || Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).y) < .5f)
+                {
+                    //           Debug.Log("spreader activated on " + gameObject);
+
                     koboldRB.AddForce(enemy.transform.InverseTransformPoint(transform.position).normalized, ForceMode2D.Force);
+                }
             }
         }
 

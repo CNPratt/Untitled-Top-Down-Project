@@ -41,7 +41,8 @@ public class ScarabAnimScript : MonoBehaviour
             currentState = thiskCom.currAttDir;
         }
 
-        else if (!thiskCom.inRange && thiskCom.spriteSwitch == false)
+ //       else if (!thiskCom.inRange && thiskCom.spriteSwitch == false)
+          else
         {
             if (koboldRB.velocity.y > 0 && Mathf.Abs(koboldRB.velocity.x) <= Mathf.Abs(koboldRB.velocity.y) / 2)
             {
@@ -107,87 +108,87 @@ public class ScarabAnimScript : MonoBehaviour
             }
         }
 
-        else if (thiskCom.inRange && thiskCom.spriteSwitch == false)
-        {
-            if (pDistancenorm.y > 0 && Mathf.Abs(pDistancenorm.x) < .25f)
-            {
-       //         Debug.Log("inRange look up" + pDistancenorm);
-
-                runState = 1;
-                currentState = runState;
-                idleState = 9;
-
-            }
-
-            else if (pDistancenorm.x < 0 && Mathf.Abs(pDistancenorm.y) < .25f)
-            {
-      //          Debug.Log("inRange look left" + pDistancenorm);
-
-                runState = 7;
-                currentState = runState;
-                idleState = 15;
-            }
-
-            else if (pDistancenorm.y < 0 && Mathf.Abs(pDistancenorm.x) < .25f)
-            {
-     //           Debug.Log("inRange look down" + pDistancenorm);
-
-                runState = 5;
-                currentState = runState;
-                idleState = 13;
-
-            }
-
-            else if (pDistancenorm.x > 0 && Mathf.Abs(pDistancenorm.y) < .25f)
-            {
-    //            Debug.Log("inRange look right" + pDistancenorm);
-
-                runState = 3;
-                currentState = runState;
-                idleState = 11;
-            }
-
-            else if (pDistancenorm.y > 0 && pDistancenorm.x < -.25f)
-            {
-//                Debug.Log("inRange look up left" + pDistancenorm);
-            
-                runState = 8;
-                currentState = runState;
-                idleState = 16;
-            
-            }
-            
-            else if (pDistancenorm.y > 0 && pDistancenorm.x > .25f)
-            {
-//                Debug.Log("inRange look up right" + pDistancenorm);
-            
-                runState = 2;
-                currentState = runState;
-                idleState = 10;
-            }
-            
-            else if (pDistancenorm.y < 0 && pDistancenorm.x < -.25f)
-            {
-//                Debug.Log("inRange look down left" + pDistancenorm);
-            
-                runState = 6;
-                currentState = runState;
-                idleState = 16;
-            }
-            
-            else if (pDistancenorm.y < 0 && pDistancenorm.x > .25f)
-            {
- //               Debug.Log("inRange look down right" + pDistancenorm);
-            
-                runState = 4;
-                currentState = runState;
-                idleState = 12;
-            }
-            else
-            {
-                currentState = idleState;
-            }
-        }
+//        else if (thiskCom.inRange && thiskCom.spriteSwitch == false)
+//        {
+//            if (pDistancenorm.y > 0 && Mathf.Abs(pDistancenorm.x) < .25f)
+//            {
+//       //         Debug.Log("inRange look up" + pDistancenorm);
+//
+//                runState = 1;
+//                currentState = runState;
+//                idleState = 9;
+//
+//            }
+//
+//            else if (pDistancenorm.x < 0 && Mathf.Abs(pDistancenorm.y) < .25f)
+//            {
+//      //          Debug.Log("inRange look left" + pDistancenorm);
+//
+//                runState = 7;
+//                currentState = runState;
+//                idleState = 15;
+//            }
+//
+//            else if (pDistancenorm.y < 0 && Mathf.Abs(pDistancenorm.x) < .25f)
+//            {
+//     //           Debug.Log("inRange look down" + pDistancenorm);
+//
+//                runState = 5;
+//                currentState = runState;
+//                idleState = 13;
+//
+//            }
+//
+//            else if (pDistancenorm.x > 0 && Mathf.Abs(pDistancenorm.y) < .25f)
+//            {
+//    //            Debug.Log("inRange look right" + pDistancenorm);
+//
+//                runState = 3;
+//                currentState = runState;
+//                idleState = 11;
+//            }
+//
+//            else if (pDistancenorm.y > 0 && pDistancenorm.x < -.25f)
+//            {
+////                Debug.Log("inRange look up left" + pDistancenorm);
+//            
+//                runState = 8;
+//                currentState = runState;
+//                idleState = 16;
+//            
+//            }
+//            
+//            else if (pDistancenorm.y > 0 && pDistancenorm.x > .25f)
+//            {
+////                Debug.Log("inRange look up right" + pDistancenorm);
+//            
+//                runState = 2;
+//                currentState = runState;
+//                idleState = 10;
+//            }
+//            
+//            else if (pDistancenorm.y < 0 && pDistancenorm.x < -.25f)
+//            {
+////                Debug.Log("inRange look down left" + pDistancenorm);
+//            
+//                runState = 6;
+//                currentState = runState;
+//                idleState = 16;
+//            }
+//            
+//            else if (pDistancenorm.y < 0 && pDistancenorm.x > .25f)
+//            {
+// //               Debug.Log("inRange look down right" + pDistancenorm);
+//            
+//                runState = 4;
+//                currentState = runState;
+//                idleState = 12;
+//            }
+//            else
+//            {
+//                currentState = idleState;
+//            }
+//        }
 
 
         //          facedirection setting

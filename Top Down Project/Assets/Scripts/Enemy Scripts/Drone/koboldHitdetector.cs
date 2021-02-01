@@ -10,8 +10,11 @@ public class koboldHitdetector : MonoBehaviour
     {
         if(collider.tag == "Weapons")
         {
-            handlerAI.gotHit = true;
-            handlerAI.gotHitSwitch = true;
+            if (handlerAI.gotHit == false)
+            {
+                handlerAI.gotHit = true;
+                handlerAI.gotHitSwitch = true;
+            }
         }
     }
 

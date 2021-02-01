@@ -5,6 +5,10 @@ using UnityEngine.Rendering;
 
 public class ScarabCombat : EnCombatMono
 {
+    public int enHealthMax;
+    public int enHealthCurrent;
+    public GameObject deathFX;
+
     public ScarabAnimScript kAnimScript;
 
     public Coroutine kslashRoutine;
@@ -23,14 +27,23 @@ public class ScarabCombat : EnCombatMono
     public CapsuleCollider2D pCol;
     public CapsuleCollider2D enCol;
 //    public bool gotHit;
-    public bool gotHitSwitch;
+//    public bool gotHitSwitch;
     public Rigidbody2D koboldRB;
 
-    
+    IEnumerator EnDeath()
+    {
+        Instantiate(deathFX, transform.position, transform.rotation);
+        Destroy(gameObject);
+        yield break;
+    }
 
     IEnumerator GotHit()
     {
         //        Debug.Log("Gothit engaged");
+
+        koboldRB.velocity = Vector3.zero;
+
+        enHealthCurrent = enHealthCurrent - 1;
 
         if (isAttacking)
         {
@@ -39,18 +52,27 @@ public class ScarabCombat : EnCombatMono
             spriteSwitch = false;
         }
 
-        koboldRB.AddForce((transform.position - player.transform.position).normalized * 5f, ForceMode2D.Impulse);
+        koboldRB.AddForce((transform.position - player.transform.position).normalized * 1.5f, ForceMode2D.Impulse);
+
+        //      used to be double the time below - 5sec instead of 2.5s
 
         rend.color = Color.white;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
         rend.color = Color.clear;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
         rend.color = Color.white;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
         rend.color = Color.clear;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
         rend.color = Color.white;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
+
+        if (enHealthCurrent <= 0)
+        {
+            StartCoroutine(EnDeath());
+        }
+
+        koboldRB.velocity = Vector3.zero;
 
         gotHit = false;
     }
@@ -58,6 +80,8 @@ public class ScarabCombat : EnCombatMono
     // Start is called before the first frame update
     void Start()
     {
+        enHealthMax = 3;
+        enHealthCurrent = enHealthMax;
 
         kAnimScript = gameObject.GetComponent<ScarabAnimScript>();
         koboldRB = gameObject.GetComponent<Rigidbody2D>();

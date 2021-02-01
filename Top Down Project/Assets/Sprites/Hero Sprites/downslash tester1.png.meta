@@ -1,37 +1,67 @@
 fileFormatVersion: 2
-guid: 3f6a58bcbf0fb48eca228642739a9ce0
+guid: 6c02e940b18764d0db0928e1a0a89e45
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1151193963891033451
-    second: slasheffect_0
+      213: -221681371090637672
+    second: downslash tester1_0
   - first:
-      213: 6431067328231976591
-    second: slasheffect_1
+      213: 6530685790015834769
+    second: downslash tester1_1
   - first:
-      213: 1177435601850777940
-    second: slasheffect_2
+      213: -3449827405827162602
+    second: downslash tester1_2
   - first:
-      213: -2315066900006893843
-    second: slasheffect_3
+      213: -7423734474061743465
+    second: downslash tester1_3
   - first:
-      213: 7350341178878492635
-    second: slasheffect_4
+      213: -8605734219546738116
+    second: downslash tester1_4
   - first:
-      213: -8790203888625350403
-    second: slasheffect_5
+      213: -7736155285574869135
+    second: downslash tester1_5
   - first:
-      213: 3480952452553308313
-    second: slasheffect_6
+      213: -809197996374202427
+    second: downslash tester1_6
   - first:
-      213: 6484951075372940282
-    second: slasheffect_7
+      213: -4020587293497474681
+    second: downslash tester1_7
   - first:
-      213: 3382353732619856709
-    second: slasheffect_8
+      213: -5303133431715933980
+    second: downslash tester1_8
   - first:
-      213: 4381313870290102220
-    second: slasheffect_9
+      213: 6323050806499815910
+    second: downslash tester1_9
+  - first:
+      213: -6611521146866323402
+    second: downslash tester1_0
+  - first:
+      213: -2027946117193762243
+    second: downslash tester1_1
+  - first:
+      213: -2844608924992877952
+    second: downslash tester1_2
+  - first:
+      213: -4052146666610806182
+    second: downslash tester1_3
+  - first:
+      213: 7638778894031497355
+    second: downslash tester1_4
+  - first:
+      213: -1705475593900116649
+    second: downslash tester1_5
+  - first:
+      213: 4660161548939605063
+    second: downslash tester1_6
+  - first:
+      213: -8679688071951505554
+    second: downslash tester1_7
+  - first:
+      213: -4551900913847478021
+    second: downslash tester1_8
+  - first:
+      213: 9072789122563489485
+    second: downslash tester1_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,211 +159,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slasheffect_0
+      name: downslash tester1_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 101
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59a73ba60332600f0800000000000000
-      internalID: -1151193963891033451
+      spriteID: 630bc08db882f34a0800000000000000
+      internalID: -6611521146866323402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slasheffect_1
+      name: downslash tester1_1
       rect:
         serializedVersion: 2
-        x: 66
-        y: 101
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8e23e969adbf3950800000000000000
-      internalID: 6431067328231976591
+      spriteID: d3a780d30c94bd3e0800000000000000
+      internalID: -2027946117193762243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slasheffect_2
+      name: downslash tester1_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 69
-        width: 13
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 451c63a0177175010800000000000000
-      internalID: 1177435601850777940
+      spriteID: 08ac4ec014be588d0800000000000000
+      internalID: -2844608924992877952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slasheffect_3
+      name: downslash tester1_3
       rect:
         serializedVersion: 2
-        x: 34
+        x: 0
         y: 64
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de603d19bea3fdfd0800000000000000
-      internalID: -2315066900006893843
+      spriteID: a5231ee6312e3c7c0800000000000000
+      internalID: -4052146666610806182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slasheffect_4
+      name: downslash tester1_4
       rect:
         serializedVersion: 2
-        x: 66
+        x: 32
         y: 64
-        width: 15
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdf7af0cb58a10660800000000000000
-      internalID: 7350341178878492635
+      spriteID: b88af70aee4620a60800000000000000
+      internalID: 7638778894031497355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slasheffect_5
+      name: downslash tester1_5
       rect:
         serializedVersion: 2
-        x: 4
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7553c7cbbfee458e0800000000000000
+      internalID: -1705475593900116649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: downslash tester1_6
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 32
-        width: 24
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df88a33c22ce20680800000000000000
-      internalID: -8790203888625350403
+      spriteID: 744ba78fc383ca040800000000000000
+      internalID: 4660161548939605063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slasheffect_6
+      name: downslash tester1_7
       rect:
         serializedVersion: 2
-        x: 36
-        y: 33
-        width: 24
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 998f67e00d3de4030800000000000000
-      internalID: 3480952452553308313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slasheffect_7
-      rect:
-        serializedVersion: 2
-        x: 76
+        x: 32
         y: 32
-        width: 16
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afb3461f4ac2ff950800000000000000
-      internalID: 6484951075372940282
+      spriteID: e67a22e7fad8b8780800000000000000
+      internalID: -8679688071951505554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slasheffect_8
+      name: downslash tester1_8
       rect:
         serializedVersion: 2
-        x: 22
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf858516c3664d0c0800000000000000
+      internalID: -4551900913847478021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: downslash tester1_9
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54be581acc880fe20800000000000000
-      internalID: 3382353732619856709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slasheffect_9
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 101
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc7222870cd8dcc30800000000000000
-      internalID: 4381313870290102220
+      spriteID: dcebc6423a509ed70800000000000000
+      internalID: 9072789122563489485
       vertices: []
       indices: 
       edges: []

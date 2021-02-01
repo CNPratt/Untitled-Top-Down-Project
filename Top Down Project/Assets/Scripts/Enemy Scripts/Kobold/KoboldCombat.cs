@@ -5,6 +5,9 @@ using UnityEngine.Rendering;
 
 public class KoboldCombat : EnCombatMono
 {
+    public int enHealthMax;
+    public int enHealthCurrent;
+    public GameObject deathFX;
     public KoboldAnimScript kAnimScript;
 
     public Coroutine kslashRoutine;
@@ -23,14 +26,23 @@ public class KoboldCombat : EnCombatMono
     public CapsuleCollider2D pCol;
     public CapsuleCollider2D enCol;
 //    public bool gotHit;
-    public bool gotHitSwitch;
+//    public bool gotHitSwitch;
     public Rigidbody2D koboldRB;
 
-    
+    IEnumerator EnDeath()
+    {
+        Instantiate(deathFX, transform.position, transform.rotation);
+        Destroy(gameObject);
+        yield break;
+    }
 
     IEnumerator GotHit()
     {
         //        Debug.Log("Gothit engaged");
+
+        koboldRB.velocity = Vector3.zero;
+
+        enHealthCurrent = enHealthCurrent - 1;
 
         if (isAttacking)
         {
@@ -39,18 +51,27 @@ public class KoboldCombat : EnCombatMono
             spriteSwitch = false;
         }
 
-        koboldRB.AddForce((transform.position - player.transform.position).normalized * 5f, ForceMode2D.Impulse);
+        koboldRB.AddForce((transform.position - player.transform.position).normalized * 1.5f, ForceMode2D.Impulse);
+
+//      used to be double the time below - 5sec instead of 2.5s
 
         rend.color = Color.white;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
         rend.color = Color.clear;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
         rend.color = Color.white;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
         rend.color = Color.clear;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
         rend.color = Color.white;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.05f);
+
+        if(enHealthCurrent <= 0)
+        {
+            StartCoroutine(EnDeath());
+        }
+
+        koboldRB.velocity = Vector3.zero;
 
         gotHit = false;
     }
@@ -58,6 +79,9 @@ public class KoboldCombat : EnCombatMono
     // Start is called before the first frame update
     void Start()
     {
+
+        enHealthMax = 3;
+        enHealthCurrent = enHealthMax;
 
         kAnimScript = gameObject.GetComponent<KoboldAnimScript>();
         koboldRB = gameObject.GetComponent<Rigidbody2D>();
@@ -69,6 +93,10 @@ public class KoboldCombat : EnCombatMono
 
     IEnumerator KSlash()
     {
+        koboldRB.velocity = Vector3.zero;
+        currAttDir = kAnimScript.currentState;
+        spriteSwitch = true;
+
         pDetected = false;
         isAttacking = true;
 
@@ -76,8 +104,9 @@ public class KoboldCombat : EnCombatMono
 
         yield return new WaitForSeconds(.5f);
 
-        currAttDir = kAnimScript.currentState;
-        spriteSwitch = true;
+//          to track player movement before attacking, much more difficult:
+//        currAttDir = kAnimScript.currentState;
+//        spriteSwitch = true;
 
         koboldRB.AddForce(kAnimScript.faceDirection * 4, ForceMode2D.Impulse);
 
@@ -100,7 +129,18 @@ public class KoboldCombat : EnCombatMono
     // Update is called once per frame
     void Update()
     {
-        if(!inRange && kslashRoutine != null)
+        if(gotHit)
+        {
+            pdetector.SetActive(false);
+        }
+        else
+        {
+            pdetector.SetActive(true);
+        }
+
+        //        Debug.Log(enHealthCurrent + "/" + enHealthMax);
+
+        if (!inRange && kslashRoutine != null)
         {
             StopCoroutine(kslashRoutine);
             isAttacking = false;
@@ -143,29 +183,30 @@ public class KoboldCombat : EnCombatMono
 
         if (gotHit == true)
         {
-            koboldRB.velocity = new Vector2(0, 0);
-            koboldRB.AddForce((transform.position - player.transform.position).normalized * 50f, ForceMode2D.Force);
+//            koboldRB.velocity = new Vector2(0, 0);
+//            koboldRB.AddForce((transform.position - player.transform.position).normalized * 50f, ForceMode2D.Force);
         }
 
         //      klash location updater
+        //      used to be double the distance form kobold
 
         if ( kAnimScript.faceDirection == Vector3.down ||  kAnimScript.faceDirection == Vector3.up ||  kAnimScript.faceDirection == Vector3.right ||  kAnimScript.faceDirection == Vector3.left)
         {
-            kslashl.transform.localPosition =  kAnimScript.faceDirection / 4;
+            kslashl.transform.localPosition =  kAnimScript.faceDirection / 8;
             kslashl.transform.localEulerAngles = kAnimScript.faceRoto;
-            kslashr.transform.localPosition =  kAnimScript.faceDirection / 4;
+            kslashr.transform.localPosition =  kAnimScript.faceDirection / 8;
             kslashr.transform.localEulerAngles = kAnimScript.faceRoto;
-            pdetector.transform.localPosition =  kAnimScript.faceDirection / 4;
+            pdetector.transform.localPosition =  kAnimScript.faceDirection / 8;
             pdetector.transform.localEulerAngles = kAnimScript.faceRoto;
         }
 
         else if ( kAnimScript.faceDirection == (Vector3.down + Vector3.right) ||  kAnimScript.faceDirection == (Vector3.down + Vector3.left) ||  kAnimScript.faceDirection == (Vector3.up + Vector3.right) ||  kAnimScript.faceDirection == (Vector3.up + Vector3.left))
         {
-            kslashl.transform.localPosition =  kAnimScript.faceDirection * .3334f / 2;
+            kslashl.transform.localPosition =  kAnimScript.faceDirection * .3334f / 4;
             kslashl.transform.localEulerAngles = kAnimScript.faceRoto;
-            kslashr.transform.localPosition =  kAnimScript.faceDirection * .3334f / 2;
+            kslashr.transform.localPosition =  kAnimScript.faceDirection * .3334f / 4;
             kslashr.transform.localEulerAngles = kAnimScript.faceRoto;
-            pdetector.transform.localPosition =  kAnimScript.faceDirection * .3334f / 2;
+            pdetector.transform.localPosition =  kAnimScript.faceDirection * .3334f / 4;
             pdetector.transform.localEulerAngles = kAnimScript.faceRoto;
         }
     }

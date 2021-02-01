@@ -104,7 +104,7 @@ public class KGPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (path != null)
+        if (path != null && thiskCom.isAttacking == false)
         {
             if (Vector2.Distance(path.vectorPath[path.vectorPath.Count - 1], target.position) < 3 && !thiskCom.isAttacking)
             {
@@ -139,11 +139,14 @@ public class KGPath : MonoBehaviour
             //           Debug.Log(target.transform.position - enemy.transform.position);
             //           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
 
-                if (Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x) < .5f || Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).y) < .5f)
+            if (enemy != null)
             {
-     //           Debug.Log("spreader activated on " + gameObject);
-            
+                if (Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x) < .5f || Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).y) < .5f)
+                {
+                    //           Debug.Log("spreader activated on " + gameObject);
+
                     koboldRB.AddForce(enemy.transform.InverseTransformPoint(transform.position).normalized, ForceMode2D.Force);
+                }
             }
         }
 
@@ -173,7 +176,7 @@ public class KGPath : MonoBehaviour
         float targDist = Vector2.Distance(koboldRB.position, target.position);
         float awareDistance = 5f;
 
-        if (targDist < awareDistance && !thiskCom.isAttacking && !thiskCom.gotHit)
+        if (targDist < awareDistance && !thiskCom.isAttacking && !thiskCom.gotHit && !isSearching)
         {
  //           koboldRB.velocity = new Vector2(0, 0);
             koboldRB.AddForce(force/10, ForceMode2D.Force);

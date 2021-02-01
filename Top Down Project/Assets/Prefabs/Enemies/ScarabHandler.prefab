@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b593a22c0fd456f8100dbccbf5071c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kCom: {fileID: 0}
   knockBack: 0
   enPos: {x: 0, y: 0, z: 0}
   koboldTrans: {fileID: 8516214642194656246}
@@ -324,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b593a22c0fd456f8100dbccbf5071c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kCom: {fileID: 0}
   knockBack: 0
   enPos: {x: 0, y: 0, z: 0}
   koboldTrans: {fileID: 8516214642194656246}
@@ -357,7 +359,7 @@ GameObject:
   - component: {fileID: 8516214642194656242}
   - component: {fileID: 8516214642194656247}
   - component: {fileID: 8516214642194656244}
-  - component: {fileID: 543072689604694776}
+  - component: {fileID: 6028510238940923083}
   m_Layer: 8
   m_Name: Scarab
   m_TagString: Enemy
@@ -468,7 +470,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01442932, y: 0.10922359}
   m_Size: {x: 0.5317426, y: 0.3591703}
   m_Direction: 1
---- !u!114 &543072689604694776
+--- !u!114 &6028510238940923083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -477,7 +479,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8516214642194656243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6326446d394874a1da2e5744ba34d050, type: 3}
+  m_Script: {fileID: 11500000, guid: 87cb0d9f7a34d4ac39a90bca25fc532c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handlerAI: {fileID: 1546031735912912852}
@@ -617,6 +619,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ac9d2b9936c47faa6c6d2f8b3c25ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gotHit: 0
+  gotHitSwitch: 0
+  enHealthMax: 0
+  enHealthCurrent: 0
+  deathFX: {fileID: 7326784430475278950, guid: a88a1db0d6fd14d7ead2e515077f0c8f, type: 3}
   kAnimScript: {fileID: 8787983501423080128}
   currAttDir: 0
   spriteSwitch: 0
@@ -630,8 +637,6 @@ MonoBehaviour:
   player: {fileID: 0}
   pCol: {fileID: 0}
   enCol: {fileID: 0}
-  gotHit: 0
-  gotHitSwitch: 0
   koboldRB: {fileID: 8516214642272112940}
 --- !u!114 &7390344302074131773
 MonoBehaviour:
