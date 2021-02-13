@@ -6,6 +6,7 @@ public class WeaponController : MonoBehaviour
 {
     public GameObject colCenter;
     public GameObject slash;
+    public GameObject medslash;
     public GameObject bigslash;
 
     public Rigidbody2D rb;
@@ -83,7 +84,7 @@ public class WeaponController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && slashCDOn == false && PlayerController.canAttack && !DodgeScript.isDodging)
         {
-            slash.transform.localScale = new Vector3(1, 1, 1);
+//            slash.transform.localScale = new Vector3(1, 1, 1);
 
             // slash location updater
 
@@ -128,7 +129,11 @@ public class WeaponController : MonoBehaviour
                 comboCounter = 0;
                 bigslash.SetActive(true);
             }
-            else
+            else if (comboCounter == 1)
+            {
+                medslash.SetActive(true);
+            }
+            else if (comboCounter == 0)
             {
                 slash.SetActive(true);
             }

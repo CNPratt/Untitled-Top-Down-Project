@@ -33,13 +33,14 @@ public class ScarabCombat : EnCombatMono
     IEnumerator EnDeath()
     {
         Instantiate(deathFX, transform.position, transform.rotation);
-        Destroy(gameObject);
+//       Destroy(gameObject);
+        gameObject.SetActive(false);
         yield break;
     }
 
     IEnumerator GotHit()
     {
-        //        Debug.Log("Gothit engaged");
+//                Debug.Log("Gothit engaged");
 
         koboldRB.velocity = Vector3.zero;
 
@@ -56,15 +57,16 @@ public class ScarabCombat : EnCombatMono
 
         //      used to be double the time below - 5sec instead of 2.5s
 
-        rend.color = Color.white;
+        rend.color = Color.black;
+        //        rend.color = Color.white;
         yield return new WaitForSeconds(.05f);
-        rend.color = Color.clear;
+        //        rend.color = Color.clear;
         yield return new WaitForSeconds(.05f);
-        rend.color = Color.white;
+        //        rend.color = Color.white;
         yield return new WaitForSeconds(.05f);
-        rend.color = Color.clear;
+        //        rend.color = Color.clear;
         yield return new WaitForSeconds(.05f);
-        rend.color = Color.white;
+                rend.color = Color.white;
         yield return new WaitForSeconds(.05f);
 
         if (enHealthCurrent <= 0)
@@ -77,9 +79,15 @@ public class ScarabCombat : EnCombatMono
         gotHit = false;
     }
 
+    private void OnEnable()
+    {
+        enHealthCurrent = enHealthMax;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+
         enHealthMax = 3;
         enHealthCurrent = enHealthMax;
 
@@ -167,8 +175,8 @@ public class ScarabCombat : EnCombatMono
 
         if (gotHit == true)
         {
-            koboldRB.velocity = new Vector2(0, 0);
-            koboldRB.AddForce((transform.position - player.transform.position).normalized * 50f, ForceMode2D.Force);
+//            koboldRB.velocity = new Vector2(0, 0);
+//            koboldRB.AddForce((transform.position - player.transform.position).normalized * 50f, ForceMode2D.Force);
         }
 
         //      klash location updater

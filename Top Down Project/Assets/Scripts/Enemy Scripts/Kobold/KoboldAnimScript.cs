@@ -28,7 +28,7 @@ public class KoboldAnimScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+
         Vector3 pDistancenorm = transform.InverseTransformPoint(player.transform.position).normalized;
 
         anim.SetInteger("animState", currentState);
@@ -41,7 +41,7 @@ public class KoboldAnimScript : MonoBehaviour
             currentState = thiskCom.currAttDir;
         }
 
-        else if (!thiskCom.inRange && thiskCom.spriteSwitch == false)
+        else if (Vector2.Distance(koboldRB.position, player.transform.position) > 3 && thiskCom.spriteSwitch == false)
         {
             if (koboldRB.velocity.y > 0 && Mathf.Abs(koboldRB.velocity.x) <= Mathf.Abs(koboldRB.velocity.y) / 2)
             {
@@ -107,7 +107,7 @@ public class KoboldAnimScript : MonoBehaviour
             }
         }
 
-        else if (thiskCom.inRange && thiskCom.spriteSwitch == false)
+        else if (Vector2.Distance(koboldRB.position, player.transform.position) < 3 && thiskCom.inRange && thiskCom.spriteSwitch == false)
         {
             if (pDistancenorm.y > 0 && Mathf.Abs(pDistancenorm.x) < .25f)
             {

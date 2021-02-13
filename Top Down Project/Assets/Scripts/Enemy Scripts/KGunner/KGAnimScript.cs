@@ -30,7 +30,7 @@ public class KGAnimScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+
         Vector3 pDistancenorm = transform.InverseTransformPoint(player.transform.position).normalized;
 
         anim.SetInteger("animState", currentState);

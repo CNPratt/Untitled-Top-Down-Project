@@ -7,6 +7,9 @@ using UnityEngine.Tilemaps;
 
 public class ScarabPath : MonoBehaviour
 {
+    public List<Vector3> randomPointOnARandomNode;
+    public GraphNode node;
+
     public Vector2 startPos;
 
     public List<GameObject> Enemies;
@@ -71,20 +74,53 @@ public class ScarabPath : MonoBehaviour
         {
             if (Vector2.Distance(koboldRB.position, target.position) < 5f && !thiskCom.isAttacking)
             {
-                pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-   //             seeker.StartPath(koboldRB.position, target.position - pathRandomizer, OnPathComplete);
+                node = AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node;
 
-                seeker.StartPath(koboldRB.position, koboldRB.transform.position - pathRandomizer * 5, OnPathComplete);
+                if (node != null)
 
-                CancelInvoke();
-                InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
+                {
+
+                    var reachable = PathUtilities.GetReachableNodes(node);
+
+                    randomPointOnARandomNode = PathUtilities.GetPointsOnNodes(reachable, 1);
+
+                }
+
+                //            pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+                //             seeker.StartPath(koboldRB.position, target.position - pathRandomizer, OnPathComplete);
+
+ //               seeker.StartPath(koboldRB.position, koboldRB.transform.position - pathRandomizer * 5, OnPathComplete);
+
+                seeker.StartPath(koboldRB.position, randomPointOnARandomNode[Random.Range(0, randomPointOnARandomNode.Count - 1)], OnPathComplete);
+
+                    CancelInvoke();
+                    InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
             }
             else if (Vector2.Distance(koboldRB.position, target.position) > 5f && !thiskCom.isAttacking)
             {
-                pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-                seeker.StartPath(koboldRB.position, (Vector3)AstarPath.active.GetNearest(koboldRB.position + ((Vector2)pathRandomizer * 4)), OnPathComplete);
-                CancelInvoke();
-                InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
+                node = AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node;
+
+                if (node != null)
+
+                {
+
+                    var reachable = PathUtilities.GetReachableNodes(node);
+
+                    randomPointOnARandomNode = PathUtilities.GetPointsOnNodes(reachable, 1);
+
+                }
+
+                if (reachedEndofPath)
+                {
+                    seeker.StartPath(koboldRB.position, randomPointOnARandomNode[Random.Range(0, randomPointOnARandomNode.Count - 1)], OnPathComplete);
+                }
+
+                //                pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+                //                seeker.StartPath(koboldRB.position, (Vector3)AstarPath.active.GetNearest(koboldRB.position + ((Vector2)pathRandomizer * 4)), OnPathComplete);
+
+
+                                CancelInvoke();
+                                InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
             }
         }
     }
@@ -99,10 +135,10 @@ public class ScarabPath : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
-        if(thiskCom.inRange != updateSwitch)
+        if (thiskCom.inRange != updateSwitch)
         {
             updateSwitch = thiskCom.inRange;
 
@@ -158,11 +194,13 @@ public class ScarabPath : MonoBehaviour
         if (targDist < awareDistance && !thiskCom.isAttacking && !thiskCom.gotHit)
         {
    //         koboldRB.velocity = new Vector2(0, 0);
+//            koboldRB.AddForce(force/10, ForceMode2D.Force);
             koboldRB.AddForce(force/20, ForceMode2D.Force);
+
         }
         else if (targDist > awareDistance && !thiskCom.isAttacking && !thiskCom.gotHit)
         {
-            koboldRB.AddForce(direction, ForceMode2D.Force);
+            koboldRB.AddForce(force/20, ForceMode2D.Force);
         }
 
             float distance = Vector2.Distance(koboldRB.position, path.vectorPath[currentWaypoint]);

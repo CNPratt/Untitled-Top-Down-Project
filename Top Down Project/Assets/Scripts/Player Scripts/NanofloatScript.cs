@@ -18,6 +18,7 @@ public class NanofloatScript : MonoBehaviour
 
     void Update()
     {
+
         if(transform.position.y != originalY + ((float)Mathf.Sin(Time.time * 5) * floatStrength))
         {
             this.originalY = this.transform.position.y;

@@ -20,7 +20,7 @@ public class DodgeScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O) && PlayerController.backpedal == false && !isDodging && !WeaponController.slashCDOn && WeaponController.stopSwitch)
         {
-            Debug.Log("Dodge pressed");
+ //           Debug.Log("Dodge pressed");
 
             StartCoroutine(DodgeMethod());
         }
@@ -53,44 +53,44 @@ public class DodgeScript : MonoBehaviour
         {
             //            Debug.Log("Dashmethod called");
 
-            if (PlayerController.backpedal == false && !isDodging)
-            {
-    //            rend.color = Color.white;
-    //            rend.color = Color.grey;
-
-                //                dashEffectOn = true;
-                isDodging = true;
-
-                rb.AddForce(PlayerAnimScript.faceDirection * PlayerController.moveSpeed * dodgeSpeed, ForceMode2D.Impulse);
-                //               InvokeRepeating("DashFX", 0, dashEqualizer);
-
-                //                InvokeRepeating("DashFX", 0, .05f);
-
-                yield return new WaitForSeconds(.25f);
-                //                CancelInvoke("DashFX");
-                //                yield return new WaitForSeconds(.75f);
-
-                //                CancelInvoke("DashFX");
-                isDodging = false;
-                //                dashEffectOn = false;
-
-                WeaponController.stopSwitch = true;
-
-      //          rend.color = Color.white;
-      //          rend.color = Color.blue;
-                WeaponController.isComWindow = true;
-
-                yield return new WaitForSeconds(.25f);
-
-                WeaponController.isComWindow = false;
-      //          rend.color = Color.white;
-
-                if (!WeaponController.slashCDOn)
-                {
-                    WeaponController.stopSwitch = false;
-                }
-            }
-
+//            if (PlayerController.backpedal == false && !isDodging)
+//            {
+//    //            rend.color = Color.white;
+//    //            rend.color = Color.grey;
+//
+//                //                dashEffectOn = true;
+//                isDodging = true;
+//
+//                rb.AddForce(PlayerAnimScript.faceDirection * PlayerController.moveSpeed * dodgeSpeed, ForceMode2D.Impulse);
+//                //               InvokeRepeating("DashFX", 0, dashEqualizer);
+//
+//                //                InvokeRepeating("DashFX", 0, .05f);
+//
+//                yield return new WaitForSeconds(.25f);
+//                //                CancelInvoke("DashFX");
+//                //                yield return new WaitForSeconds(.75f);
+//
+//                //                CancelInvoke("DashFX");
+//                isDodging = false;
+//                //                dashEffectOn = false;
+//
+//                WeaponController.stopSwitch = true;
+//
+//      //          rend.color = Color.white;
+//      //          rend.color = Color.blue;
+//                WeaponController.isComWindow = true;
+//
+//                yield return new WaitForSeconds(.25f);
+//
+//                WeaponController.isComWindow = false;
+//      //          rend.color = Color.white;
+//
+//                if (!WeaponController.slashCDOn)
+//                {
+//                    WeaponController.stopSwitch = false;
+//                }
+//            }
+//
             yield break;
         }
     }

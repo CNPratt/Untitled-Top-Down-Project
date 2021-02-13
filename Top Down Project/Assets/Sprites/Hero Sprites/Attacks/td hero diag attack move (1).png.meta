@@ -1,0 +1,1211 @@
+fileFormatVersion: 2
+guid: 5a151a1872a33408badbf1d579b526e2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4968866626977104627
+    second: td hero diag attack move (1)_0
+  - first:
+      213: 3214352738648416970
+    second: td hero diag attack move (1)_1
+  - first:
+      213: 9081847514928229751
+    second: td hero diag attack move (1)_2
+  - first:
+      213: -5609617685711610242
+    second: td hero diag attack move (1)_3
+  - first:
+      213: 8372224731551433320
+    second: td hero diag attack move (1)_4
+  - first:
+      213: 4031130133271079711
+    second: td hero diag attack move (1)_5
+  - first:
+      213: 5317864188412228044
+    second: td hero diag attack move (1)_6
+  - first:
+      213: 2006512243588326566
+    second: td hero diag attack move (1)_7
+  - first:
+      213: -2708727012639502921
+    second: td hero diag attack move (1)_8
+  - first:
+      213: 5369815060502942332
+    second: td hero diag attack move (1)_9
+  - first:
+      213: -2342305484356129254
+    second: td hero diag attack move (1)_10
+  - first:
+      213: 3647021978771809168
+    second: td hero diag attack move (1)_11
+  - first:
+      213: 7885111029944744178
+    second: td hero diag attack move (1)_12
+  - first:
+      213: 4692925425278962758
+    second: td hero diag attack move (1)_13
+  - first:
+      213: -6335849294479087492
+    second: td hero diag attack move (1)_14
+  - first:
+      213: 7519223526472055989
+    second: td hero diag attack move (1)_15
+  - first:
+      213: 9217306927880818814
+    second: td hero diag attack move (1)_16
+  - first:
+      213: 6077116857798876867
+    second: td hero diag attack move (1)_17
+  - first:
+      213: -5621356251176017644
+    second: td hero diag attack move (1)_18
+  - first:
+      213: -7804006348320696380
+    second: td hero diag attack move (1)_19
+  - first:
+      213: 8565240537909392441
+    second: td hero diag attack move (1)_20
+  - first:
+      213: 1426930739713005098
+    second: td hero diag attack move (1)_21
+  - first:
+      213: 3350228211786710562
+    second: td hero diag attack move (1)_22
+  - first:
+      213: -5779020186665075570
+    second: td hero diag attack move (1)_23
+  - first:
+      213: 5924125638805655479
+    second: td hero diag attack move (1)_24
+  - first:
+      213: 3663078238522889810
+    second: td hero diag attack move (1)_25
+  - first:
+      213: 9182374762669432034
+    second: td hero diag attack move (1)_26
+  - first:
+      213: -8186477863340875007
+    second: td hero diag attack move (1)_27
+  - first:
+      213: 1826936287609808507
+    second: td hero diag attack move (1)_28
+  - first:
+      213: 36532153292422135
+    second: td hero diag attack move (1)_29
+  - first:
+      213: 3419665967201313906
+    second: td hero diag attack move (1)_30
+  - first:
+      213: -625781410390934537
+    second: td hero diag attack move (1)_31
+  - first:
+      213: 3054784249216775851
+    second: td hero diag attack move (1)_32
+  - first:
+      213: 1046982129896581479
+    second: td hero diag attack move (1)_33
+  - first:
+      213: -9111044892115634383
+    second: td hero diag attack move (1)_34
+  - first:
+      213: 5126894422957156671
+    second: td hero diag attack move (1)_35
+  - first:
+      213: -4478610166370120414
+    second: td hero diag attack move (1)_36
+  - first:
+      213: 392621015071968790
+    second: td hero diag attack move (1)_37
+  - first:
+      213: 3723515654635377672
+    second: td hero diag attack move (1)_38
+  - first:
+      213: 7170144850503265047
+    second: td hero diag attack move (1)_39
+  - first:
+      213: 2426239152542437912
+    second: td hero diag attack move (1)_40
+  - first:
+      213: -2087449551835163144
+    second: td hero diag attack move (1)_41
+  - first:
+      213: -7183294106533504355
+    second: td hero diag attack move (1)_42
+  - first:
+      213: 7570585366283792198
+    second: td hero diag attack move (1)_43
+  - first:
+      213: -3068239964713877513
+    second: td hero diag attack move (1)_44
+  - first:
+      213: 4592286099731656885
+    second: td hero diag attack move (1)_45
+  - first:
+      213: 8387969542685314188
+    second: td hero diag attack move (1)_46
+  - first:
+      213: -6920557772534079955
+    second: td hero diag attack move (1)_47
+  - first:
+      213: 8836378276082302816
+    second: td hero diag attack move (1)_48
+  - first:
+      213: -1095158736231934557
+    second: td hero diag attack move (1)_49
+  - first:
+      213: -4832052438325486180
+    second: td hero diag attack move (1)_50
+  - first:
+      213: 6742526706040442281
+    second: td hero diag attack move (1)_51
+  - first:
+      213: -8983259570700573340
+    second: td hero diag attack move (1)_52
+  - first:
+      213: 8376113658230842925
+    second: td hero diag attack move (1)_53
+  - first:
+      213: 8297610322147071787
+    second: td hero diag attack move (1)_54
+  - first:
+      213: -1817163204671183420
+    second: td hero diag attack move (1)_55
+  - first:
+      213: 8377515598791024525
+    second: td hero diag attack move (1)_56
+  - first:
+      213: -1564263920035408572
+    second: td hero diag attack move (1)_57
+  - first:
+      213: -4619190087311789577
+    second: td hero diag attack move (1)_58
+  - first:
+      213: -1909952385623896701
+    second: td hero diag attack move (1)_59
+  - first:
+      213: 832913612841556060
+    second: td hero diag attack move (1)_60
+  - first:
+      213: -3957248512703140050
+    second: td hero diag attack move (1)_61
+  - first:
+      213: -2998648970708514398
+    second: td hero diag attack move (1)_62
+  - first:
+      213: 3179227127451181660
+    second: td hero diag attack move (1)_63
+  - first:
+      213: -4481888372042027678
+    second: td hero diag attack move (1)_64
+  - first:
+      213: -7605165261912319940
+    second: td hero diag attack move (1)_65
+  - first:
+      213: 7805778434216170741
+    second: td hero diag attack move (1)_66
+  - first:
+      213: -4531375647455840898
+    second: td hero diag attack move (1)_67
+  - first:
+      213: 5354049952439602034
+    second: td hero diag attack move (1)_68
+  - first:
+      213: 2058517433435274984
+    second: td hero diag attack move (1)_69
+  - first:
+      213: 2901553058076228498
+    second: td hero diag attack move (1)_70
+  - first:
+      213: 1725539820202629622
+    second: td hero diag attack move (1)_71
+  - first:
+      213: -8831460399730782308
+    second: td hero diag attack move (1)_72
+  - first:
+      213: -8990905803403198460
+    second: td hero diag attack move (1)_73
+  - first:
+      213: 5948942070575728139
+    second: td hero diag attack move (1)_74
+  - first:
+      213: -1671678198382565946
+    second: td hero diag attack move (1)_75
+  - first:
+      213: 6761346335769743957
+    second: td hero diag attack move (1)_76
+  - first:
+      213: 1819157425002201483
+    second: td hero diag attack move (1)_77
+  - first:
+      213: 4337648363533062112
+    second: td hero diag attack move (1)_78
+  - first:
+      213: 7696869384996942582
+    second: td hero diag attack move (1)_79
+  - first:
+      213: -768167224521130693
+    second: td hero diag attack move (1)_80
+  - first:
+      213: 4195958990807103719
+    second: td hero diag attack move (1)_81
+  - first:
+      213: -5683931296118396160
+    second: td hero diag attack move (1)_82
+  - first:
+      213: -8682034876196807373
+    second: td hero diag attack move (1)_83
+  - first:
+      213: -7820172649752772236
+    second: td hero diag attack move (1)_84
+  - first:
+      213: -5534050972236971438
+    second: td hero diag attack move (1)_85
+  - first:
+      213: 6416510992476621193
+    second: td hero diag attack move (1)_86
+  - first:
+      213: 2977945398207745681
+    second: td hero diag attack move (1)_87
+  - first:
+      213: 4441070128672438749
+    second: td hero diag attack move (1)_88
+  - first:
+      213: -640050800282741552
+    second: td hero diag attack move (1)_89
+  - first:
+      213: -4866585364325491442
+    second: td hero diag attack move (1)_90
+  - first:
+      213: 2481137515402304448
+    second: td hero diag attack move (1)_91
+  - first:
+      213: 428239013185723203
+    second: td hero diag attack move (1)_92
+  - first:
+      213: 3703181022735606943
+    second: td hero diag attack move (1)_93
+  - first:
+      213: 2644263859566536493
+    second: td hero diag attack move (1)_94
+  - first:
+      213: 8818591399272803280
+    second: td hero diag attack move (1)_95
+  - first:
+      213: -8333384127363264155
+    second: td hero diag attack move (1)_96
+  - first:
+      213: -3447691784736890806
+    second: td hero diag attack move (1)_97
+  - first:
+      213: 3870925865746577934
+    second: td hero diag attack move (1)_98
+  - first:
+      213: -3618928759698384055
+    second: td hero diag attack move (1)_99
+  - first:
+      213: -2532106979138890810
+    second: td hero diag attack move (1)_100
+  - first:
+      213: -7021117367740084157
+    second: td hero diag attack move (1)_101
+  - first:
+      213: -4112641606048594909
+    second: td hero diag attack move (1)_102
+  - first:
+      213: 119998672373424287
+    second: td hero diag attack move (1)_103
+  - first:
+      213: -3653274845822275138
+    second: td hero diag attack move (1)_104
+  - first:
+      213: -6070207257491055507
+    second: td hero diag attack move (1)_105
+  - first:
+      213: -2534947862140270772
+    second: td hero diag attack move (1)_106
+  - first:
+      213: 8192546205910320078
+    second: td hero diag attack move (1)_107
+  - first:
+      213: -2895776371222383565
+    second: td hero diag attack move (1)_108
+  - first:
+      213: -6479079552240289498
+    second: td hero diag attack move (1)_109
+  - first:
+      213: -6516089476051560668
+    second: td hero diag attack move (1)_110
+  - first:
+      213: -8992406771571229663
+    second: td hero diag attack move (1)_111
+  - first:
+      213: -3071705936654665672
+    second: td hero diag attack move (1)_112
+  - first:
+      213: -2660756848297721609
+    second: td hero diag attack move (1)_113
+  - first:
+      213: -10486740253930188
+    second: td hero diag attack move (1)_114
+  - first:
+      213: 2663884030324908110
+    second: td hero diag attack move (1)_115
+  - first:
+      213: -1097650068162156180
+    second: td hero diag attack move (1)_116
+  - first:
+      213: -520232722842812354
+    second: td hero diag attack move (1)_117
+  - first:
+      213: -3368607116576589157
+    second: td hero diag attack move (1)_118
+  - first:
+      213: -1681899415403887778
+    second: td hero diag attack move (1)_119
+  - first:
+      213: -3144128142441545095
+    second: td hero diag attack move (1)_120
+  - first:
+      213: 5802659686945213565
+    second: td hero diag attack move (1)_121
+  - first:
+      213: -3253361264186609228
+    second: td hero diag attack move (1)_122
+  - first:
+      213: 4402372430247660033
+    second: td hero diag attack move (1)_123
+  - first:
+      213: 7682358082895100790
+    second: td hero diag attack move (1)_124
+  - first:
+      213: -4508310927490367509
+    second: td hero diag attack move (1)_125
+  - first:
+      213: -3848275428632180348
+    second: td hero diag attack move (1)_126
+  - first:
+      213: -4157764988246608516
+    second: td hero diag attack move (1)_127
+  - first:
+      213: -4249225845457792810
+    second: td hero diag attack move (1)_128
+  - first:
+      213: 2550027951034480067
+    second: td hero diag attack move (1)_129
+  - first:
+      213: 6808300185634834476
+    second: td hero diag attack move (1)_130
+  - first:
+      213: -8934924146579873007
+    second: td hero diag attack move (1)_131
+  - first:
+      213: 4356061043102350216
+    second: td hero diag attack move (1)_132
+  - first:
+      213: 1378914329146287951
+    second: td hero diag attack move (1)_133
+  - first:
+      213: -248272979156926583
+    second: td hero diag attack move (1)_134
+  - first:
+      213: -8531850231836499564
+    second: td hero diag attack move (1)_135
+  - first:
+      213: 5055850419778153177
+    second: td hero diag attack move (1)_136
+  - first:
+      213: 6298962904543798408
+    second: td hero diag attack move (1)_137
+  - first:
+      213: 6082976558819909037
+    second: td hero diag attack move (1)_138
+  - first:
+      213: -4195310832209814227
+    second: td hero diag attack move (1)_139
+  - first:
+      213: 2155375010323710203
+    second: td hero diag attack move (1)_140
+  - first:
+      213: -8388577666318835027
+    second: td hero diag attack move (1)_141
+  - first:
+      213: -3144719808930278415
+    second: td hero diag attack move (1)_142
+  - first:
+      213: 6038014450150425708
+    second: td hero diag attack move (1)_143
+  - first:
+      213: -856465974923115650
+    second: td hero diag attack move (1)_144
+  - first:
+      213: -8598329639419853442
+    second: td hero diag attack move (1)_145
+  - first:
+      213: 2533903736081616975
+    second: td hero diag attack move (1)_146
+  - first:
+      213: 4276791327540277363
+    second: td hero diag attack move (1)_147
+  - first:
+      213: 4336774712838775862
+    second: td hero diag attack move (1)_148
+  - first:
+      213: 6282363318886082203
+    second: td hero diag attack move (1)_149
+  - first:
+      213: 1052996781203807122
+    second: td hero diag attack move (1)_150
+  - first:
+      213: 3082155464444984524
+    second: td hero diag attack move (1)_151
+  - first:
+      213: -5456527183391089518
+    second: td hero diag attack move (1)_152
+  - first:
+      213: 5384314244805220845
+    second: td hero diag attack move (1)_153
+  - first:
+      213: 8964294472080276917
+    second: td hero diag attack move (1)_154
+  - first:
+      213: -6400942322723017044
+    second: td hero diag attack move (1)_155
+  - first:
+      213: 5723531212281481132
+    second: td hero diag attack move (1)_156
+  - first:
+      213: -3002195424947905713
+    second: td hero diag attack move (1)_157
+  - first:
+      213: 8642274909483985461
+    second: td hero diag attack move (1)_158
+  - first:
+      213: 4833142175757361304
+    second: td hero diag attack move (1)_159
+  - first:
+      213: -155757487020299508
+    second: td hero diag attack move (1)_160
+  - first:
+      213: -7107782618928977409
+    second: td hero diag attack move (1)_161
+  - first:
+      213: 7628922176948489134
+    second: td hero diag attack move (1)_162
+  - first:
+      213: 3972439510187028582
+    second: td hero diag attack move (1)_163
+  - first:
+      213: 4296963789320165506
+    second: td hero diag attack move (1)_164
+  - first:
+      213: -7060836064633208408
+    second: td hero diag attack move (1)_165
+  - first:
+      213: 4169742306638738574
+    second: td hero diag attack move (1)_166
+  - first:
+      213: 9213186799323976415
+    second: td hero diag attack move (1)_167
+  - first:
+      213: 9086072690722154191
+    second: td hero diag attack move (1)_168
+  - first:
+      213: 7202674277319291607
+    second: td hero diag attack move (1)_169
+  - first:
+      213: -9138987453618527304
+    second: td hero diag attack move (1)_170
+  - first:
+      213: 820649585153887153
+    second: td hero diag attack move (1)_171
+  - first:
+      213: 3231061626132689735
+    second: td hero diag attack move (1)_172
+  - first:
+      213: 257268445582974834
+    second: td hero diag attack move (1)_173
+  - first:
+      213: 5457423857432427501
+    second: td hero diag attack move (1)_174
+  - first:
+      213: 7405435104900597002
+    second: td hero diag attack move (1)_175
+  - first:
+      213: 1772610835552747628
+    second: td hero diag attack move (1)_176
+  - first:
+      213: 6490279471086922569
+    second: td hero diag attack move (1)_177
+  - first:
+      213: 2680096660274742451
+    second: td hero diag attack move (1)_178
+  - first:
+      213: -4327851964136676948
+    second: td hero diag attack move (1)_179
+  - first:
+      213: -3956073479514658516
+    second: td hero diag attack move (1)_180
+  - first:
+      213: -8688363785956072412
+    second: td hero diag attack move (1)_181
+  - first:
+      213: -3206729258940252028
+    second: td hero diag attack move (1)_182
+  - first:
+      213: 2864748415597208478
+    second: td hero diag attack move (1)_183
+  - first:
+      213: -1635511309603754632
+    second: td hero diag attack move (1)_184
+  - first:
+      213: 3585942812295416221
+    second: td hero diag attack move (1)_185
+  - first:
+      213: -43903676950212861
+    second: td hero diag attack move (1)_186
+  - first:
+      213: 8475734346379319531
+    second: td hero diag attack move (1)_187
+  - first:
+      213: -7495194514868841721
+    second: td hero diag attack move (1)_188
+  - first:
+      213: 8632859004165182419
+    second: td hero diag attack move (1)_189
+  - first:
+      213: -147080578516991181
+    second: td hero diag attack move (1)_190
+  - first:
+      213: -3579174687423079407
+    second: td hero diag attack move (1)_191
+  - first:
+      213: -1590396117697135685
+    second: td hero diag attack move (1)_192
+  - first:
+      213: 7834042216864118627
+    second: td hero diag attack move (1)_193
+  - first:
+      213: 2480879834359924233
+    second: td hero diag attack move (1)_194
+  - first:
+      213: -4732809588439144535
+    second: td hero diag attack move (1)_195
+  - first:
+      213: 8785268730007008412
+    second: td hero diag attack move (1)_196
+  - first:
+      213: 2243904561238404939
+    second: td hero diag attack move (1)_197
+  - first:
+      213: -4404582570786306255
+    second: td hero diag attack move (1)_198
+  - first:
+      213: -9092376177113116482
+    second: td hero diag attack move (1)_199
+  - first:
+      213: 1095876904758205452
+    second: td hero diag attack move (1)_200
+  - first:
+      213: 6783980068319761067
+    second: td hero diag attack move (1)_201
+  - first:
+      213: -4815772940503510192
+    second: td hero diag attack move (1)_202
+  - first:
+      213: -3646493301944518835
+    second: td hero diag attack move (1)_203
+  - first:
+      213: -1783499283701843640
+    second: td hero diag attack move (1)_204
+  - first:
+      213: 6973150747218449900
+    second: td hero diag attack move (1)_205
+  - first:
+      213: -9093729003307168724
+    second: td hero diag attack move (1)_206
+  - first:
+      213: 5694582151914110194
+    second: td hero diag attack move (1)_207
+  - first:
+      213: -2496448150897707721
+    second: td hero diag attack move (1)_208
+  - first:
+      213: -5076204529264775181
+    second: td hero diag attack move (1)_209
+  - first:
+      213: 6913203950029699705
+    second: td hero diag attack move (1)_210
+  - first:
+      213: -37907531658184488
+    second: td hero diag attack move (1)_211
+  - first:
+      213: -4511007113447310048
+    second: td hero diag attack move (1)_212
+  - first:
+      213: -8172047572314531253
+    second: td hero diag attack move (1)_213
+  - first:
+      213: 8542688647703767396
+    second: td hero diag attack move (1)_214
+  - first:
+      213: -755808647572727045
+    second: td hero diag attack move (1)_215
+  - first:
+      213: -4762332536164591649
+    second: td hero diag attack move (1)_216
+  - first:
+      213: 7840572412898449526
+    second: td hero diag attack move (1)_217
+  - first:
+      213: 4867213219618800504
+    second: td hero diag attack move (1)_218
+  - first:
+      213: -5586607730562983381
+    second: td hero diag attack move (1)_219
+  - first:
+      213: -1522880937812941566
+    second: td hero diag attack move (1)_220
+  - first:
+      213: -4239283982008131059
+    second: td hero diag attack move (1)_221
+  - first:
+      213: -5855995013153447299
+    second: td hero diag attack move (1)_222
+  - first:
+      213: 7929390377835743468
+    second: td hero diag attack move (1)_223
+  - first:
+      213: 3804856738286266897
+    second: td hero diag attack move (1)_224
+  - first:
+      213: -5932598803690748650
+    second: td hero diag attack move (1)_225
+  - first:
+      213: 8894828028780644912
+    second: td hero diag attack move (1)_226
+  - first:
+      213: -6123172856836149806
+    second: td hero diag attack move (1)_227
+  - first:
+      213: -503365590901196248
+    second: td hero diag attack move (1)_228
+  - first:
+      213: -1265573173598945078
+    second: td hero diag attack move (1)_229
+  - first:
+      213: 6710136623550587601
+    second: td hero diag attack move (1)_230
+  - first:
+      213: 4340621090520574997
+    second: td hero diag attack move (1)_231
+  - first:
+      213: -6897818354979820051
+    second: td hero diag attack move (1)_232
+  - first:
+      213: -8608778559509520795
+    second: td hero diag attack move (1)_233
+  - first:
+      213: -7033907614485997321
+    second: td hero diag attack move (1)_234
+  - first:
+      213: -490839052526068470
+    second: td hero diag attack move (1)_235
+  - first:
+      213: 2379075316858358290
+    second: td hero diag attack move (1)_236
+  - first:
+      213: -4206306260850258222
+    second: td hero diag attack move (1)_237
+  - first:
+      213: -8808795815264889586
+    second: td hero diag attack move (1)_238
+  - first:
+      213: 3045091112200920895
+    second: td hero diag attack move (1)_239
+  - first:
+      213: 2644987880162869642
+    second: td hero diag attack move (1)_240
+  - first:
+      213: 302308465030425870
+    second: td hero diag attack move (1)_241
+  - first:
+      213: -8779783524700814736
+    second: td hero diag attack move (1)_242
+  - first:
+      213: 1325502985666579602
+    second: td hero diag attack move (1)_243
+  - first:
+      213: 1132987278087844704
+    second: td hero diag attack move (1)_244
+  - first:
+      213: 6801132789238950526
+    second: td hero diag attack move (1)_245
+  - first:
+      213: -3531693723547870361
+    second: td hero diag attack move (1)_246
+  - first:
+      213: -590649124863986031
+    second: td hero diag attack move (1)_247
+  - first:
+      213: 3433693184585163629
+    second: td hero diag attack move (1)_248
+  - first:
+      213: -5453516622305823665
+    second: td hero diag attack move (1)_249
+  - first:
+      213: 7127488544805221495
+    second: td hero diag attack move (1)_250
+  - first:
+      213: 7452914729539796331
+    second: td hero diag attack move (1)_251
+  - first:
+      213: 7523769459218045645
+    second: td hero diag attack move (1)_252
+  - first:
+      213: -2542206226149105752
+    second: td hero diag attack move (1)_253
+  - first:
+      213: 6234541972367474328
+    second: td hero diag attack move (1)_254
+  - first:
+      213: -3799596919694314098
+    second: td hero diag attack move (1)_255
+  - first:
+      213: 7923641226197147102
+    second: td hero diag attack move (1)_256
+  - first:
+      213: 9007245042866002492
+    second: td hero diag attack move (1)_257
+  - first:
+      213: -631286499147067880
+    second: td hero diag attack move (1)_258
+  - first:
+      213: 6683213160869556985
+    second: td hero diag attack move (1)_259
+  - first:
+      213: -5511767906613398917
+    second: td hero diag attack move (1)_260
+  - first:
+      213: -3091533237173217563
+    second: td hero diag attack move (1)_261
+  - first:
+      213: 6871314476534961845
+    second: td hero diag attack move (1)_262
+  - first:
+      213: -7646245426622021831
+    second: td hero diag attack move (1)_263
+  - first:
+      213: 3974486175420595920
+    second: td hero diag attack move (1)_264
+  - first:
+      213: -572344355733865796
+    second: td hero diag attack move (1)_265
+  - first:
+      213: -7565094463333633235
+    second: td hero diag attack move (1)_266
+  - first:
+      213: -1172228800201135235
+    second: td hero diag attack move (1)_267
+  - first:
+      213: -243634917756385360
+    second: td hero diag attack move (1)_268
+  - first:
+      213: 1244250865182141066
+    second: td hero diag attack move (1)_269
+  - first:
+      213: -4682714010630923471
+    second: td hero diag attack move (1)_270
+  - first:
+      213: -7029127492955153787
+    second: td hero diag attack move (1)_271
+  - first:
+      213: -7360980004108954988
+    second: td hero diag attack move (1)_272
+  - first:
+      213: 7640997623124170518
+    second: td hero diag attack move (1)_273
+  - first:
+      213: -3405125953566771320
+    second: td hero diag attack move (1)_274
+  - first:
+      213: -7364212768256502623
+    second: td hero diag attack move (1)_275
+  - first:
+      213: 8297405524409950569
+    second: td hero diag attack move (1)_276
+  - first:
+      213: 7467558768446295772
+    second: td hero diag attack move (1)_277
+  - first:
+      213: 3889785923509054850
+    second: td hero diag attack move (1)_278
+  - first:
+      213: -2699762553471952001
+    second: td hero diag attack move (1)_279
+  - first:
+      213: -9156168839240233063
+    second: td hero diag attack move (1)_280
+  - first:
+      213: -5944091652596592009
+    second: td hero diag attack move (1)_281
+  - first:
+      213: 503684893462936751
+    second: td hero diag attack move (1)_282
+  - first:
+      213: -7077357676686221125
+    second: td hero diag attack move (1)_283
+  - first:
+      213: 6449431646275493454
+    second: td hero diag attack move (1)_284
+  - first:
+      213: 740746576918301411
+    second: td hero diag attack move (1)_0
+  - first:
+      213: 2799490307857430707
+    second: td hero diag attack move (1)_1
+  - first:
+      213: 3823869418656724542
+    second: td hero diag attack move (1)_2
+  - first:
+      213: 8598433338666544551
+    second: td hero diag attack move (1)_3
+  - first:
+      213: -3221935065701752580
+    second: td hero diag attack move (1)_4
+  - first:
+      213: 987260331598003939
+    second: td hero diag attack move (1)_5
+  - first:
+      213: -1448093059684568197
+    second: td hero diag attack move (1)_6
+  - first:
+      213: 8443866428707815992
+    second: td hero diag attack move (1)_7
+  - first:
+      213: 5893397964274905377
+    second: td hero diag attack move (1)_8
+  - first:
+      213: 4096792735758506201
+    second: td hero diag attack move (1)_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 102
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea4dc94619a74a00800000000000000
+      internalID: 740746576918301411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 101
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8bdf74a99c9d620800000000000000
+      internalID: 2799490307857430707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 100
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36738ef9fc111530800000000000000
+      internalID: 3823869418656724542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 67
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad6818a095c35770800000000000000
+      internalID: 8598433338666544551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_4
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 67
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0e877d0236943d0800000000000000
+      internalID: -3221935065701752580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 67
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eebbb57a0473bd00800000000000000
+      internalID: 987260331598003939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 35
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73fac7d80757ebe0800000000000000
+      internalID: -1448093059684568197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_7
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 36
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832c9f587c3ae2570800000000000000
+      internalID: 8443866428707815992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 37
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121bd94593e89c150800000000000000
+      internalID: 5893397964274905377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: td hero diag attack move (1)_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 6
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d85945994bbad830800000000000000
+      internalID: 4096792735758506201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

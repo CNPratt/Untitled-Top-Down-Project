@@ -467,9 +467,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0020733012, y: -2.1095529}
-  m_Size: {x: 2.8153286, y: 2.0964816}
-  m_Direction: 1
+  m_Offset: {x: -0.021617413, y: -1.7925507}
+  m_Size: {x: 3.139968, y: 3.765868}
+  m_Direction: 0
 --- !u!114 &5622893990568855085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,7 +547,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: -1
+    value: 1
 --- !u!50 &8516214642272112940
 Rigidbody2D:
   serializedVersion: 4
@@ -582,9 +582,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0020700623, y: -0.18908142}
-  m_Size: {x: 0.3416062, y: 0.31829283}
-  m_Direction: 1
+  m_Offset: {x: -0.0040323734, y: -0.18127167}
+  m_Size: {x: 0.29843378, y: 0.3571303}
+  m_Direction: 0
 --- !u!114 &-5752454894025946494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,8 +597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40b9e815025d413db2321dbb218d66b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kgPath: {fileID: 0}
-  player: {fileID: 0}
+  kgPath: {fileID: -5339695917324259524}
+  player: {fileID: 1854964192959219951, guid: 53b3ca62f7ab145d58737a4958e73e42, type: 3}
   thiskCom: {fileID: -1674099913028283102}
   koboldRB: {fileID: 8516214642272112940}
   faceDirection: {x: 0, y: 0, z: 0}
@@ -622,6 +622,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gotHit: 0
   gotHitSwitch: 0
+  thisPath: {fileID: 0}
+  canShoot: 0
   enHealthMax: 0
   enHealthCurrent: 0
   deathFX: {fileID: 7326784430475278950, guid: a88a1db0d6fd14d7ead2e515077f0c8f, type: 3}
@@ -638,7 +640,7 @@ MonoBehaviour:
   kslashl: {fileID: 291280301184699762}
   kslashr: {fileID: 5425864193092050098}
   rend: {fileID: 8516214642194656242}
-  player: {fileID: 0}
+  player: {fileID: 1854964192959219951, guid: 53b3ca62f7ab145d58737a4958e73e42, type: 3}
   pCol: {fileID: 0}
   enCol: {fileID: 0}
   koboldRB: {fileID: 0}
@@ -654,6 +656,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6de46e3e5f747549af035299963502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kslashl: {fileID: 291280301184699762}
+  layermask: 0
+  randomPointOnARandomNode: []
   isSearching: 0
   startPos: {x: 0, y: 0}
   Enemies: []
@@ -667,6 +672,6 @@ MonoBehaviour:
   gotHit: 0
   thisEnemy: {fileID: 8516214642194656243}
   target: {fileID: 0}
-  speed: 80
+  speed: 40
   nextWaypointDistance: 1
   reachedEndofPath: 0

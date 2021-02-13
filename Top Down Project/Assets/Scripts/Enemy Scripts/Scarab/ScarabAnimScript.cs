@@ -28,7 +28,7 @@ public class ScarabAnimScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+
         Vector3 pDistancenorm = transform.InverseTransformPoint(player.transform.position).normalized;
 
         anim.SetInteger("animState", currentState);
@@ -44,7 +44,7 @@ public class ScarabAnimScript : MonoBehaviour
  //       else if (!thiskCom.inRange && thiskCom.spriteSwitch == false)
           else
         {
-            if (koboldRB.velocity.y > 0 && Mathf.Abs(koboldRB.velocity.x) <= Mathf.Abs(koboldRB.velocity.y) / 2)
+            if (koboldRB.velocity.y > .2 && Mathf.Abs(koboldRB.velocity.x) <= Mathf.Abs(koboldRB.velocity.y) / 2)
             {
                 runState = 1;
                 currentState = runState;
@@ -52,14 +52,14 @@ public class ScarabAnimScript : MonoBehaviour
 
             }
 
-            else if (koboldRB.velocity.x < 0 && Mathf.Abs(koboldRB.velocity.y) <= Mathf.Abs(koboldRB.velocity.x) / 2)
+            else if (koboldRB.velocity.x < .2 && Mathf.Abs(koboldRB.velocity.y) <= Mathf.Abs(koboldRB.velocity.x) / 2)
             {
                 runState = 7;
                 currentState = runState;
                 idleState = 15;
             }
 
-            else if (koboldRB.velocity.y < 0 && Mathf.Abs(koboldRB.velocity.x) <= Mathf.Abs(koboldRB.velocity.y) / 2)
+            else if (koboldRB.velocity.y < .2 && Mathf.Abs(koboldRB.velocity.x) <= Mathf.Abs(koboldRB.velocity.y) / 2)
             {
                 runState = 5;
                 currentState = runState;
@@ -67,14 +67,14 @@ public class ScarabAnimScript : MonoBehaviour
 
             }
 
-            else if (koboldRB.velocity.x > 0 && Mathf.Abs(koboldRB.velocity.y) <= Mathf.Abs(koboldRB.velocity.x) / 2)
+            else if (koboldRB.velocity.x > .2 && Mathf.Abs(koboldRB.velocity.y) <= Mathf.Abs(koboldRB.velocity.x) / 2)
             {
                 runState = 3;
                 currentState = runState;
                 idleState = 11;
             }
 
-            else if (koboldRB.velocity.x < 0 && koboldRB.velocity.y > 0)
+            else if (koboldRB.velocity.x < .2 && koboldRB.velocity.y > .1)
             {
                 runState = 8;
                 currentState = runState;
@@ -82,21 +82,21 @@ public class ScarabAnimScript : MonoBehaviour
 
             }
 
-            else if (koboldRB.velocity.x > 0 && koboldRB.velocity.y > 0)
+            else if (koboldRB.velocity.x > 0.2 && koboldRB.velocity.y > 0.2)
             {
                 runState = 2;
                 currentState = runState;
                 idleState = 10;
             }
 
-            else if (koboldRB.velocity.x < 0 && koboldRB.velocity.y < 0)
+            else if (koboldRB.velocity.x < 0.2 && koboldRB.velocity.y < 0.2)
             {
                 runState = 6;
                 currentState = runState;
                 idleState = 16;
             }
 
-            else if (koboldRB.velocity.x > 0 && koboldRB.velocity.y < 0)
+            else if (koboldRB.velocity.x > 0.2 && koboldRB.velocity.y < 0.2)
             {
                 runState = 4;
                 currentState = runState;

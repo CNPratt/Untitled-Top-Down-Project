@@ -39,8 +39,9 @@ public class Throwscripttest2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bombRB.isKinematic = true;
 
-        tCol = GameObject.Find("Tilemap").GetComponent<CompositeCollider2D>();
+        tCol = GameObject.Find("Main Tilemap").GetComponent<CompositeCollider2D>();
 
         canpickUp = true;
         player = GameObject.Find("Player");
@@ -163,6 +164,9 @@ public class Throwscripttest2 : MonoBehaviour
             canpickUp = true;
 
             yield return new WaitForSeconds(.2f);
+//
+            bombRB.isKinematic = true;
+            bombRB.velocity = Vector3.zero;
         }
 
 

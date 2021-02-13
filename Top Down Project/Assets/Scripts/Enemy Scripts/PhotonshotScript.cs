@@ -10,7 +10,7 @@ public class PhotonshotScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "Player" || collision.name == "Tilemap")
+        if (collision.name == "Player" || collision.name == "Main Tilemap")
         {
             Destroy(gameObject);
         }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4531797348769966552}
   - component: {fileID: 4636941062393405482}
   - component: {fileID: 2708986735327140372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Photon Shot
   m_TagString: Enemy Weapons
   m_Icon: {fileID: 0}

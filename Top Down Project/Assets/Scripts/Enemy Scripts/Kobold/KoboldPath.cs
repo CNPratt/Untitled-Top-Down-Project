@@ -7,6 +7,11 @@ using UnityEngine.Tilemaps;
 
 public class KoboldPath : MonoBehaviour
 {
+    public bool pursuitMode;
+
+    public List<Vector3> randomPointOnARandomNode;
+    public GraphNode node;
+
     public Vector2 startPos;
 
     public List<GameObject> Enemies;
@@ -61,7 +66,10 @@ public class KoboldPath : MonoBehaviour
         koboldRB = GetComponent<Rigidbody2D>();
 
 
-        InvokeRepeating("UpdatePath", 0f, Random.Range(1f, 2f));
+//        InvokeRepeating("UpdatePath", 0f, Random.Range(1f, 2f));
+
+        Invoke("UpdatePath", 0);
+
     }
 
 
@@ -69,19 +77,37 @@ public class KoboldPath : MonoBehaviour
     {
         if (seeker.IsDone())
         {
-            if (Vector2.Distance(koboldRB.position, target.position) < 5f && !thiskCom.isAttacking)
+            if (thiskCom.inRange && !thiskCom.isAttacking)
             {
+                pursuitMode = true;
+
                 pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
                 seeker.StartPath(koboldRB.position, target.position - pathRandomizer, OnPathComplete);
-                CancelInvoke();
-                InvokeRepeating("UpdatePath", 0, Random.Range(.5f, 1f));
+//                CancelInvoke();
+//                InvokeRepeating("UpdatePath", 0, Random.Range(1f, 2f));
             }
-            else if (Vector2.Distance(koboldRB.position, target.position) > 5f && !thiskCom.isAttacking)
+            else if (!thiskCom.inRange && !thiskCom.isAttacking)
             {
-                pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-                seeker.StartPath(koboldRB.position, (Vector3)AstarPath.active.GetNearest(koboldRB.position + ((Vector2)pathRandomizer * 4)), OnPathComplete);
-                CancelInvoke();
-                InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
+                pursuitMode = false;
+
+                node = AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node;
+
+                if (node != null)
+
+                {
+
+                    var reachable = PathUtilities.GetReachableNodes(node);
+
+                    randomPointOnARandomNode = PathUtilities.GetPointsOnNodes(reachable, 1);
+
+                }
+
+                seeker.StartPath(koboldRB.position, randomPointOnARandomNode[Random.Range(0, randomPointOnARandomNode.Count - 1)], OnPathComplete);
+
+                //               pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+                //               seeker.StartPath(koboldRB.position, (Vector3)AstarPath.active.GetNearest(koboldRB.position + ((Vector2)pathRandomizer * 4)), OnPathComplete);
+  //                             CancelInvoke();
+  //                             InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
             }
         }
     }
@@ -96,17 +122,35 @@ public class KoboldPath : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(thiskCom.inRange != updateSwitch)
+        if (path != null)
         {
-            updateSwitch = thiskCom.inRange;
+//            Debug.Log(Vector2.Distance((Vector2)path.vectorPath[path.vectorPath.Count - 1], koboldRB.position));
+        }
 
-            if(thiskCom.inRange)
+        if (path != null)
+        {
+            if (thiskCom.inRange && !thiskCom.isAttacking && Vector2.Distance((Vector2)path.vectorPath[path.vectorPath.Count - 1], target.position) > 3)
             {
                 Invoke("UpdatePath", 0);
             }
         }
+
+        if(reachedEndofPath)
+        {
+            Invoke("UpdatePath", 0);
+        }
+
+//        if (thiskCom.inRange != updateSwitch)
+//        {
+//            updateSwitch = thiskCom.inRange;
+//
+//            if(thiskCom.inRange)
+//            {
+//                Invoke("UpdatePath", 0);
+//            }
+//        }
 
         foreach (GameObject enemy in Enemies)
         {
@@ -126,7 +170,7 @@ public class KoboldPath : MonoBehaviour
         }
 
 
-        AstarPath.active.UpdateGraphs(handlerCol.bounds);
+ //       AstarPath.active.UpdateGraphs(handlerCol.bounds);
 
         thisEnemy.transform.position = transform.position;
 
@@ -149,14 +193,17 @@ public class KoboldPath : MonoBehaviour
         Vector2 force = direction * speed;
         //
         float targDist = Vector2.Distance(koboldRB.position, target.position);
-        float awareDistance = 5f;
+//        float awareDistance = 5f;
 
-        if (targDist < awareDistance && !thiskCom.isAttacking && !thiskCom.gotHit)
+        if (thiskCom.inRange && !thiskCom.isAttacking && !thiskCom.gotHit)
         {
-            koboldRB.velocity = new Vector2(0, 0);
-            koboldRB.AddForce(force, ForceMode2D.Force);
+//            koboldRB.velocity = new Vector2(0, 0);
+            koboldRB.AddForce(force/8, ForceMode2D.Force);
+
+//            koboldRB.velocity = direction * 3;
+
         }
-        else if (targDist > awareDistance && !thiskCom.isAttacking && !thiskCom.gotHit)
+        else if (!thiskCom.inRange && !thiskCom.isAttacking && !thiskCom.gotHit)
         {
             koboldRB.AddForce(direction, ForceMode2D.Force);
         }

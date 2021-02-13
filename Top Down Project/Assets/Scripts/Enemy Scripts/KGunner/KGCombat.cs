@@ -5,6 +5,9 @@ using UnityEngine.Rendering;
 
 public class KGCombat : EnCombatMono
 {
+    public KGPath thisPath;
+    public bool canShoot;
+
     public int enHealthMax;
     public int enHealthCurrent;
     public GameObject deathFX;
@@ -36,13 +39,14 @@ public class KGCombat : EnCombatMono
     IEnumerator EnDeath()
     {
         Instantiate(deathFX, transform.position, transform.rotation);
-        Destroy(gameObject);
+//       Destroy(gameObject);
+        gameObject.SetActive(false);
         yield break;
     }
 
     IEnumerator GotHit()
     {
-        //        Debug.Log("Gothit engaged");
+//                Debug.Log("Gothit engaged");
 
         koboldRB.velocity = Vector3.zero;
 
@@ -50,22 +54,26 @@ public class KGCombat : EnCombatMono
 
         if (isAttacking)
         {
-            StopCoroutine(kshotRoutine);
+            if (kshotRoutine != null)
+            {
+                StopCoroutine(kshotRoutine);
+            }
             isAttacking = false;
             spriteSwitch = false;
         }
 
         koboldRB.AddForce((transform.position - player.transform.position).normalized * 1.5f, ForceMode2D.Impulse);
 
-        //      used to be double the time below - 5sec instead of 2.5s
+        //      used to be double the time below - .5sec instead of .25s
 
-        rend.color = Color.white;
+        rend.color = Color.black;
+//        rend.color = Color.white;
         yield return new WaitForSeconds(.05f);
-        rend.color = Color.clear;
+//        rend.color = Color.clear;
         yield return new WaitForSeconds(.05f);
-        rend.color = Color.white;
+//        rend.color = Color.white;
         yield return new WaitForSeconds(.05f);
-        rend.color = Color.clear;
+//        rend.color = Color.clear;
         yield return new WaitForSeconds(.05f);
         rend.color = Color.white;
         yield return new WaitForSeconds(.05f);
@@ -80,13 +88,25 @@ public class KGCombat : EnCombatMono
         gotHit = false;
     }
 
+    private void OnEnable()
+    {
+        enHealthCurrent = enHealthMax;
+    }
+
+    private void OnDisable()
+    {
+        inRange = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        canShoot = true;
 
         enHealthMax = 3;
         enHealthCurrent = enHealthMax;
 
+        thisPath = gameObject.GetComponent<KGPath>();
         shotSwitch = true;
         kAnimScript = gameObject.GetComponent<KGAnimScript>();
         koboldRB = gameObject.GetComponent<Rigidbody2D>();
@@ -98,20 +118,24 @@ public class KGCombat : EnCombatMono
 
     IEnumerator KShotCD()
     {
- //       Debug.Log("called");
+//        Debug.Log("called");
 
-        yield return new WaitForSeconds(Random.Range(4f, 5f));
+        yield return new WaitForSeconds(Random.Range(3f, 4f));
 
         if (!gotHit && inRange)
         {
-            kshotRoutine = StartCoroutine("KShot", 0);
+//            kshotRoutine = StartCoroutine("KShot", 0);
         }
 
-        StartCoroutine("KShotCD", 0);
+        canShoot = true;
+
+//       StartCoroutine("KShotCD", 0);
     }
 
     IEnumerator KShot()
     {
+        canShoot = false;
+
         toShoot = false;
         isAttacking = true;
 
@@ -119,7 +143,7 @@ public class KGCombat : EnCombatMono
 
 //        koboldRB.AddForce(kAnimScript.backDirection, ForceMode2D.Impulse);
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.1f);
 
 //       spriteSwitch = true;
 
@@ -137,7 +161,7 @@ public class KGCombat : EnCombatMono
 //        kslashl.SetActive(false);
 //        kslashr.SetActive(false);
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.1f);
 
         currAttDir = kAnimScript.currentState;
         spriteSwitch = true;
@@ -149,21 +173,28 @@ public class KGCombat : EnCombatMono
 
         koboldRB.AddForce(kAnimScript.faceDirection, ForceMode2D.Impulse);
 
-        yield return new WaitForSeconds(.4f);
+        yield return new WaitForSeconds(.1f);
 
         spriteSwitch = false;
         isAttacking = false;
+        StartCoroutine("KShotCD", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //       if(thisPath.losHit.collider.name == "Player" && canShoot)
+        //       {
+        //           Debug.Log("triggered");
+        //
+        //           StartCoroutine("KShot");
+        //       }
 
-        if (shotSwitch)
+        if (canShoot && thisPath.losHit.collider == null && inRange)
         {
- //           Debug.Log("called");
+//            Debug.Log("called");
             shotSwitch = false;
-            StartCoroutine("KShotCD", 0);
+            StartCoroutine("KShot", 0);
         }
 
 //       if(!inRange && kslashRoutine != null)
@@ -178,10 +209,6 @@ public class KGCombat : EnCombatMono
         if (Vector2.Distance(koboldRB.position, player.transform.position) < 5)
         {
             inRange = true;
-        }
-        else
-        {
-            inRange = false;
         }
 
  //       if (toShoot == true && !isAttacking)
@@ -209,8 +236,8 @@ public class KGCombat : EnCombatMono
 
         if (gotHit == true)
         {
-            koboldRB.velocity = new Vector2(0, 0);
-            koboldRB.AddForce((transform.position - player.transform.position).normalized * 50f, ForceMode2D.Force);
+//            koboldRB.velocity = new Vector2(0, 0);
+//            koboldRB.AddForce((transform.position - player.transform.position).normalized * 50f, ForceMode2D.Force);
         }
 
         //      klash location updater

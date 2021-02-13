@@ -5,10 +5,14 @@ using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
- 
+    public Color solidColor;
+    public static Color rendColor;
+
+    public static Vector3 desiredDir;
     public GameObject nanoTarget;
 
     public Rigidbody2D rb;
+    public PlayerAnimScript animScript;
     public EnCombatMono lastCombatAI;
     public SpriteRenderer rend;
     public Collider2D lastEnemyCollider;
@@ -29,24 +33,23 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Recoil()
     {
-//        Debug.Log("Recoil called");
-        
-        beenHit = true;
-        rend.color = Color.white;
-        yield return new WaitForSeconds(.1f);
-        rend.color = Color.clear;
-        yield return new WaitForSeconds(.1f);
-        rend.color = Color.white;
-        yield return new WaitForSeconds(.1f);
-        rend.color = Color.clear;
-        yield return new WaitForSeconds(.1f);
-        rend.color = Color.white;
-        yield return new WaitForSeconds(.1f);
+        //        Debug.Log("Recoil called");
+            beenHit = true;
+            rend.color = Color.white;
+            yield return new WaitForSeconds(.1f);
+            rend.color = Color.clear;
+            yield return new WaitForSeconds(.1f);
+            rend.color = Color.white;
+            yield return new WaitForSeconds(.1f);
+            rend.color = Color.clear;
+            yield return new WaitForSeconds(.1f);
+            rend.color = Color.white;
+            yield return new WaitForSeconds(.1f);
 
-        beenHit = false;
+            beenHit = false;
 
-        canAttack = true;
-        DashScript.canDash = true;
+            canAttack = true;
+            DashScript.canDash = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -55,7 +58,7 @@ public class PlayerController : MonoBehaviour
         {
       //      Debug.Log("Initial enemy hit.");
 
-            PlayerAnimScript.currentState = PlayerAnimScript.idleState;
+            animScript.currentState = PlayerAnimScript.idleState;
 
             lastEnemyCollider = collider.GetComponentInParent<Collider2D>();
             lastColPos = lastEnemyCollider.transform.position;
@@ -76,7 +79,7 @@ public class PlayerController : MonoBehaviour
         if (collider.tag == "Enemy Weapons" && beenHit == false && !DodgeScript.isDodging)
         {
 
-            PlayerAnimScript.currentState = PlayerAnimScript.idleState;
+            animScript.currentState = PlayerAnimScript.idleState;
 
             lastEnemyCollider = collider.GetComponentInParent<Collider2D>();
             lastColPos = lastEnemyCollider.transform.position;
@@ -100,7 +103,7 @@ public class PlayerController : MonoBehaviour
         {
             //      Debug.Log("Initial enemy hit.");
 
-            PlayerAnimScript.currentState = PlayerAnimScript.idleState;
+            animScript.currentState = PlayerAnimScript.idleState;
 
             lastEnemyCollider = collision.GetComponentInParent<Collider2D>();
             lastColPos = lastEnemyCollider.transform.position;
@@ -117,16 +120,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit && !DodgeScript.isDodging)
+        if (collision.tag != null)
         {
-            //      Debug.Log("Initial enemy hit.");
+            if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit && !DodgeScript.isDodging)
+            {
+                //      Debug.Log("Initial enemy hit.");
 
-            PlayerAnimScript.currentState = PlayerAnimScript.idleState;
+                animScript.currentState = PlayerAnimScript.idleState;
 
-            lastEnemyCollider = collision.GetComponentInParent<Collider2D>();
-            lastColPos = lastEnemyCollider.transform.position;
+                lastEnemyCollider = collision.GetComponentInParent<Collider2D>();
+                lastColPos = lastEnemyCollider.transform.position;
 
-            StartCoroutine(Recoil());
+                StartCoroutine(Recoil());
+            }
         }
 
         if (collision.tag == "Enemy" && beenHit == true)
@@ -139,6 +145,16 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(10, 12, true);
+
+        animScript = gameObject.GetComponent<PlayerAnimScript>();
+
+        solidColor = rend.color;
+
+        solidColor.a = 1f;
+
+        rendColor = rend.color;
+
         enCollisionIgnore = true;
 
         canAttack = true;
@@ -151,6 +167,21 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        rendColor.a = Random.Range(.1f, .8f);
+
+        if(DashScript.dashEffectOn)
+        {
+            rend.color = rendColor;
+            Physics2D.IgnoreLayerCollision(10, 11, true);
+            Physics2D.IgnoreLayerCollision(10, 8, true);
+
+        }
+        else
+        {
+            rend.color = solidColor;
+            Physics2D.IgnoreLayerCollision(10, 11, false);
+            Physics2D.IgnoreLayerCollision(10, 8, false);
+        }
 
         if (PlayerAnimScript.faceDirection == Vector3.down || PlayerAnimScript.faceDirection == Vector3.up || PlayerAnimScript.faceDirection == Vector3.right || PlayerAnimScript.faceDirection == Vector3.left)
         {
@@ -214,6 +245,7 @@ public class PlayerController : MonoBehaviour
                 backpedal = false;
             }
 
+
             if (Input.GetKey("w"))
             {
                 rb.AddForce(Vector2.up * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
@@ -237,5 +269,60 @@ public class PlayerController : MonoBehaviour
                 backpedal = true;
             }
         }
+
+        if (Input.GetKey("w") && !Input.GetKey("d") && !Input.GetKey("a"))
+        {
+            moveSpeed = 1f;
+
+            desiredDir = Vector3.up;
+        }
+
+        else if (Input.GetKey("a") && !Input.GetKey("w") && !Input.GetKey("s"))
+        {
+            moveSpeed = 1f;
+
+            desiredDir = Vector3.left;
+        }
+
+        else if (Input.GetKey("s") && !Input.GetKey("a") && !Input.GetKey("d"))
+        {
+            moveSpeed = 1f;
+            desiredDir = Vector3.down;
+        }
+
+        else if (Input.GetKey("d") && !Input.GetKey("w") && !Input.GetKey("s"))
+        {
+            moveSpeed = 1f;
+            desiredDir = Vector3.right;
+        }
+
+        else if (Input.GetKey("w") && Input.GetKey("a"))
+        {
+            moveSpeed = .7f;
+
+            desiredDir = Vector3.up + Vector3.left;
+        }
+
+        else if (Input.GetKey("w") && Input.GetKey("d"))
+        {
+            moveSpeed = .7f;
+
+            desiredDir = Vector3.up + Vector3.right;
+        }
+
+        else if (Input.GetKey("s") && Input.GetKey("a"))
+        {
+            moveSpeed = .7f;
+
+            desiredDir = Vector3.down + Vector3.left;
+        }
+
+        else if (Input.GetKey("s") && Input.GetKey("d"))
+        {
+            moveSpeed = .7f;
+
+            desiredDir = Vector3.down + Vector3.right;
+        }
     }
 }
+

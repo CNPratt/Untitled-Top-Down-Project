@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class dashEffect : MonoBehaviour
 {
+    public PlayerAnimScript animScript;
+
 //    public Animator anim;
     public bool fadeOn;
     public Color color;
@@ -15,10 +17,11 @@ public class dashEffect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animScript = GameObject.Find("Player").GetComponent<PlayerAnimScript>();
         prend = GameObject.Find("Player").GetComponent<SpriteRenderer>();
         rend = GetComponent<SpriteRenderer>();
         color = rend.color;
-        color.a = 1f;
+        color.a = prend.color.a;
 
         rend.sprite = prend.sprite;
     }
@@ -26,18 +29,23 @@ public class dashEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerAnimScript.currentState == 1 || PlayerAnimScript.currentState == 5 || PlayerAnimScript.currentState == 6 || PlayerAnimScript.currentState == 9 || PlayerAnimScript.currentState == 13 || PlayerAnimScript.currentState == 14)
-        {
-            rend.sortingOrder = 1;
-        }
-        else
+//        if (animScript.currentState == 4 || animScript.currentState == 5 || animScript.currentState == 6 || animScript.currentState == 12 || animScript.currentState == 13 || animScript.currentState == 14)
+//        {
+//            rend.sortingOrder = -1;
+//        }
+
+        if(PlayerAnimScript.faceDirection == Vector3.down || PlayerAnimScript.faceDirection == Vector3.down + Vector3.right || PlayerAnimScript.faceDirection == Vector3.down + Vector3.left)
         {
             rend.sortingOrder = -1;
         }
-        
-        
-//        dashFXstate = PlayerAnimScript.currentState;
-//        anim.SetInteger("animState", dashFXstate);
+        else
+        {
+            rend.sortingOrder = 1;
+        }
+
+
+        //        dashFXstate = PlayerAnimScript.currentState;
+        //        anim.SetInteger("animState", dashFXstate);
 
         rend.color = color;
 

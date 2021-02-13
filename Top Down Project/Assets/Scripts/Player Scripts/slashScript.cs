@@ -31,13 +31,6 @@ public class slashScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerAnimScript.currentState == 4 || PlayerAnimScript.currentState == 5 || PlayerAnimScript.currentState == 6 || PlayerAnimScript.currentState == 12 || PlayerAnimScript.currentState == 13 || PlayerAnimScript.currentState == 14)
-        {
-            rend.sortingOrder = 1;
-        }
-        else
-        {
-            rend.sortingOrder = -1;
-        }
+
     }
 }

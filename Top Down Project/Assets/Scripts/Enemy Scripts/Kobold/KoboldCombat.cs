@@ -32,13 +32,14 @@ public class KoboldCombat : EnCombatMono
     IEnumerator EnDeath()
     {
         Instantiate(deathFX, transform.position, transform.rotation);
-        Destroy(gameObject);
+//       Destroy(gameObject);
+        gameObject.SetActive(false);
         yield break;
     }
 
     IEnumerator GotHit()
     {
-        //        Debug.Log("Gothit engaged");
+ //               Debug.Log("Gothit engaged");
 
         koboldRB.velocity = Vector3.zero;
 
@@ -53,20 +54,21 @@ public class KoboldCombat : EnCombatMono
 
         koboldRB.AddForce((transform.position - player.transform.position).normalized * 1.5f, ForceMode2D.Impulse);
 
-//      used to be double the time below - 5sec instead of 2.5s
+        //      used to be double the time below - 5sec instead of 2.5s
 
+        rend.color = Color.black;
+        //        rend.color = Color.white;
+        yield return new WaitForSeconds(.05f);
+        //        rend.color = Color.clear;
+        yield return new WaitForSeconds(.05f);
+        //        rend.color = Color.white;
+        yield return new WaitForSeconds(.05f);
+        //        rend.color = Color.clear;
+        yield return new WaitForSeconds(.05f);
         rend.color = Color.white;
-        yield return new WaitForSeconds(.05f);
-        rend.color = Color.clear;
-        yield return new WaitForSeconds(.05f);
-        rend.color = Color.white;
-        yield return new WaitForSeconds(.05f);
-        rend.color = Color.clear;
-        yield return new WaitForSeconds(.05f);
-        rend.color = Color.white;
-        yield return new WaitForSeconds(.05f);
+                yield return new WaitForSeconds(.05f);
 
-        if(enHealthCurrent <= 0)
+        if (enHealthCurrent <= 0)
         {
             StartCoroutine(EnDeath());
         }
@@ -74,6 +76,16 @@ public class KoboldCombat : EnCombatMono
         koboldRB.velocity = Vector3.zero;
 
         gotHit = false;
+    }
+
+    private void OnEnable()
+    {
+        enHealthCurrent = enHealthMax;
+    }
+
+    private void OnDisable()
+    {
+        inRange = false;
     }
 
     // Start is called before the first frame update
@@ -152,10 +164,6 @@ public class KoboldCombat : EnCombatMono
         if (Vector2.Distance(koboldRB.position, player.transform.position) < 5)
         {
             inRange = true;
-        }
-        else
-        {
-            inRange = false;
         }
 
         if (pDetected == true && !isAttacking)

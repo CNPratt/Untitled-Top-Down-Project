@@ -618,6 +618,7 @@ namespace Pathfinding {
 				if (rigid != null) rigid.MovePosition(currentPosition);
 //				else if (rigid2D != null) rigid2D.MovePosition(currentPosition);
 
+				else if (rigid2D != null && rigid2D.name == "Nanobot") rigid2D.velocity = (currentPosition - rigid2D.transform.position) * 2;
 				else if (rigid2D != null) rigid2D.velocity = (nextPosition - rigid2D.transform.position);
 
 				else tr.position = currentPosition;
