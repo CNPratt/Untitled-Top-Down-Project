@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: -7326620611511844117}
   - component: {fileID: 575275491307959464}
   - component: {fileID: 1126467848970658234}
+  - component: {fileID: -9139101181543642961}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -221,7 +222,6 @@ MonoBehaviour:
   stopintCounter: 0
   comboCounter: 0
   isSlashing: 0
-  isCharging: 0
   slashCharger: 0
   slashInterval: 0
   stopInterval: 0
@@ -259,6 +259,18 @@ MonoBehaviour:
   dashEqualizer: 0
   dashFXThreshold: 0
   velInt: 0
+--- !u!114 &-9139101181543642961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854964192959219951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1eca86737c43437e990d35610830595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2286484011957501018
 GameObject:
   m_ObjectHideFlags: 0

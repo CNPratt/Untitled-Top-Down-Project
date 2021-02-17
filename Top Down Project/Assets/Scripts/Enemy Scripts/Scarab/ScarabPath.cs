@@ -86,11 +86,6 @@ public class ScarabPath : MonoBehaviour
 
                 }
 
-                //            pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-                //             seeker.StartPath(koboldRB.position, target.position - pathRandomizer, OnPathComplete);
-
- //               seeker.StartPath(koboldRB.position, koboldRB.transform.position - pathRandomizer * 5, OnPathComplete);
-
                 seeker.StartPath(koboldRB.position, randomPointOnARandomNode[Random.Range(0, randomPointOnARandomNode.Count - 1)], OnPathComplete);
 
                     CancelInvoke();
@@ -115,12 +110,8 @@ public class ScarabPath : MonoBehaviour
                     seeker.StartPath(koboldRB.position, randomPointOnARandomNode[Random.Range(0, randomPointOnARandomNode.Count - 1)], OnPathComplete);
                 }
 
-                //                pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-                //                seeker.StartPath(koboldRB.position, (Vector3)AstarPath.active.GetNearest(koboldRB.position + ((Vector2)pathRandomizer * 4)), OnPathComplete);
-
-
-                                CancelInvoke();
-                                InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
+                    CancelInvoke();
+                    InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
             }
         }
     }
@@ -150,15 +141,15 @@ public class ScarabPath : MonoBehaviour
 
         foreach (GameObject enemy in Enemies)
         {
-            //           Debug.Log(Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x));
-            //           Debug.Log(target.transform.position - enemy.transform.position);
-            //           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
+//           Debug.Log(Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x));
+//           Debug.Log(target.transform.position - enemy.transform.position);
+//           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
 
             if (enemy != null)
             {
                 if (Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x) < .5f || Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).y) < .5f)
                 {
-                    //           Debug.Log("spreader activated on " + gameObject);
+       //           Debug.Log("spreader activated on " + gameObject);
 
                     koboldRB.AddForce(enemy.transform.InverseTransformPoint(transform.position).normalized, ForceMode2D.Force);
                 }
@@ -193,8 +184,7 @@ public class ScarabPath : MonoBehaviour
 
         if (targDist < awareDistance && !thiskCom.isAttacking && !thiskCom.gotHit)
         {
-   //         koboldRB.velocity = new Vector2(0, 0);
-//            koboldRB.AddForce(force/10, ForceMode2D.Force);
+
             koboldRB.AddForce(force/20, ForceMode2D.Force);
 
         }

@@ -7,6 +7,8 @@ public class Throwscripttest2 : MonoBehaviour
 {
     // MODULER MASS BUT LINEAR DRAG = 2
 
+    public bool okeyUp;
+
     public float objMass;
     public float objDrag;
 
@@ -22,17 +24,25 @@ public class Throwscripttest2 : MonoBehaviour
     public bool isIgnoringPlayer;
     public bool canpickUp;
 
+    IEnumerator OKeyUp()
+    {
+        yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.O));
+        okeyUp = true;
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
-//        Debug.Log("collision detected");
+  //      Debug.Log("stay");
 
-        if(canpickUp== true && (collision.collider.name == "Player" && Input.GetKey(KeyCode.O) && PlayerController.isHolding == false))
+        if(canpickUp== true && collision.collider.name == "Player" && Input.GetKeyDown(KeyCode.O) && PlayerController.handsFree)
         {
             PlayerController.isHolding = true;
 
             canpickUp = false;
             isHeld = true;
             gameObject.transform.SetParent(player.transform);
+
+            StartCoroutine("OKeyUp");
         }
     }
 
@@ -84,8 +94,13 @@ public class Throwscripttest2 : MonoBehaviour
             gameObject.transform.localPosition = new Vector2(0, .3f);
         }
 
-        if (isHeld == true && Input.GetKeyDown(KeyCode.I))
+        if (isHeld == true && Input.GetKeyDown(KeyCode.O) && okeyUp)
         {
+            Physics2D.IgnoreLayerCollision(13, 11);
+            Physics2D.IgnoreLayerCollision(13, 13);
+
+            okeyUp = false;
+
             PlayerController.isHolding = false;
 
             isHeld = false;
@@ -127,6 +142,9 @@ public class Throwscripttest2 : MonoBehaviour
             PlayerController.moveSpeed = speedBefore;
 
             yield return new WaitForSeconds(.2f);
+
+            Physics2D.IgnoreLayerCollision(13, 11, false);
+            Physics2D.IgnoreLayerCollision(13, 13, false);
 
             isIgnoringPlayer = false;
 

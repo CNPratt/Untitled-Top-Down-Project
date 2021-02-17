@@ -87,15 +87,10 @@ public class KGPath : MonoBehaviour
             if (thiskCom.inRange && !thiskCom.isAttacking)
             {
                 pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-//                seeker.StartPath(koboldRB.position, target.position - (pathRandomizer), OnPathComplete);
-
-//                seeker.StartPath(koboldRB.position, (Vector3)AstarPath.active.GetNearest(koboldRB.position - new Vector2(pathRandomizer.x * 4, pathRandomizer.y * 4)), OnPathComplete);
 
                 seeker.StartPath(koboldRB.position, (Vector3)AstarPath.active.GetNearest((Vector2)target.position - new Vector2(pathRandomizer.x * 4, pathRandomizer.y * 4)), OnPathComplete);
-
- //               CancelInvoke();
- //               InvokeRepeating("UpdatePath", 0, Random.Range(1.5f, 2f));
             }
+
             else if (!thiskCom.inRange && !thiskCom.isAttacking)
             {
                 node = AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node;
@@ -112,10 +107,6 @@ public class KGPath : MonoBehaviour
 
                 seeker.StartPath(koboldRB.position, randomPointOnARandomNode[Random.Range(0, randomPointOnARandomNode.Count - 1)], OnPathComplete);
 
-                //                pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-                //                seeker.StartPath(koboldRB.position, (Vector3)AstarPath.active.GetNearest(koboldRB.position + ((Vector2)pathRandomizer * 4)), OnPathComplete);
- //                               CancelInvoke();
- //                               InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
             }
         }
     }
@@ -146,21 +137,11 @@ public class KGPath : MonoBehaviour
             Invoke("UpdatePath", 0);
         }
 
-//        if (thiskCom.inRange != updateSwitch)
-//        {
-//            updateSwitch = thiskCom.inRange;
-//
-//            if(thiskCom.inRange)
-//            {
-//                Invoke("UpdatePath", 0);
-//            }
-//        }
-
         foreach (GameObject enemy in Enemies)
         {
-            //           Debug.Log(Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x));
-            //           Debug.Log(target.transform.position - enemy.transform.position);
-            //           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
+//           Debug.Log(Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x));
+//           Debug.Log(target.transform.position - enemy.transform.position);
+//           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
 
             if (enemy != null)
             {
@@ -195,13 +176,13 @@ public class KGPath : MonoBehaviour
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - koboldRB.position).normalized;
         Vector2 force = direction * speed;
-        //
+ //
         float targDist = Vector2.Distance(koboldRB.position, target.position);
+
  //       float awareDistance = 5f;
 
         if (thiskCom.inRange && !thiskCom.isAttacking && !thiskCom.gotHit)
         {
- //           koboldRB.velocity = new Vector2(0, 0);
             koboldRB.AddForce(force/10, ForceMode2D.Force);
         }
         else if (!thiskCom.inRange && !thiskCom.isAttacking && !thiskCom.gotHit)

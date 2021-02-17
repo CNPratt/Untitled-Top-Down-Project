@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8304892436598539611}
   - component: {fileID: 33997740688779690}
   - component: {fileID: 7429547227514019808}
+  - component: {fileID: 2061725141}
   m_Layer: 0
   m_Name: Dromad Merchant A
   m_TagString: Untagged
@@ -119,3 +120,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.11245966}
   m_Size: {x: 0.3118105, y: 0.43133068}
   m_Direction: 0
+--- !u!114 &2061725141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8304892436598539612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc680b5bcc9647919b42bdaf86b4495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  dBox: {fileID: 0}
+  dText: {fileID: 0}
+  toPrint: []
+  sent1: Hey, there, you! That's right, I'm talking to PIXELGUARDIAN and NIR.
+  sent2: This is a small test of the fundementals of the dialogue system.
+  sent3: Thanks for inviting me into the Creative Brew community!

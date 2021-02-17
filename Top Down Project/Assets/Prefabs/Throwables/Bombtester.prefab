@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 342885824485872042}
   - component: {fileID: 135516767315531696}
   - component: {fileID: 2597532291148859977}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TileColliderTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38670492dec394428a5ceb730fde4122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!1 &8338667327532664882
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ GameObject:
   - component: {fileID: 8338667327532664892}
   - component: {fileID: 8338667327532664883}
   - component: {fileID: 4650628641640788248}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Bombtester
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47a121199d2e4d5891ea3edef2ffe05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  okeyUp: 0
   objMass: 0
   objDrag: 0
   speedBefore: 0

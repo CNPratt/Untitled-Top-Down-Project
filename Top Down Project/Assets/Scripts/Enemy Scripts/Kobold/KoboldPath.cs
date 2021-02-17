@@ -103,11 +103,6 @@ public class KoboldPath : MonoBehaviour
                 }
 
                 seeker.StartPath(koboldRB.position, randomPointOnARandomNode[Random.Range(0, randomPointOnARandomNode.Count - 1)], OnPathComplete);
-
-                //               pathRandomizer = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
-                //               seeker.StartPath(koboldRB.position, (Vector3)AstarPath.active.GetNearest(koboldRB.position + ((Vector2)pathRandomizer * 4)), OnPathComplete);
-  //                             CancelInvoke();
-  //                             InvokeRepeating("UpdatePath", 0, Random.Range(3f, 5f));
             }
         }
     }
@@ -142,21 +137,12 @@ public class KoboldPath : MonoBehaviour
             Invoke("UpdatePath", 0);
         }
 
-//        if (thiskCom.inRange != updateSwitch)
-//        {
-//            updateSwitch = thiskCom.inRange;
-//
-//            if(thiskCom.inRange)
-//            {
-//                Invoke("UpdatePath", 0);
-//            }
-//        }
 
         foreach (GameObject enemy in Enemies)
         {
-            //           Debug.Log(Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x));
-            //           Debug.Log(target.transform.position - enemy.transform.position);
-            //           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
+//           Debug.Log(Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x));
+//           Debug.Log(target.transform.position - enemy.transform.position);
+//           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
 
             if (enemy != null)
             {
@@ -191,17 +177,14 @@ public class KoboldPath : MonoBehaviour
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - koboldRB.position).normalized;
         Vector2 force = direction * speed;
-        //
+//
         float targDist = Vector2.Distance(koboldRB.position, target.position);
+
 //        float awareDistance = 5f;
 
         if (thiskCom.inRange && !thiskCom.isAttacking && !thiskCom.gotHit)
         {
-//            koboldRB.velocity = new Vector2(0, 0);
             koboldRB.AddForce(force/8, ForceMode2D.Force);
-
-//            koboldRB.velocity = direction * 3;
-
         }
         else if (!thiskCom.inRange && !thiskCom.isAttacking && !thiskCom.gotHit)
         {

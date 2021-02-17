@@ -622,6 +622,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gotHit: 0
   gotHitSwitch: 0
+  bodyDamage: 1
+  skillDamage1: 2
+  dropLoot: {fileID: 7864373578455807554, guid: 28e3b5b01f2e34fa89ca1d7d1f40a84f,
+    type: 3}
   thisPath: {fileID: 0}
   canShoot: 0
   enHealthMax: 0

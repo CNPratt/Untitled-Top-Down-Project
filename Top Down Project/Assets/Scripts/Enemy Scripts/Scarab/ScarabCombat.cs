@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class ScarabCombat : EnCombatMono
 {
+    public GameObject dropLoot;
+
     public int enHealthMax;
     public int enHealthCurrent;
     public GameObject deathFX;
@@ -26,14 +28,12 @@ public class ScarabCombat : EnCombatMono
     public GameObject player;
     public CapsuleCollider2D pCol;
     public CapsuleCollider2D enCol;
-//    public bool gotHit;
-//    public bool gotHitSwitch;
     public Rigidbody2D koboldRB;
 
     IEnumerator EnDeath()
     {
+        DropLoot(dropLoot);
         Instantiate(deathFX, transform.position, transform.rotation);
-//       Destroy(gameObject);
         gameObject.SetActive(false);
         yield break;
     }
@@ -171,12 +171,6 @@ public class ScarabCombat : EnCombatMono
         {
             StartCoroutine(GotHit());
             gotHitSwitch = false;
-        }
-
-        if (gotHit == true)
-        {
-//            koboldRB.velocity = new Vector2(0, 0);
-//            koboldRB.AddForce((transform.position - player.transform.position).normalized * 50f, ForceMode2D.Force);
         }
 
         //      klash location updater

@@ -17,11 +17,10 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer rend;
     public Collider2D lastEnemyCollider;
 
+    public static bool handsFree;
     public static bool beenHit;
     public static bool canAttack;
-
     public static bool isHolding;
-
     public static bool backpedal;
     public static bool enCollisionIgnore;
 
@@ -62,9 +61,11 @@ public class PlayerController : MonoBehaviour
 
             lastEnemyCollider = collider.GetComponentInParent<Collider2D>();
             lastColPos = lastEnemyCollider.transform.position;
+            lastCombatAI = lastEnemyCollider.GetComponentInParent<EnCombatMono>();
 
             rb.velocity = new Vector2(0, 0);
 
+            PlayerInventoryScript.TakeDamage(lastCombatAI.bodyDamage);
             StartCoroutine(Recoil());
         }
 
@@ -83,9 +84,11 @@ public class PlayerController : MonoBehaviour
 
             lastEnemyCollider = collider.GetComponentInParent<Collider2D>();
             lastColPos = lastEnemyCollider.transform.position;
+            lastCombatAI = lastEnemyCollider.GetComponentInParent<EnCombatMono>();
 
             rb.velocity = new Vector2(0, 0);
 
+            PlayerInventoryScript.TakeDamage(lastCombatAI.skillDamage1);
             StartCoroutine(Recoil());
         }
 
@@ -107,7 +110,9 @@ public class PlayerController : MonoBehaviour
 
             lastEnemyCollider = collision.GetComponentInParent<Collider2D>();
             lastColPos = lastEnemyCollider.transform.position;
+            lastCombatAI = lastEnemyCollider.GetComponentInParent<EnCombatMono>();
 
+            PlayerInventoryScript.TakeDamage(lastCombatAI.bodyDamage);
             StartCoroutine(Recoil());
         }
 
@@ -118,29 +123,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag != null)
-        {
-            if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit && !DodgeScript.isDodging)
-            {
-                //      Debug.Log("Initial enemy hit.");
-
-                animScript.currentState = PlayerAnimScript.idleState;
-
-                lastEnemyCollider = collision.GetComponentInParent<Collider2D>();
-                lastColPos = lastEnemyCollider.transform.position;
-
-                StartCoroutine(Recoil());
-            }
-        }
-
-        if (collision.tag == "Enemy" && beenHit == true)
-        {
-            rb.AddForce((transform.position - lastColPos).normalized * 2f, ForceMode2D.Impulse);
-            //        Debug.Log("Hit while beenHit = true" + (transform.position - lastEnemyCollider.transform.position));
-        }
-    }
+//    private void OnTriggerExit2D(Collider2D collision)
+//    {
+//        if (collision.tag != null)
+//        {
+//            if (collision.tag == "Enemy" && beenHit == false && !collision.GetComponentInParent<EnCombatMono>().gotHit && !DodgeScript.isDodging)
+//            {
+//                //      Debug.Log("Initial enemy hit.");
+//
+//                animScript.currentState = PlayerAnimScript.idleState;
+//
+//                lastEnemyCollider = collision.GetComponentInParent<Collider2D>();
+//                lastColPos = lastEnemyCollider.transform.position;
+//
+//                StartCoroutine(Recoil());
+//            }
+//        }
+//
+//        if (collision.tag == "Enemy" && beenHit == true)
+//        {
+//            rb.AddForce((transform.position - lastColPos).normalized * 2f, ForceMode2D.Impulse);
+//            //        Debug.Log("Hit while beenHit = true" + (transform.position - lastEnemyCollider.transform.position));
+//        }
+//    }
 
     // Start is called before the first frame update
     void Start()
@@ -168,6 +173,16 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         rendColor.a = Random.Range(.1f, .8f);
+
+        if(!beenHit && !isHolding && !DashScript.isDashing && !WeaponController.stopSwitch && !WeaponController.isCharging)
+        {
+            handsFree = true;
+        }
+
+        else
+        {
+            handsFree = false;
+        }
 
         if(DashScript.dashEffectOn)
         {

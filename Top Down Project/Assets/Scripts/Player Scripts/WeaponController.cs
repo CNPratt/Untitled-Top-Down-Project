@@ -18,7 +18,7 @@ public class WeaponController : MonoBehaviour
     public static int thisIdle;
 
     public bool isSlashing;
-    public bool isCharging;
+    public static bool isCharging;
     public static bool stopSwitch;
     public static bool slashCDOn;
     public static bool isComWindow;

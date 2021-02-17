@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class KoboldCombat : EnCombatMono
 {
+    public GameObject dropLoot;
+
     public int enHealthMax;
     public int enHealthCurrent;
     public GameObject deathFX;
@@ -31,6 +33,7 @@ public class KoboldCombat : EnCombatMono
 
     IEnumerator EnDeath()
     {
+        DropLoot(dropLoot);
         Instantiate(deathFX, transform.position, transform.rotation);
 //       Destroy(gameObject);
         gameObject.SetActive(false);

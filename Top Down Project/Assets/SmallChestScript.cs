@@ -10,7 +10,7 @@ public class SmallChestScript : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.collider.name == "Player" && Input.GetKeyDown(KeyCode.O))
+        if (collision.collider.name == "Player" && Input.GetKeyDown(KeyCode.O) && PlayerController.handsFree)
         {
             rend.sprite = openSprite;
         }
