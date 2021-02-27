@@ -7,8 +7,8 @@ public class ScarabCombat : EnCombatMono
 {
     public GameObject dropLoot;
 
-    public int enHealthMax;
-    public int enHealthCurrent;
+//    public int enHealthMax;
+//    public int enHealthCurrent;
     public GameObject deathFX;
 
     public ScarabAnimScript kAnimScript;

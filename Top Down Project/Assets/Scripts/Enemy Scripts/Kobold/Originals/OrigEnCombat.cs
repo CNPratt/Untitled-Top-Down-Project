@@ -5,8 +5,8 @@ using UnityEngine.Rendering;
 
 public class OriginalEnCombat : EnCombatMono
 {
-    public int enHealthMax;
-    public int enHealthCurrent;
+ //   public int enHealthMax;
+//    public int enHealthCurrent;
     public GameObject deathFX;
     public OriginalEnAnimScript kAnimScript;
 

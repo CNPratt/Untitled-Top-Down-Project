@@ -219,28 +219,28 @@ public class PlayerAnimScript : MonoBehaviour
         else if (currentState == 4 || currentState == 12)
         {
             attackState = 20;
-            faceDirection = (Vector2.down + Vector2.right);
+            faceDirection = (Vector2.down + Vector2.right) * .7f;
             faceRoto = new Vector3(0, 0, 45);
         }
 
         else if (currentState == 6 || currentState == 14)
         {
             attackState = 22;
-            faceDirection = (Vector2.down + Vector2.left);
+            faceDirection = (Vector2.down + Vector2.left) * .7f;
             faceRoto = new Vector3(0, 0, -45);
         }
 
         else if (currentState == 2 || currentState == 10)
         {
             attackState = 18;
-            faceDirection = (Vector2.up + Vector2.right);
+            faceDirection = (Vector2.up + Vector2.right) * .7f;
             faceRoto = new Vector3(0, 0, 135);
         }
 
         else if (currentState == 8 || currentState == 16)
         {
             attackState = 24;
-            faceDirection = (Vector2.up + Vector2.left);
+            faceDirection = (Vector2.up + Vector2.left) * .7f;
             faceRoto = new Vector3(0, 0, -135);
         }
     }

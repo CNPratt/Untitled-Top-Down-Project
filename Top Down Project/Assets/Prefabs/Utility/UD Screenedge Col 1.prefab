@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2298653891998192819}
   - component: {fileID: 2298653891998192816}
   - component: {fileID: 4802764015403450826}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: UD Screenedge Col 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,10 +70,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e06cf3de6f784be0a9ea1426b2a30ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomObjUp: {fileID: 0}
+  roomObjDown: {fileID: 0}
   playerTrans: {fileID: 0}
   cam: {fileID: 0}
   camscript: {fileID: 0}
-  leftminBounds: {x: 0, y: 0, z: 0}
-  leftmaxBounds: {x: 0, y: 0, z: 0}
-  rightminBounds: {x: 0, y: 0, z: 0}
-  rightmaxBounds: {x: 0, y: 0, z: 0}
+  upminBounds: {x: 0, y: 0, z: 0}
+  upmaxBounds: {x: 0, y: 0, z: 0}
+  downminBounds: {x: 0, y: 0, z: 0}
+  downmaxBounds: {x: 0, y: 0, z: 0}

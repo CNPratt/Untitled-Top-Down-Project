@@ -5,6 +5,11 @@ using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
+    public int lineMask;
+
+    public static Coroutine thisOKEY;
+    public static bool okeyUp;
+
     public Color solidColor;
     public static Color rendColor;
 
@@ -29,6 +34,20 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 lastColPos;
 
+    public static IEnumerator OKeyUp()
+    {
+//        Debug.Log("called");
+
+        if (thisOKEY == null)
+        {
+//            Debug.Log("inloop");
+
+            yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.O));
+            okeyUp = true;
+
+            thisOKEY = null;
+        }
+    }
 
     IEnumerator Recoil()
     {
@@ -150,6 +169,12 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lineMask = (1 << 10) | (1 << 12) | (1 << 14);
+
+        lineMask = ~lineMask;
+
+        okeyUp = true;
+
         Physics2D.IgnoreLayerCollision(10, 12, true);
 
         animScript = gameObject.GetComponent<PlayerAnimScript>();
@@ -172,6 +197,26 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        Debug.DrawLine(transform.position, transform.position + PlayerAnimScript.faceDirection/2);
+        var hit =  Physics2D.Linecast(transform.position, transform.position + PlayerAnimScript.faceDirection/2, lineMask);
+
+        if (hit.transform != null)
+        {
+            Debug.Log(hit.transform.name);
+
+            if (hit.transform.tag == "Keycard Door" && Input.GetKeyDown(KeyCode.O) && handsFree && PlayerInventoryScript.redKeys > 0 && okeyUp)
+            {
+                var door = hit.transform.GetComponent<Doorbase>();
+
+                Debug.Log("inloop");
+
+                PlayerInventoryScript.redKeys = PlayerInventoryScript.redKeys - 1;
+                door.doorState = 1;
+
+                thisOKEY = StartCoroutine(OKeyUp());
+            }
+        }
+
         rendColor.a = Random.Range(.1f, .8f);
 
         if(!beenHit && !isHolding && !DashScript.isDashing && !WeaponController.stopSwitch && !WeaponController.isCharging)

@@ -10,8 +10,8 @@ public class KGCombat : EnCombatMono
     public KGPath thisPath;
     public bool canShoot;
 
-    public int enHealthMax;
-    public int enHealthCurrent;
+ //   public int enHealthMax;
+ //   public int enHealthCurrent;
     public GameObject deathFX;
 
     public Coroutine kshotRoutine;
@@ -93,6 +93,7 @@ public class KGCombat : EnCombatMono
 
     private void OnEnable()
     {
+        canShoot = true;
         enHealthCurrent = enHealthMax;
     }
 
@@ -167,7 +168,7 @@ public class KGCombat : EnCombatMono
         if (canShoot && thisPath.losHit.collider == null && inRange)
         {
 //            Debug.Log("called");
-            shotSwitch = false;
+//            shotSwitch = false;
             kshotRoutine = StartCoroutine("KShot", 0);
         }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2298653891998192819}
   - component: {fileID: 2298653891998192816}
   - component: {fileID: 2298653891998192817}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LR Screenedge Col
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,6 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abbcc309449741a496864b1263bba48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomObjLeft: {fileID: 0}
+  roomObjRight: {fileID: 0}
   playerTrans: {fileID: 0}
   cam: {fileID: 0}
   camscript: {fileID: 0}

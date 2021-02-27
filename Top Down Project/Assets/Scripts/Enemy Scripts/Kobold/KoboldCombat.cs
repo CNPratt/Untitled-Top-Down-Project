@@ -7,8 +7,8 @@ public class KoboldCombat : EnCombatMono
 {
     public GameObject dropLoot;
 
-    public int enHealthMax;
-    public int enHealthCurrent;
+//    public int enHealthMax;
+//    public int enHealthCurrent;
     public GameObject deathFX;
     public KoboldAnimScript kAnimScript;
 

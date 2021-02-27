@@ -98,7 +98,7 @@ public class WeaponController : MonoBehaviour
                 colCenter.transform.localEulerAngles = PlayerAnimScript.faceRoto;
             }
 
-            else if (PlayerAnimScript.faceDirection == (Vector3.down + Vector3.right) || PlayerAnimScript.faceDirection == (Vector3.down + Vector3.left)  || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.right) || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.left))
+            else if (PlayerAnimScript.faceDirection == (Vector3.down + Vector3.right) * .7f || PlayerAnimScript.faceDirection == (Vector3.down + Vector3.left) * .7f || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.right) * .7f || PlayerAnimScript.faceDirection == (Vector3.up + Vector3.left) * .7f)
             {
                 if (comboCounter != 0)
                 {

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EnCombatMono : MonoBehaviour
 {
+    public bool beenDefeated;
+
+    public int enHealthMax;
+    public int enHealthCurrent;
+
     public bool gotHit;
     public bool gotHitSwitch;
 

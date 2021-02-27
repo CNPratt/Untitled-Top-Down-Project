@@ -8,6 +8,7 @@ TagManager:
   - Weapons
   - Enemy Weapons
   - Enemy Handler
+  - Keycard Door
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Handler Layer
   - Room Separator Layer
   - Throwables
-  - 
+  - Edge Collider Layer
   - 
   - 
   - 
