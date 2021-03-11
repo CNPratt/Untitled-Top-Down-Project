@@ -61,6 +61,8 @@ public class KGCombat : EnCombatMono
             {
                 StopCoroutine(kshotRoutine);
             }
+
+            StartCoroutine(KShotCD());
             isAttacking = false;
             spriteSwitch = false;
         }

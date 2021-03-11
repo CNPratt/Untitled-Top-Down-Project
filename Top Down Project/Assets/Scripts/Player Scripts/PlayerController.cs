@@ -5,6 +5,9 @@ using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
+    public static float diagEQ;
+    public static bool isDiagonal;
+    public static RaycastHit2D interactLine;
     public int lineMask;
 
     public static Coroutine thisOKEY;
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer rend;
     public Collider2D lastEnemyCollider;
 
+    public static bool isTalking;
     public static bool handsFree;
     public static bool beenHit;
     public static bool canAttack;
@@ -29,6 +33,8 @@ public class PlayerController : MonoBehaviour
     public static bool backpedal;
     public static bool enCollisionIgnore;
 
+    public static float vortexEffector;
+    public static float combinedSpeed;
     public static float moveSpeed;
     public float slashStutter;
 
@@ -169,6 +175,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+//        Time.timeScale = .8f;
+
+        vortexEffector = 1;
+
         lineMask = (1 << 10) | (1 << 12) | (1 << 14);
 
         lineMask = ~lineMask;
@@ -197,16 +207,22 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
+        combinedSpeed = moveSpeed * .015f * slashStutter * diagEQ * vortexEffector;
+
+
+        //        Debug.Log(moveSpeed);
+
         Debug.DrawLine(transform.position, transform.position + PlayerAnimScript.faceDirection/2);
-        var hit =  Physics2D.Linecast(transform.position, transform.position + PlayerAnimScript.faceDirection/2, lineMask);
+        interactLine =  Physics2D.Linecast(transform.position, transform.position + PlayerAnimScript.faceDirection/2, lineMask);
 
-        if (hit.transform != null)
+        if (interactLine.transform != null)
         {
-            Debug.Log(hit.transform.name);
+//            Debug.Log(interactLine.transform.name);
 
-            if (hit.transform.tag == "Keycard Door" && Input.GetKeyDown(KeyCode.O) && handsFree && PlayerInventoryScript.redKeys > 0 && okeyUp)
+            if (interactLine.transform.tag == "Keycard Door" && Input.GetKeyDown(KeyCode.O) && handsFree && PlayerInventoryScript.redKeys > 0 && okeyUp)
             {
-                var door = hit.transform.GetComponent<Doorbase>();
+                var door = interactLine.transform.GetComponent<Doorbase>();
 
                 Debug.Log("inloop");
 
@@ -215,11 +231,56 @@ public class PlayerController : MonoBehaviour
 
                 thisOKEY = StartCoroutine(OKeyUp());
             }
-        }
+//
+            if (interactLine.transform.tag == "Throwables")
+            {
+                var throwable = interactLine.transform.GetComponent<Throwscripttest2>();
+
+                if (throwable.canpickUp == true && Input.GetKeyDown(KeyCode.O) && !isHolding && handsFree && okeyUp)
+                {
+                    isHolding = true;
+
+                    throwable.canpickUp = false;
+                    throwable.isHeld = true;
+                    throwable.transform.SetParent(gameObject.transform);
+
+                    okeyUp = false;
+                    thisOKEY = StartCoroutine(PlayerController.OKeyUp());
+                }
+            }
+
+            if(interactLine.transform.tag == "Chest")
+            {
+   //             Debug.Log("hit chest");
+
+                if (Input.GetKeyDown(KeyCode.O) && !isHolding && handsFree && okeyUp)
+                {
+  //                  Debug.Log("inloop");
+
+                    var chest = interactLine.transform.GetComponent<SmallChestScript>();
+
+                    chest.isOpen = true;
+                }
+            }
+            //
+            if (interactLine.transform.tag == "NPC")
+            {
+                var npc = interactLine.transform.GetComponent<DialogueBaseScript>();
+
+                if (Input.GetKeyDown(KeyCode.O) && npc.thisDialogue == null && handsFree && okeyUp)
+                {
+                    //          Debug.Log("called");
+
+                    isTalking = true;
+
+                    npc.thisDialogue = npc.StartCoroutine("StartDialogue");
+                }
+            }
+          }
 
         rendColor.a = Random.Range(.1f, .8f);
 
-        if(!beenHit && !isHolding && !DashScript.isDashing && !WeaponController.stopSwitch && !WeaponController.isCharging)
+        if(!beenHit && !isHolding && !DashScript.isDashing && !WeaponController.stopSwitch && !WeaponController.isCharging && !isTalking)
         {
             handsFree = true;
         }
@@ -308,19 +369,19 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKey("w"))
             {
-                rb.AddForce(Vector2.up * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.up * combinedSpeed, ForceMode2D.Impulse);
             }
             if (Input.GetKey("a"))
             {
-                rb.AddForce(Vector2.left * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.left * combinedSpeed, ForceMode2D.Impulse);
             }
             if (Input.GetKey("s"))
             {
-                rb.AddForce(Vector2.down * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.down * combinedSpeed, ForceMode2D.Impulse);
             }
             if (Input.GetKey("d"))
             {
-                rb.AddForce(Vector2.right * moveSpeed * Time.deltaTime * slashStutter, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.right * combinedSpeed, ForceMode2D.Impulse);
             }
 
 
@@ -332,54 +393,72 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey("w") && !Input.GetKey("d") && !Input.GetKey("a"))
         {
-            moveSpeed = 1f;
+            isDiagonal = false;
+
+            diagEQ = 1f;
 
             desiredDir = Vector3.up;
         }
 
         else if (Input.GetKey("a") && !Input.GetKey("w") && !Input.GetKey("s"))
         {
-            moveSpeed = 1f;
+            isDiagonal = false;
+
+            diagEQ = 1f;
 
             desiredDir = Vector3.left;
         }
 
         else if (Input.GetKey("s") && !Input.GetKey("a") && !Input.GetKey("d"))
         {
-            moveSpeed = 1f;
+            isDiagonal = false;
+
+            diagEQ = 1f;
+
             desiredDir = Vector3.down;
         }
 
         else if (Input.GetKey("d") && !Input.GetKey("w") && !Input.GetKey("s"))
         {
-            moveSpeed = 1f;
+            isDiagonal = false;
+
+            diagEQ = 1f;
+
             desiredDir = Vector3.right;
         }
 
         else if (Input.GetKey("w") && Input.GetKey("a"))
         {
-            moveSpeed = .7f;
+            isDiagonal = true;
+
+            diagEQ = .7f;
 
             desiredDir = Vector3.up + Vector3.left;
         }
 
         else if (Input.GetKey("w") && Input.GetKey("d"))
         {
-            moveSpeed = .7f;
+            isDiagonal = true;
+
+            diagEQ = .7f;
 
             desiredDir = Vector3.up + Vector3.right;
         }
 
         else if (Input.GetKey("s") && Input.GetKey("a"))
         {
-            moveSpeed = .7f;
+            isDiagonal = true;
+
+            diagEQ = .7f;
 
             desiredDir = Vector3.down + Vector3.left;
         }
 
         else if (Input.GetKey("s") && Input.GetKey("d"))
         {
-            moveSpeed = .7f;
+            isDiagonal = true;
+
+            diagEQ = .7f;
 
             desiredDir = Vector3.down + Vector3.right;
         }

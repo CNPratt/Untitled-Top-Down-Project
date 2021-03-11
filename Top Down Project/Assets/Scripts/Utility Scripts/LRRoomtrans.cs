@@ -26,12 +26,12 @@ public class LRRoomtrans : MonoBehaviour
                 roomObjRight.SetActive(true);
                 roomObjLeft.SetActive(false);
 
-                camscript.maxBounds = rightmaxBounds;
-                camscript.minBounds = rightminBounds;
+//                camscript.maxBounds = rightmaxBounds;
+//                camscript.minBounds = rightminBounds;
 
                 while(playerTrans.position.x > transform.position.x)
                 {
-                    camscript.smoother = 1;
+//                    camscript.smoother = 1;
                     return;
                 }
             }
@@ -41,12 +41,12 @@ public class LRRoomtrans : MonoBehaviour
                 roomObjLeft.SetActive(true);
                 roomObjRight.SetActive(false);
 
-                camscript.maxBounds = leftmaxBounds;
-                camscript.minBounds = leftminBounds;
+//                camscript.maxBounds = leftmaxBounds;
+//                camscript.minBounds = leftminBounds;
 
                 while (playerTrans.position.x < transform.position.x)
                 {
-                    camscript.smoother = 1;
+//                    camscript.smoother = 1;
                     return;
                 }
             }

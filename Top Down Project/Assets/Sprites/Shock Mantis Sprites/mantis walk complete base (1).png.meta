@@ -1,0 +1,1142 @@
+fileFormatVersion: 2
+guid: c13e48855fd1642efb6585631cea77a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2551437584166585124
+    second: mantis walk complete base (1)_0
+  - first:
+      213: 3170102374464106205
+    second: mantis walk complete base (1)_1
+  - first:
+      213: -2013632907807364738
+    second: mantis walk complete base (1)_2
+  - first:
+      213: 6840674789405620626
+    second: mantis walk complete base (1)_3
+  - first:
+      213: -7574658072745549055
+    second: mantis walk complete base (1)_4
+  - first:
+      213: 1554919087425977821
+    second: mantis walk complete base (1)_5
+  - first:
+      213: -546655359070192620
+    second: mantis walk complete base (1)_6
+  - first:
+      213: -193798401169980917
+    second: mantis walk complete base (1)_7
+  - first:
+      213: 7249200660709629197
+    second: mantis walk complete base (1)_8
+  - first:
+      213: 3364592865061460547
+    second: mantis walk complete base (1)_9
+  - first:
+      213: 8270147352051997707
+    second: mantis walk complete base (1)_10
+  - first:
+      213: -5005760225842371741
+    second: mantis walk complete base (1)_11
+  - first:
+      213: -2907487391980197203
+    second: mantis walk complete base (1)_12
+  - first:
+      213: -2839088973934371849
+    second: mantis walk complete base (1)_13
+  - first:
+      213: -5757875780117959984
+    second: mantis walk complete base (1)_14
+  - first:
+      213: 926981704422465739
+    second: mantis walk complete base (1)_15
+  - first:
+      213: 3464072539066158813
+    second: mantis walk complete base (1)_16
+  - first:
+      213: -2828540472852823385
+    second: mantis walk complete base (1)_17
+  - first:
+      213: -5172389491366856070
+    second: mantis walk complete base (1)_18
+  - first:
+      213: -1404608125250673933
+    second: mantis walk complete base (1)_19
+  - first:
+      213: 3787670816700036218
+    second: mantis walk complete base (1)_20
+  - first:
+      213: -6657856907967154056
+    second: mantis walk complete base (1)_21
+  - first:
+      213: 871820017054641759
+    second: mantis walk complete base (1)_22
+  - first:
+      213: -2576537879441998001
+    second: mantis walk complete base (1)_23
+  - first:
+      213: 8657666424546193641
+    second: mantis walk complete base (1)_24
+  - first:
+      213: -6613206409986243813
+    second: mantis walk complete base (1)_25
+  - first:
+      213: -4305940869732905210
+    second: mantis walk complete base (1)_26
+  - first:
+      213: -1121635193260157468
+    second: mantis walk complete base (1)_27
+  - first:
+      213: -5557038791292409212
+    second: mantis walk complete base (1)_28
+  - first:
+      213: 8085154808814995622
+    second: mantis walk complete base (1)_29
+  - first:
+      213: 3067087813950356365
+    second: mantis walk complete base (1)_30
+  - first:
+      213: 5624830333834417369
+    second: mantis walk complete base (1)_31
+  - first:
+      213: -2484330808715821355
+    second: mantis walk complete base (1)_32
+  - first:
+      213: 7318764283775350482
+    second: mantis walk complete base (1)_33
+  - first:
+      213: -3076817400147233299
+    second: mantis walk complete base (1)_34
+  - first:
+      213: -1431003635544672460
+    second: mantis walk complete base (1)_35
+  - first:
+      213: -8580221445116415494
+    second: mantis walk complete base (1)_36
+  - first:
+      213: -9175845623243070711
+    second: mantis walk complete base (1)_37
+  - first:
+      213: -6740888792433377727
+    second: mantis walk complete base (1)_0
+  - first:
+      213: -3589341851530097593
+    second: mantis walk complete base (1)_1
+  - first:
+      213: 379934882633360794
+    second: mantis walk complete base (1)_2
+  - first:
+      213: -3119272484199234179
+    second: mantis walk complete base (1)_3
+  - first:
+      213: -8448962002194163259
+    second: mantis walk complete base (1)_4
+  - first:
+      213: 5331635188872832292
+    second: mantis walk complete base (1)_5
+  - first:
+      213: 1231470768002407775
+    second: mantis walk complete base (1)_6
+  - first:
+      213: 7315510450005628878
+    second: mantis walk complete base (1)_7
+  - first:
+      213: -2664543383994911210
+    second: mantis walk complete base (1)_8
+  - first:
+      213: -5787434588593798248
+    second: mantis walk complete base (1)_9
+  - first:
+      213: -7483078383988129265
+    second: mantis walk complete base (1)_10
+  - first:
+      213: -6890877304336408246
+    second: mantis walk complete base (1)_11
+  - first:
+      213: -127435885203792431
+    second: mantis walk complete base (1)_12
+  - first:
+      213: -2690439473691545347
+    second: mantis walk complete base (1)_13
+  - first:
+      213: 6471370776114581101
+    second: mantis walk complete base (1)_14
+  - first:
+      213: -8284167698777116379
+    second: mantis walk complete base (1)_15
+  - first:
+      213: -1118156014189914410
+    second: mantis walk complete base (1)_16
+  - first:
+      213: -1671025061368041301
+    second: mantis walk complete base (1)_17
+  - first:
+      213: 5573334501718950278
+    second: mantis walk complete base (1)_18
+  - first:
+      213: 976350768291141604
+    second: mantis walk complete base (1)_19
+  - first:
+      213: -702953614871346306
+    second: mantis walk complete base (1)_20
+  - first:
+      213: 8752602217552397047
+    second: mantis walk complete base (1)_21
+  - first:
+      213: -1794607135313574325
+    second: mantis walk complete base (1)_22
+  - first:
+      213: -4990666839965251223
+    second: mantis walk complete base (1)_23
+  - first:
+      213: -8935386799444923425
+    second: mantis walk complete base (1)_24
+  - first:
+      213: -7815462254383864268
+    second: mantis walk complete base (1)_25
+  - first:
+      213: -8385982951484129311
+    second: mantis walk complete base (1)_26
+  - first:
+      213: 5627786802608470931
+    second: mantis walk complete base (1)_27
+  - first:
+      213: 2676989777972700033
+    second: mantis walk complete base (1)_28
+  - first:
+      213: -5650614265906532819
+    second: mantis walk complete base (1)_29
+  - first:
+      213: 6973598324379571694
+    second: mantis walk complete base (1)_30
+  - first:
+      213: 9220041597855746356
+    second: mantis walk complete base (1)_31
+  - first:
+      213: 795804471724417799
+    second: mantis walk complete base (1)_32
+  - first:
+      213: -170516844194514538
+    second: mantis walk complete base (1)_33
+  - first:
+      213: 231639465825912921
+    second: mantis walk complete base (1)_34
+  - first:
+      213: -8330143096337517221
+    second: mantis walk complete base (1)_35
+  - first:
+      213: -3276901232821599917
+    second: mantis walk complete base (1)_36
+  - first:
+      213: 2543720397591957392
+    second: mantis walk complete base (1)_37
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eb898ab5d8372a0800000000000000
+      internalID: -6740888792433377727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c0b1a6a98103ec0800000000000000
+      internalID: -3589341851530097593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95242543ccc54500800000000000000
+      internalID: 379934882633360794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7587a5c33e16b4d0800000000000000
+      internalID: -3119272484199234179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c99172d2d14fba80800000000000000
+      internalID: -8448962002194163259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425ecb0c4f5cdf940800000000000000
+      internalID: 5331635188872832292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d9f0e8320171110800000000000000
+      internalID: 1231470768002407775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec75e3bbef9e58560800000000000000
+      internalID: 7315510450005628878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616bd5cd8e3a50bd0800000000000000
+      internalID: -2664543383994911210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893ce02a7e6eeafa0800000000000000
+      internalID: -5787434588593798248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02cbf75bd3c62890800000000000000
+      internalID: -7483078383988129265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a412a34e99fae50a0800000000000000
+      internalID: -6890877304336408246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd5ac2dcb14b3ef0800000000000000
+      internalID: -127435885203792431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df03de0ad83a9aad0800000000000000
+      internalID: -2690439473691545347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e47202f6deec950800000000000000
+      internalID: 6471370776114581101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521ff9e8e59b80d80800000000000000
+      internalID: -8284167698777116379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d65eb287038b70f0800000000000000
+      internalID: -1118156014189914410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0f1666f835fc8e0800000000000000
+      internalID: -1671025061368041301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68103655336785d40800000000000000
+      internalID: 5573334501718950278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e75c20d9d1bc8d00800000000000000
+      internalID: 976350768291141604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e734404696b9e36f0800000000000000
+      internalID: -702953614871346306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2c185f75d777970800000000000000
+      internalID: 8752602217552397047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46c04491564817e0800000000000000
+      internalID: -1794607135313574325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969cc8363f69dbab0800000000000000
+      internalID: -4990666839965251223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbee503c012ff380800000000000000
+      internalID: -8935386799444923425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436e9fbdc76e98390800000000000000
+      internalID: -7815462254383864268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef7e4cbfe00f9b80800000000000000
+      internalID: -8385982951484129311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bfb19974ae91e40800000000000000
+      internalID: 5627786802608470931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1832a6f0504962520800000000000000
+      internalID: 2676989777972700033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ee2ed634cf491b0800000000000000
+      internalID: -5650614265906532819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee557e27ab237c060800000000000000
+      internalID: 6973598324379571694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_31
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439448ebbfa24ff70800000000000000
+      internalID: 9220041597855746356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7032dcf53f34b0b00800000000000000
+      internalID: 795804471724417799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_33
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699b09965d332adf0800000000000000
+      internalID: -170516844194514538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958c38cedd2f63300800000000000000
+      internalID: 231639465825912921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5531a62df2656c80800000000000000
+      internalID: -8330143096337517221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35101a5c0bb1682d0800000000000000
+      internalID: -3276901232821599917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mantis walk complete base (1)_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f4262793c1d4320800000000000000
+      internalID: 2543720397591957392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

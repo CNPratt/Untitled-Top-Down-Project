@@ -7,6 +7,9 @@ using UnityEngine.Tilemaps;
 
 public class KoboldPath : MonoBehaviour
 {
+    public GraphUpdateObject graphBoundsUpdate;
+    public bool canRoam;
+
     public bool pursuitMode;
 
     public List<Vector3> randomPointOnARandomNode;
@@ -52,9 +55,9 @@ public class KoboldPath : MonoBehaviour
     void Start()
     {
 
-        Enemies = new List<GameObject>();
-        Enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy Handler"));
-        Enemies.Remove(gameObject);
+//        Enemies = new List<GameObject>();
+//        Enemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy Handler"));
+//        Enemies.Remove(gameObject);
 
         thiskCom = gameObject.GetComponent<KoboldCombat>();
 
@@ -64,6 +67,8 @@ public class KoboldPath : MonoBehaviour
 
         seeker = GetComponent<Seeker>();
         koboldRB = GetComponent<Rigidbody2D>();
+
+        graphBoundsUpdate = new GraphUpdateObject(handlerCol.bounds);
 
 
 //        InvokeRepeating("UpdatePath", 0f, Random.Range(1f, 2f));
@@ -138,25 +143,25 @@ public class KoboldPath : MonoBehaviour
         }
 
 
-        foreach (GameObject enemy in Enemies)
-        {
+//        foreach (GameObject enemy in Enemies)
+//        {
 //           Debug.Log(Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x));
 //           Debug.Log(target.transform.position - enemy.transform.position);
 //           Debug.Log(enemy.transform.InverseTransformPoint(transform.position).normalized);
 
-            if (enemy != null)
-            {
-                if (Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x) < .5f || Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).y) < .5f)
-                {
-                    //           Debug.Log("spreader activated on " + gameObject);
+ //           if (enemy != null)
+ //           {
+ //               if (Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).x) < .5f || Mathf.Abs(transform.InverseTransformPoint(enemy.transform.position).y) < .5f)
+ //               {
+ //                   //           Debug.Log("spreader activated on " + gameObject);
+ //
+ //                   koboldRB.AddForce(enemy.transform.InverseTransformPoint(transform.position).normalized, ForceMode2D.Force);
+ //               }
+ //           }
+ //       }
 
-                    koboldRB.AddForce(enemy.transform.InverseTransformPoint(transform.position).normalized, ForceMode2D.Force);
-                }
-            }
-        }
 
-
- //       AstarPath.active.UpdateGraphs(handlerCol.bounds);
+        AstarPath.active.UpdateGraphs(graphBoundsUpdate);
 
         thisEnemy.transform.position = transform.position;
 
@@ -186,7 +191,7 @@ public class KoboldPath : MonoBehaviour
         {
             koboldRB.AddForce(force/8, ForceMode2D.Force);
         }
-        else if (!thiskCom.inRange && !thiskCom.isAttacking && !thiskCom.gotHit)
+        else if (!thiskCom.inRange && !thiskCom.isAttacking && !thiskCom.gotHit && canRoam)
         {
             koboldRB.AddForce(direction, ForceMode2D.Force);
         }

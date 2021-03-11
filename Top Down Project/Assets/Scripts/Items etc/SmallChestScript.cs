@@ -5,16 +5,18 @@ using UnityEngine.Rendering;
 
 public class SmallChestScript : MonoBehaviour
 {
+    public bool isOpen;
+
     public Sprite openSprite;
     public SpriteRenderer rend;
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.collider.name == "Player" && Input.GetKeyDown(KeyCode.O) && PlayerController.handsFree)
-        {
-            rend.sprite = openSprite;
-        }
-    }
+//    private void OnCollisionStay2D(Collision2D collision)
+//    {
+//        if (collision.collider.name == "Player" && Input.GetKeyDown(KeyCode.O) && PlayerController.handsFree)
+//        {
+//            rend.sprite = openSprite;
+//        }
+//    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,9 @@ public class SmallChestScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(isOpen)
+        {
+            rend.sprite = openSprite;
+        }
     }
 }

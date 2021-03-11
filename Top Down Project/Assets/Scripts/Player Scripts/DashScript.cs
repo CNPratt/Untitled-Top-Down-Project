@@ -25,7 +25,7 @@ public class DashScript : MonoBehaviour
         //        if (xVel > dashFXThreshold || yVel > dashFXThreshold)
         //        {
         Instantiate(dashFX, transform.position, transform.rotation);
-//        }
+        //        }
         return;
     }
 
@@ -80,9 +80,9 @@ public class DashScript : MonoBehaviour
                 dashEffectOn = true;
                 isDashing = true;
 
-  //              rb.AddForce(PlayerAnimScript.faceDirection * PlayerController.moveSpeed * dashSpeed, ForceMode2D.Impulse);
+                //              rb.AddForce(PlayerAnimScript.faceDirection * PlayerController.moveSpeed * dashSpeed, ForceMode2D.Impulse);
 
-                rb.AddForce(PlayerController.desiredDir * PlayerController.moveSpeed * dashSpeed, ForceMode2D.Impulse);
+                rb.AddForce(PlayerController.desiredDir * PlayerController.moveSpeed * dashSpeed * PlayerController.diagEQ, ForceMode2D.Impulse);
 
                 //               InvokeRepeating("DashFX", 0, dashEqualizer);
 
@@ -98,7 +98,7 @@ public class DashScript : MonoBehaviour
 
                 CancelInvoke("DashFX");
                 isDashing = false;
-                
+
             }
 
             yield break;

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2880897156561116521}
   m_Layer: 13
   m_Name: Generic Rock
-  m_TagString: Untagged
+  m_TagString: Throwables
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47a121199d2e4d5891ea3edef2ffe05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  okeyUp: 0
   objMass: 0
   objDrag: 0
   speedBefore: 0

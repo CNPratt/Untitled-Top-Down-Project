@@ -30,39 +30,39 @@ public class Throwscripttest2 : MonoBehaviour
 //        okeyUp = true;
 //    }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-  //      Debug.Log("stay");
-
-        if(canpickUp== true && collision.collider.name == "Player" && Input.GetKeyDown(KeyCode.O) && !PlayerController.isHolding && PlayerController.handsFree)
-        {
-            PlayerController.isHolding = true;
-
-            canpickUp = false;
-            isHeld = true;
-            gameObject.transform.SetParent(player.transform);
-
-            PlayerController.okeyUp = false;
-            PlayerController.thisOKEY = StartCoroutine(PlayerController.OKeyUp());
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-//              Debug.Log("enter");
-
-        if (canpickUp == true && collision.collider.name == "Player" && Input.GetKeyDown(KeyCode.O) && !PlayerController.isHolding && PlayerController.handsFree)
-        {
-            PlayerController.isHolding = true;
-
-            canpickUp = false;
-            isHeld = true;
-            gameObject.transform.SetParent(player.transform);
-
-            PlayerController.okeyUp = false;
-            PlayerController.thisOKEY = StartCoroutine(PlayerController.OKeyUp());
-        }
-    }
+ //   private void OnCollisionStay2D(Collision2D collision)
+ //   {
+ // //      Debug.Log("stay");
+ //
+ //       if(canpickUp== true && collision.collider.name == "Player" && Input.GetKeyDown(KeyCode.O) && !PlayerController.isHolding && PlayerController.handsFree)
+ //       {
+ //           PlayerController.isHolding = true;
+ //
+ //           canpickUp = false;
+ //           isHeld = true;
+ //           gameObject.transform.SetParent(player.transform);
+ //
+ //           PlayerController.okeyUp = false;
+ //           PlayerController.thisOKEY = StartCoroutine(PlayerController.OKeyUp());
+ //       }
+ //   }
+ //
+ //   private void OnCollisionEnter2D(Collision2D collision)
+ //   {
+////              Debug.Log("enter");
+ //
+ //       if (canpickUp == true && collision.collider.name == "Player" && Input.GetKeyDown(KeyCode.O) && !PlayerController.isHolding && PlayerController.handsFree)
+ //       {
+ //           PlayerController.isHolding = true;
+ //
+ //           canpickUp = false;
+ //           isHeld = true;
+ //           gameObject.transform.SetParent(player.transform);
+ //
+ //           PlayerController.okeyUp = false;
+ //           PlayerController.thisOKEY = StartCoroutine(PlayerController.OKeyUp());
+ //       }
+ //   }
 
     // Start is called before the first frame update
     void Start()

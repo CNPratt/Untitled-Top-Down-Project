@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4590661331038904021}
   m_Layer: 0
   m_Name: Small Chest A
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a57d5021e13f4d60b53a0def1d510dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOpen: 0
   openSprite: {fileID: -7726735990604219347, guid: e2ed704ae249f410baaa44367297a98e,
     type: 3}
   rend: {fileID: 4590661331038904019}

@@ -99,7 +99,7 @@ public class KGAnimScript : MonoBehaviour
             {
                 runState = 6;
                 currentState = runState;
-                idleState = 16;
+                idleState = 14;
             }
 
             else if (koboldRB.velocity.x > 0 && koboldRB.velocity.y < 0)
@@ -179,7 +179,7 @@ public class KGAnimScript : MonoBehaviour
             
                 runState = 6;
                 currentState = runState;
-                idleState = 16;
+                idleState = 14;
             }
             
             else if (pDistancenorm.y < 0 && pDistancenorm.x > .25f)

@@ -26,12 +26,12 @@ public class UDRoomtrans : MonoBehaviour
                 roomObjUp.SetActive(true);
                 roomObjDown.SetActive(false);
 
-                camscript.maxBounds = upmaxBounds;
-                camscript.minBounds = upminBounds;
+//                camscript.maxBounds = upmaxBounds;
+//                camscript.minBounds = upminBounds;
 
                 while(playerTrans.position.y > transform.position.y)
                 {
-                    camscript.smoother = 1;
+//                    camscript.smoother = 1;
                     return;
                 }
             }
@@ -41,12 +41,12 @@ public class UDRoomtrans : MonoBehaviour
                 roomObjDown.SetActive(true);
                 roomObjUp.SetActive(false);
 
-                camscript.maxBounds = downmaxBounds;
-                camscript.minBounds = downminBounds;
+//                camscript.maxBounds = downmaxBounds;
+//                camscript.minBounds = downminBounds;
 
                 while (playerTrans.position.y < transform.position.y)
                 {
-                    camscript.smoother = 1;
+//                    camscript.smoother = 1;
                     return;
                 }
             }

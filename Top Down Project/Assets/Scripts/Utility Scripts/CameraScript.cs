@@ -13,8 +13,8 @@ public class CameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxBounds = new Vector2(-3.75f, 7f);
-        minBounds = new Vector2(-6f, 3f);
+        maxBounds = new Vector2(100f, 100f);
+        minBounds = new Vector2(-100f, -100f);
         cameraZ = -10f;
     }
 

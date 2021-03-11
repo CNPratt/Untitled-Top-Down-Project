@@ -52,7 +52,7 @@ public class NubombScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        throwScript = gameObject.GetComponent<Throwscripttest2>();
     }
 
     // Update is called once per frame
@@ -73,6 +73,10 @@ public class NubombScript : MonoBehaviour
         if(explosion.activeSelf && transform.parent != null)
         {
 //            pos = transform.TransformPoint(gameObject.transform.localPosition);
+
+            PlayerController.isHolding = false;
+
+            throwScript.isHeld = false;
 
             throwScript.enabled = false;
 
