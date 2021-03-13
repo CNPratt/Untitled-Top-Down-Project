@@ -482,6 +482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87cb0d9f7a34d4ac39a90bca25fc532c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
+  kbPower: 0
+  invTime: 0
   handlerAI: {fileID: 6629723928895401351}
 --- !u!1 &8516214642272112936
 GameObject:
@@ -597,14 +600,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1d3ef1748234ce78ae9e26fd00bbbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beenDefeated: 0
+  enHealthMax: 0
+  enHealthCurrent: 0
   gotHit: 0
   gotHitSwitch: 0
   bodyDamage: 1
   skillDamage1: 2
+  detector: {fileID: 3165438301449666242}
   dropLoot: {fileID: 7864373578455807554, guid: 28e3b5b01f2e34fa89ca1d7d1f40a84f,
     type: 3}
-  enHealthMax: 0
-  enHealthCurrent: 0
   deathFX: {fileID: 7326784430475278950, guid: a88a1db0d6fd14d7ead2e515077f0c8f, type: 3}
   kAnimScript: {fileID: 0}
   currAttDir: 0
@@ -632,6 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd1acd5513a64a5ebf3939ab4504acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canRoam: 0
   pursuitMode: 0
   randomPointOnARandomNode: []
   startPos: {x: 0, y: 0}

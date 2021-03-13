@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour
 
         vortexEffector = 1;
 
-        lineMask = (1 << 10) | (1 << 12) | (1 << 14);
+        lineMask = (1 << 10) | (1 << 12) | (1 << 14) | (1 << 16);
 
         lineMask = ~lineMask;
 
@@ -218,7 +218,7 @@ public class PlayerController : MonoBehaviour
 
         if (interactLine.transform != null)
         {
-//            Debug.Log(interactLine.transform.name);
+            Debug.Log(interactLine.transform.name);
 
             if (interactLine.transform.tag == "Keycard Door" && Input.GetKeyDown(KeyCode.O) && handsFree && PlayerInventoryScript.redKeys > 0 && okeyUp)
             {
@@ -234,7 +234,7 @@ public class PlayerController : MonoBehaviour
 //
             if (interactLine.transform.tag == "Throwables")
             {
-                var throwable = interactLine.transform.GetComponent<Throwscripttest2>();
+                var throwable = interactLine.transform.GetComponent<ThrowableMaster>();
 
                 if (throwable.canpickUp == true && Input.GetKeyDown(KeyCode.O) && !isHolding && handsFree && okeyUp)
                 {

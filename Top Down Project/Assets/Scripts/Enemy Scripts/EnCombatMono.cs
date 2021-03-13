@@ -20,6 +20,16 @@ public class EnCombatMono : MonoBehaviour
         Instantiate(loot, transform.position, Quaternion.Euler(Vector3.zero));
     }
 
+    public void CallGotHit(int damage, float kbPower, float invTime)
+    {
+        StartCoroutine(GotHit(damage, kbPower, invTime));
+    }
+
+    protected virtual IEnumerator GotHit(int damage, float kbPower, float invTime)
+    {
+        yield return null;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

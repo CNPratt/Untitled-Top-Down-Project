@@ -50,13 +50,13 @@ public class SlotManager : MonoBehaviour
             {
                 if (!slot.isOccupied && (!OpenSlots.Contains(slot) || OpenSlots == null))
                 {
-                    Debug.Log(slot + "added");
+//                    Debug.Log(slot + "added");
 
                     OpenSlots.Add(slot);
                 }
                 else if (slot.isOccupied && OpenSlots.Contains(slot))
                 {
-                    Debug.Log(slot + "removed");
+//                    Debug.Log(slot + "removed");
 
                     OpenSlots.Remove(slot);
                 }

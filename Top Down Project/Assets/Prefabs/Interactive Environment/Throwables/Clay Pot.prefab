@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3831643911016488802}
   - component: {fileID: 3831643911016488733}
+  - component: {fileID: 3200049780228983980}
   - component: {fileID: 3831643911016488735}
-  - component: {fileID: 3831643911016488732}
   - component: {fileID: 3831643911016488803}
+  - component: {fileID: -6571593819724185530}
+  - component: {fileID: -4894449206945399238}
   m_Layer: 13
   m_Name: Clay Pot
   m_TagString: Throwables
@@ -85,6 +87,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3200049780228983980
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3831643911016488734}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: b5f070b6688774eea96d46ea28e2a633, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &3831643911016488735
 Rigidbody2D:
   serializedVersion: 4
@@ -106,31 +127,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3831643911016488732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3831643911016488734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f47a121199d2e4d5891ea3edef2ffe05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objMass: 0
-  objDrag: 0
-  speedBefore: 0
-  player: {fileID: 0}
-  pCol: {fileID: 0}
-  bombRB: {fileID: 3831643911016488735}
-  bombCol: {fileID: 3831643911016488803}
-  tCol: {fileID: 0}
-  throwPoint: {x: 0, y: 0, z: 0}
-  isHeld: 0
-  hasbeenSwitched: 0
-  isIgnoringPlayer: 0
-  canpickUp: 0
 --- !u!58 &3831643911016488803
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +143,55 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0694218}
   serializedVersion: 2
   m_Radius: 0.1649532
+--- !u!114 &-6571593819724185530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3831643911016488734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e402723b8f3494cda856b3dfe29f42f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canpickUp: 0
+  isHeld: 0
+  loot: {fileID: 7864373578455807554, guid: 28e3b5b01f2e34fa89ca1d7d1f40a84f, type: 3}
+  ogParent: {fileID: 0}
+  ogSprite: {fileID: 0}
+  startPos: {x: 0, y: 0}
+  breakonHit: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  rend: {fileID: 3831643911016488733}
+  recoilStats: {fileID: -4894449206945399238}
+  enDetector: {fileID: 0}
+  hitAI: {fileID: 0}
+  canDamage: 0
+  anim: {fileID: 3200049780228983980}
+  objMass: 0
+  objDrag: 0
+  speedBefore: 0
+  player: {fileID: 0}
+  pCol: {fileID: 0}
+  bombRB: {fileID: 3831643911016488735}
+  bombCol: {fileID: 3831643911016488803}
+  tCol: {fileID: 0}
+  throwPoint: {x: 0, y: 0, z: 0}
+  hasbeenSwitched: 0
+  isIgnoringPlayer: 0
+--- !u!114 &-4894449206945399238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3831643911016488734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a05f8fd9f77741da82a3e0e80abf980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  kbPower: 2
+  invTime: 1

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Throwscripttest2 : MonoBehaviour
+public class Throwscripttest2 : ThrowableMaster
 {
     // MODULER MASS BUT LINEAR DRAG = 2
 
@@ -19,10 +19,10 @@ public class Throwscripttest2 : MonoBehaviour
     public CircleCollider2D bombCol;
     public CompositeCollider2D tCol; 
     public Vector3 throwPoint;
-    public bool isHeld;
+//    public bool isHeld;
     public bool hasbeenSwitched;
     public bool isIgnoringPlayer;
-    public bool canpickUp;
+//    public bool canpickUp;
 
 //    IEnumerator OKeyUp()
 //    {
@@ -95,7 +95,7 @@ public class Throwscripttest2 : MonoBehaviour
 
         if (isHeld == true && hasbeenSwitched == false)
         {
-            PlayerController.moveSpeed = PlayerController.moveSpeed / 3;
+            PlayerController.moveSpeed = .33f;
             hasbeenSwitched = true;
         }
 
@@ -114,7 +114,7 @@ public class Throwscripttest2 : MonoBehaviour
 
         if (isHeld == true && Input.GetKeyDown(KeyCode.O) && PlayerController.okeyUp)
         {
-            Physics2D.IgnoreLayerCollision(13, 11);
+//            Physics2D.IgnoreLayerCollision(13, 11);
             Physics2D.IgnoreLayerCollision(13, 13);
 
             PlayerController.okeyUp = false;
@@ -137,7 +137,7 @@ public class Throwscripttest2 : MonoBehaviour
             if (hasbeenSwitched == true)
             {
                 hasbeenSwitched = false;
-                PlayerController.moveSpeed = PlayerController.moveSpeed * 3;
+                PlayerController.moveSpeed = 1;
             }
 
             //            bombCol.enabled = true;
@@ -152,13 +152,11 @@ public class Throwscripttest2 : MonoBehaviour
 
             bombCol.enabled = true;
 
-            speedBefore = PlayerController.moveSpeed;
-
             PlayerController.moveSpeed = 0;
 
             yield return new WaitForSeconds(.2f);
 
-            PlayerController.moveSpeed = speedBefore;
+            PlayerController.moveSpeed = 1;
 
             yield return new WaitForSeconds(.2f);
 

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class enHitdetector : MonoBehaviour
 {
+    public int damage;
+    public float kbPower;
+    public float invTime;
+
     public EnCombatMono handlerAI;
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -12,6 +16,10 @@ public class enHitdetector : MonoBehaviour
         {
             if (handlerAI.gotHit == false)
             {
+                damage = collider.GetComponent<RecoilConveyorScript>().damage;
+                kbPower = collider.GetComponent<RecoilConveyorScript>().kbPower;
+                invTime = collider.GetComponent<RecoilConveyorScript>().invTime;
+
                 handlerAI.gotHit = true;
                 handlerAI.gotHitSwitch = true;
             }
@@ -24,6 +32,10 @@ public class enHitdetector : MonoBehaviour
         {
             if (handlerAI.gotHit == false)
             {
+                damage = collider.GetComponent<RecoilConveyorScript>().damage;
+                kbPower = collider.GetComponent<RecoilConveyorScript>().kbPower;
+                invTime = collider.GetComponent<RecoilConveyorScript>().invTime;
+
                 handlerAI.gotHit = true;
                 handlerAI.gotHitSwitch = true;
             }
@@ -36,6 +48,10 @@ public class enHitdetector : MonoBehaviour
         {
             if (handlerAI.gotHit == false)
             {
+                damage = collider.GetComponent<RecoilConveyorScript>().damage;
+                kbPower = collider.GetComponent<RecoilConveyorScript>().kbPower;
+                invTime = collider.GetComponent<RecoilConveyorScript>().invTime;
+
                 handlerAI.gotHit = true;
                 handlerAI.gotHitSwitch = true;
             }

@@ -467,8 +467,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016925711, y: 0.11804968}
-  m_Size: {x: 0.53199947, y: 0.38207105}
+  m_Offset: {x: -0.016925715, y: 0.071944006}
+  m_Size: {x: 0.5319995, y: 0.28985986}
   m_Direction: 1
 --- !u!114 &6028510238940923083
 MonoBehaviour:
@@ -482,6 +482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87cb0d9f7a34d4ac39a90bca25fc532c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
+  kbPower: 0
+  invTime: 0
   handlerAI: {fileID: 1546031735912912852}
 --- !u!1 &8516214642272112936
 GameObject:
@@ -582,8 +585,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.033109985, y: 0.23016235}
-  m_Size: {x: 1.0381218, y: 0.73683256}
+  m_Offset: {x: -0.033110008, y: 0.14371432}
+  m_Size: {x: 1.0381219, y: 0.56393665}
   m_Direction: 1
 --- !u!114 &8787983501423080128
 MonoBehaviour:
@@ -619,14 +622,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ac9d2b9936c47faa6c6d2f8b3c25ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beenDefeated: 0
+  enHealthMax: 0
+  enHealthCurrent: 0
   gotHit: 0
   gotHitSwitch: 0
   bodyDamage: 1
   skillDamage1: 2
+  detector: {fileID: 6028510238940923083}
   dropLoot: {fileID: 7864373578455807554, guid: 28e3b5b01f2e34fa89ca1d7d1f40a84f,
     type: 3}
-  enHealthMax: 0
-  enHealthCurrent: 0
   deathFX: {fileID: 7326784430475278950, guid: a88a1db0d6fd14d7ead2e515077f0c8f, type: 3}
   kAnimScript: {fileID: 8787983501423080128}
   currAttDir: 0

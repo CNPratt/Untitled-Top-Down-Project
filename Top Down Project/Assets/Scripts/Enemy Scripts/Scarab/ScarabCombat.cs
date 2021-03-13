@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 
 public class ScarabCombat : EnCombatMono
 {
+    public enHitdetector detector;
+
     public GameObject dropLoot;
 
 //    public int enHealthMax;
@@ -38,13 +40,13 @@ public class ScarabCombat : EnCombatMono
         yield break;
     }
 
-    IEnumerator GotHit()
+    protected override IEnumerator GotHit(int damage, float kbPower, float invTime)
     {
-//                Debug.Log("Gothit engaged");
+        //               Debug.Log("Gothit engaged");
 
         koboldRB.velocity = Vector3.zero;
 
-        enHealthCurrent = enHealthCurrent - 1;
+        enHealthCurrent = enHealthCurrent - (1 * damage);
 
         if (isAttacking)
         {
@@ -53,21 +55,21 @@ public class ScarabCombat : EnCombatMono
             spriteSwitch = false;
         }
 
-        koboldRB.AddForce((transform.position - player.transform.position).normalized * 1.5f, ForceMode2D.Impulse);
+        koboldRB.AddForce((transform.position - player.transform.position).normalized * 1.5f * kbPower, ForceMode2D.Impulse);
 
         //      used to be double the time below - 5sec instead of 2.5s
 
         rend.color = Color.black;
         //        rend.color = Color.white;
-        yield return new WaitForSeconds(.05f);
+        yield return new WaitForSeconds(.05f * invTime);
         //        rend.color = Color.clear;
-        yield return new WaitForSeconds(.05f);
+        yield return new WaitForSeconds(.05f * invTime);
         //        rend.color = Color.white;
-        yield return new WaitForSeconds(.05f);
+        yield return new WaitForSeconds(.05f * invTime);
         //        rend.color = Color.clear;
-        yield return new WaitForSeconds(.05f);
-                rend.color = Color.white;
-        yield return new WaitForSeconds(.05f);
+        yield return new WaitForSeconds(.05f * invTime);
+        rend.color = Color.white;
+        yield return new WaitForSeconds(.05f * invTime);
 
         if (enHealthCurrent <= 0)
         {
@@ -87,7 +89,7 @@ public class ScarabCombat : EnCombatMono
     // Start is called before the first frame update
     void Start()
     {
-
+        detector = gameObject.GetComponentInChildren<enHitdetector>();
         enHealthMax = 3;
         enHealthCurrent = enHealthMax;
 
@@ -169,7 +171,7 @@ public class ScarabCombat : EnCombatMono
 
         if (gotHit == true && gotHitSwitch == true)
         {
-            StartCoroutine(GotHit());
+            StartCoroutine(GotHit(detector.damage, detector.kbPower, detector.invTime));
             gotHitSwitch = false;
         }
 

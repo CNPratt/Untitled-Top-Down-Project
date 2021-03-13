@@ -413,6 +413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a43aa47fbe2486698c51c9c183b366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashEntered: 0
+  pRB: {fileID: 0}
+  player: {fileID: 0}
+  gPath: {fileID: 0}
   beforespeed: 0
   isColliding: 0
 --- !u!1 &5425864193092050098
@@ -810,6 +814,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87cb0d9f7a34d4ac39a90bca25fc532c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
+  kbPower: 0
+  invTime: 0
   handlerAI: {fileID: 1469510896125809357}
 --- !u!1 &8516214642272112936
 GameObject:
@@ -933,8 +940,14 @@ MonoBehaviour:
   gotHitSwitch: 0
   bodyDamage: 1
   skillDamage1: 2
+  detector: {fileID: 3165438301449666242}
+  thisSlot: {fileID: 0}
+  hasReturned: 0
+  seekstartPos: {x: 0, y: 0}
+  isExecuting: 0
   cooldown: 0
   fscript: {fileID: 0}
+  isReturning: 0
   isSeeking: 0
   vortex: {fileID: 5262865499663894729}
   colCenter: {fileID: 8420457301896904423}
@@ -970,6 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ecefd7431614a869eaad291437fa7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detachedTarget: {x: 0, y: 0}
   gseekEndReached: 0
   randomOpenSpot: 0
   pursuitMode: 0

@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 
 public class KGCombat : EnCombatMono
 {
+    public enHitdetector detector;
     public GameObject dropLoot;
 
     public KGPath thisPath;
@@ -47,13 +48,13 @@ public class KGCombat : EnCombatMono
         yield break;
     }
 
-    IEnumerator GotHit()
+    protected override IEnumerator GotHit(int damage, float kbPower, float invTime)
     {
 //                Debug.Log("Gothit engaged");
 
         koboldRB.velocity = Vector3.zero;
 
-        enHealthCurrent = enHealthCurrent - 1;
+        enHealthCurrent = enHealthCurrent - (1 * damage);
 
         if (isAttacking)
         {
@@ -67,21 +68,21 @@ public class KGCombat : EnCombatMono
             spriteSwitch = false;
         }
 
-        koboldRB.AddForce((transform.position - player.transform.position).normalized * 1.5f, ForceMode2D.Impulse);
+        koboldRB.AddForce((transform.position - player.transform.position).normalized * 1.5f * kbPower, ForceMode2D.Impulse);
 
         //      used to be double the time below - .05sec instead of .025s
 
         rend.color = Color.black;
 //        rend.color = Color.white;
-        yield return new WaitForSeconds(.05f);
-//        rend.color = Color.clear;
-        yield return new WaitForSeconds(.05f);
-//        rend.color = Color.white;
-        yield return new WaitForSeconds(.05f);
-//        rend.color = Color.clear;
-        yield return new WaitForSeconds(.05f);
+        yield return new WaitForSeconds(.05f * invTime);
+        //        rend.color = Color.clear;
+        yield return new WaitForSeconds(.05f * invTime);
+        //        rend.color = Color.white;
+        yield return new WaitForSeconds(.05f * invTime);
+        //        rend.color = Color.clear;
+        yield return new WaitForSeconds(.05f * invTime);
         rend.color = Color.white;
-        yield return new WaitForSeconds(.05f);
+        yield return new WaitForSeconds(.05f * invTime);
 
         if (enHealthCurrent <= 0)
         {
@@ -107,6 +108,7 @@ public class KGCombat : EnCombatMono
     // Start is called before the first frame update
     void Start()
     {
+        detector = gameObject.GetComponentInChildren<enHitdetector>();
         canShoot = true;
 
         enHealthMax = 3;
@@ -195,7 +197,7 @@ public class KGCombat : EnCombatMono
 
         if (gotHit == true && gotHitSwitch == true)
         {
-            StartCoroutine(GotHit());
+            StartCoroutine(GotHit(detector.damage, detector.kbPower, detector.invTime));
             gotHitSwitch = false;
         }
 

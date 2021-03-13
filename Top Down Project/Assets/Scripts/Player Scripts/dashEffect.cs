@@ -34,14 +34,14 @@ public class dashEffect : MonoBehaviour
 //            rend.sortingOrder = -1;
 //        }
 
-        if(PlayerAnimScript.faceDirection == Vector3.down || PlayerAnimScript.faceDirection == Vector3.down + Vector3.right || PlayerAnimScript.faceDirection == Vector3.down + Vector3.left)
-        {
-            rend.sortingOrder = -1;
-        }
-        else
-        {
-            rend.sortingOrder = 1;
-        }
+//        if(PlayerAnimScript.faceDirection == Vector3.down || PlayerAnimScript.faceDirection == Vector3.down + Vector3.right || PlayerAnimScript.faceDirection == Vector3.down + Vector3.left)
+//        {
+//            rend.sortingOrder = -1;
+//        }
+//        else
+//        {
+//            rend.sortingOrder = 1;
+//        }
 
 
         //        dashFXstate = PlayerAnimScript.currentState;
